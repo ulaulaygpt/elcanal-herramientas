@@ -1,0 +1,137 @@
+{
+ "schema": "senda-recursos-v1",
+ "revision": 1,
+ "updatedAt": "2026-11-15T12:00:00+01:00",
+ "modules": [
+  {
+   "id": "m1",
+   "name": "Aplicaciones"
+  },
+  {
+   "id": "m2",
+   "name": "Manuales y guías"
+  },
+  {
+   "id": "m3",
+   "name": "Normativa"
+  },
+  {
+   "id": "m4",
+   "name": "Plataformas y sedes"
+  },
+  {
+   "id": "m5",
+   "name": "Modelos y formularios"
+  },
+  {
+   "id": "m6",
+   "name": "Otros recursos"
+  }
+ ],
+ "resources": [
+  {
+   "id": "pub-23dfe1e6-12a0",
+   "moduleId": "m6",
+   "name": "El Canal · Proyecto",
+   "url": "https://elcanal.es/",
+   "description": "Sitio del proyecto El Canal.",
+   "order": 1
+  },
+  {
+   "id": "pub-aa4a2d8b-a5fd",
+   "moduleId": "m6",
+   "name": "PTC · Protocolo de trazabilidad (especificación PTC-F en Zenodo)",
+   "url": "https://doi.org/10.5281/zenodo.21406680",
+   "description": "Especificación de los campos del bloque PTC (registro en Zenodo).",
+   "order": 2
+  },
+  {
+   "id": "pub-9b1252e3-82e3",
+   "moduleId": "m1",
+   "name": "Validator · Comprobación de paquetes PTC",
+   "url": "https://validator.es/",
+   "description": "Herramienta del navegador para generar y comprobar declaraciones PTC.",
+   "order": 1
+  },
+  {
+   "id": "pub-03f6b14e-c8c5",
+   "moduleId": "m6",
+   "name": "ORCID · Manuel Barrera Anglada",
+   "url": "https://orcid.org/0009-0000-8891-7021",
+   "description": "Identificador ORCID del autor.",
+   "order": 3
+  },
+  {
+   "id": "pub-5ee4367d-505e",
+   "moduleId": "m6",
+   "name": "Observatorio Provincial de Transparencia",
+   "url": "https://transparenciaactiva.es/",
+   "description": "Observatorio cívico sobre cumplimiento de la transparencia en los municipios de Sevilla.",
+   "order": 4
+  },
+  {
+   "id": "pub-db992560-6199",
+   "moduleId": "m4",
+   "name": "Plataforma de Contratación del Sector Público",
+   "url": "https://contrataciondelsectorpublico.gob.es/",
+   "description": "Perfiles de contratante y licitaciones del sector público.",
+   "order": 1
+  },
+  {
+   "id": "pub-67039925-47f6",
+   "moduleId": "m4",
+   "name": "DEHú · Dirección Electrónica Habilitada única",
+   "url": "https://dehu.redsara.es/",
+   "description": "Notificaciones electrónicas de las administraciones.",
+   "order": 2
+  },
+  {
+   "id": "pub-88554867-35e2",
+   "moduleId": "m4",
+   "name": "Registro Electrónico General de la AGE",
+   "url": "https://sede.administracionespublicas.gob.es/pagina/index/directorio/registro_rec",
+   "description": "Presentación electrónica de solicitudes y escritos.",
+   "order": 3
+  },
+  {
+   "id": "pub-99152fcf-5c5d",
+   "moduleId": "m4",
+   "name": "Agencia Tributaria · Sede electrónica (certificados tributarios)",
+   "url": "https://sede.agenciatributaria.gob.es/",
+   "description": "Certificados tributarios y trámites de la AEAT.",
+   "order": 4
+  },
+  {
+   "id": "pub-ff85bccb-b9f4",
+   "moduleId": "m3",
+   "name": "BOE · Boletín Oficial del Estado",
+   "url": "https://www.boe.es/",
+   "description": "Diario oficial y legislación consolidada.",
+   "order": 1
+  },
+  {
+   "id": "pub-03185890-f130",
+   "moduleId": "m3",
+   "name": "Ley 9/2017 de Contratos del Sector Público (texto consolidado)",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902",
+   "description": "Texto consolidado de la LCSP en el BOE.",
+   "order": 2
+  },
+  {
+   "id": "pub-5338a272-dcdd",
+   "moduleId": "m3",
+   "name": "Ley 39/2015 del Procedimiento Administrativo Común (texto consolidado)",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565",
+   "description": "Texto consolidado en el BOE.",
+   "order": 3
+  },
+  {
+   "id": "pub-865e9731-462e",
+   "moduleId": "m3",
+   "name": "Ley 19/2013 de Transparencia, Acceso a la Información y Buen Gobierno (texto consolidado)",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-12887",
+   "description": "Texto consolidado en el BOE.",
+   "order": 4
+  }
+ ]
+}

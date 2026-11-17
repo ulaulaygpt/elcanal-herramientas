@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAUCE · Guía jurídica y operativa de contratación · Beta 0.6</title>
+<style>
+/* ==========================================================================
+   CAUCE · Guía de procedimientos de contratación pública — familia visual El Canal
+   Sin recursos externos. Solo presentación: los datos jurídicos no se modifican.
+   ========================================================================== */
+:root{
+  --ink:#14283B; --mut:#44586B; --mut2:#586A7C;
+  --bg:#F5F3EE; --surf:#fff; --line:#DAE2EA; --line2:#E8EDF2;
+  --navy:#12263F;
+  --pri:#1F6F78; --pri-d:#14565D; --pri2:#E3F0F1;
+  --gold:#B08D3C; --amb:#D9B35A; --amb-l:#F6EBD0; --amb-t:#6B4F0E;
+  --grn:#2F6B4F; --grn-l:#E2EFE8;
+  --legal:#1F6F78; --cond:#B08D3C; --plie:#2F6B4F; --loc:#7A2E45;
+  --warn:#F6EBD0; --warnb:#B08D3C; --warnt:#5C4410;
+  --font:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-d:Georgia,Cambria,"Source Serif 4","Liberation Serif","Times New Roman",serif;
+  font-family:var(--font);color:var(--ink);background:var(--bg);font-size:15.5px;color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;display:flex;flex-direction:column;min-height:100vh;background:var(--bg);-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;background:#fff;border:2px solid var(--pri);padding:6px 10px;z-index:50;border-radius:6px}
+.skip:focus{top:8px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* ---------- Cabecera común de la familia ---------- */
+header{flex:0 0 auto;background:#fff;border-bottom:3px solid var(--amb)}
+.hrow{display:flex;align-items:center;gap:16px;padding:0 32px;min-height:64px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand svg.logo{width:32px;height:32px;flex:none}
+.brand h1{margin:0;font:400 1.4rem/1 var(--font-d);letter-spacing:.2em;color:var(--pri)}
+.brand p{margin:0;font-size:.85rem;color:var(--mut2)}
+.ver{font-size:.72rem;font-weight:700;letter-spacing:.03em;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--mut2)}
+.fam{margin-left:auto;display:flex;gap:4px;background:#EEF1F4;border-radius:999px;padding:4px}
+.fam a{text-decoration:none;font-size:.82rem;font-weight:700;padding:6px 16px;border-radius:999px;color:var(--navy)}
+.fam a:hover{background:#fff}
+.fam a[aria-current=page]{background:var(--pri);color:#fff}
+.fam a.p{color:var(--grn)}
+.hrow2{display:flex;align-items:center;gap:12px;padding:0 32px 14px;flex-wrap:wrap}
+.searchwrap{flex:1 1 360px;position:relative;max-width:640px}
+.searchwrap input{width:100%;height:46px;padding:0 54px 0 44px;border:1px solid #C4D0DC;border-radius:999px;background:#fff;font-size:1rem;color:var(--ink)}
+.searchwrap input::placeholder{color:#66788A}
+.searchwrap input:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 4px var(--pri2)}
+.searchwrap::before{content:"";position:absolute;left:16px;top:50%;width:18px;height:18px;transform:translateY(-50%);pointer-events:none;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23586A7C' stroke-width='2' stroke-linecap='round'><circle cx='11' cy='11' r='7'/><path d='m20 20-3.5-3.5'/></svg>") center/contain no-repeat}
+.kbd{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:.78rem;font-weight:600;border:1px solid #C6D2DE;border-bottom-width:2px;border-radius:6px;padding:2px 8px;color:var(--mut2);background:#F5F8FB;pointer-events:none}
+.searchwrap input:not(:placeholder-shown)~.kbd{display:none}
+.hbtns{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:0 16px;font-size:.9rem;font-weight:600;border-radius:999px;white-space:nowrap;background:#fff;border:1px solid #C4D0DC;color:var(--pri-d)}
+.btn:hover{background:var(--pri2);border-color:var(--pri)}
+.btn[aria-pressed=true],.btn[aria-expanded=true]{background:var(--pri);border-color:var(--pri);color:#fff}
+.strip{margin:0;padding:8px 32px;font-size:.82rem;line-height:1.45;color:#5C4410;background:#FBF6E8;border-bottom:1px solid #EADFC0}
+.strip b{color:#3E300A}
+
+/* ---------- Estructura ---------- */
+.wrap{flex:1;width:100%;max-width:1360px;margin:0 auto;padding:28px 32px 40px;display:flex;flex-direction:column;gap:18px}
+.intro h2{margin:0 0 4px;font:400 2rem/1.15 var(--font-d);letter-spacing:-.2px}
+.intro p{margin:0;color:var(--mut);font-size:1rem}
+nav#nav{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.pbtn{display:flex;flex-direction:column;gap:2px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:.98rem;font-weight:700;color:var(--ink);box-shadow:0 1px 2px rgba(18,38,63,.04)}
+.pbtn small{font-size:.78rem;font-weight:400;color:var(--mut2)}
+.pbtn:hover:not([aria-current=true]){border-color:var(--pri);background:#FBFEFE}
+.pbtn[aria-current=true]{background:var(--pri);border-color:var(--pri);color:#fff}
+.pbtn[aria-current=true] small{color:#DDEFF0}
+.leg{font-size:.85rem;color:var(--mut)}
+.leg summary{cursor:pointer;font-weight:600;color:var(--pri-d);width:max-content}
+.legend{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin-top:10px}
+.legend h3{font:700 .7rem/1 var(--font);margin:0 4px 0 8px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut2)}
+.legend h3:first-child{margin-left:0}
+.legend div{margin:0}
+
+main{background:var(--surf);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;min-width:0;box-shadow:0 1px 2px rgba(18,38,63,.04),0 14px 30px -22px rgba(18,38,63,.35)}
+.mhead{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;padding:20px 28px 0;border-bottom:1px solid var(--line)}
+.mhead h2{font:400 1.6rem/1.2 var(--font-d);margin:0 0 14px;color:var(--ink)}
+.mhead:not(:has(.tabs)){padding-bottom:16px}
+.mhead:not(:has(.tabs)) h2{margin:0}
+.mhead .sub{font-size:.85rem;color:var(--mut2);margin:0 0 16px 2px}
+.tabs{display:flex;gap:4px;margin-left:auto}
+.tab{border:0;border-bottom:3px solid transparent;background:transparent;padding:10px 16px;font-size:.95rem;font-weight:600;color:var(--mut)}
+.tab:hover:not([aria-selected=true]){color:var(--ink);border-bottom-color:var(--line)}
+.tab[aria-selected=true]{color:var(--pri-d);border-bottom-color:var(--amb)}
+.pbody{padding:22px 28px 30px}
+
+/* ---------- Etiquetas (texto + icono + trazo: no dependen solo del color) ---------- */
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;line-height:1.2;padding:3px 10px 3px 8px;border-radius:999px;vertical-align:middle;white-space:nowrap}
+.ic{width:14px;height:14px;flex:0 0 14px}
+.t-legal{background:var(--pri2);border:1px solid var(--legal);color:#0F4A50}
+.t-cond{background:var(--amb-l);border:1px solid var(--cond);color:#5C4410}
+.t-pliegos{background:var(--grn-l);border:1px dotted var(--plie);color:#235640}
+.t-local{background:#fff;border:1px dashed var(--loc);color:#471A29}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:2px 10px;background:#F7F9FA;white-space:nowrap}
+.badge.warn{background:var(--warn);border-color:var(--warnb);color:var(--warnt);font-weight:700}
+
+/* ---------- Características ---------- */
+.vista{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.86rem;color:var(--mut);margin-bottom:6px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:14px}
+.col{display:flex;flex-direction:column;gap:20px;min-width:0}
+.grupo h3{margin:0 0 12px;font:400 1.2rem/1.2 var(--font-d);color:var(--ink);display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:12px;background:var(--gb,#EEF2F7)}
+.grupo h3 .gn{flex:none;width:26px;height:26px;border-radius:50%;background:var(--gn,#3F5C80);color:#fff;font:700 .8rem/26px var(--font);text-align:center}
+.g1{--gb:#EEF2F7;--gn:#6F88A6}.g2{--gb:#E3EAF2;--gn:#58759A}.g3{--gb:#D8E2EE;--gn:#41618A}.g4{--gb:#CBD8E8;--gn:#2A4A75}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px 18px 12px;margin-bottom:12px;background:#fff;box-shadow:0 1px 2px rgba(18,38,63,.04)}
+.card.k-local{border-style:dashed;border-color:#C9A8B4}
+.chead{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.chead h4{margin:0;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut2)}
+.resp{margin:6px 0 6px;font:400 1.05rem/1.5 var(--font);color:var(--ink)}
+.crow{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}
+.more{background:none;border:0;color:var(--pri-d);text-decoration:underline;text-underline-offset:3px;padding:4px 0;font-size:.9rem;font-weight:600}
+.more:hover{color:var(--navy)}
+.refs{margin-left:auto;font-size:.8rem;color:var(--mut);display:flex;flex-wrap:wrap;gap:2px 10px}
+.ref{background:none;border:0;padding:0;font-size:.82rem;font-weight:600;color:var(--pri-d);text-decoration:underline dotted;text-underline-offset:3px}
+.ref:hover{text-decoration-style:solid}
+.detail{background:#F7F9FA;border:1px solid var(--line2);border-radius:10px;padding:12px 14px;margin-top:8px;font-size:.96rem;line-height:1.55}
+.detail p{margin:0 0 9px}.detail p:last-child{margin-bottom:0}
+.meta{font-size:.84rem;color:var(--mut)}
+.nota{border-left:4px solid var(--warnb);background:var(--warn);padding:9px 12px;border-radius:8px;margin-top:9px;font-size:.92rem;line-height:1.5;color:#3E300A}
+.nota b{display:block;margin-bottom:3px}
+.nota .base{display:block;margin-top:5px;font-size:.82rem;color:var(--warnt)}
+.flash{outline:3px solid var(--gold);outline-offset:2px}
+.puente{margin-top:6px;background:var(--grn-l);border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.puente svg{width:30px;height:30px;flex:none}
+.puente p{margin:0;flex:1 1 240px;font-size:.92rem;line-height:1.5;color:#235640}
+.puente a{background:var(--grn);color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;padding:9px 18px;border-radius:999px}
+.puente a:hover{background:#235640}
+
+/* ---------- Documentos ---------- */
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:16px}
+.stepper{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.step{background:#fff;border:1px solid #C4D0DC;border-radius:999px;padding:6px 14px;font-size:.88rem;font-weight:600;color:var(--ink)}
+.step:hover{background:var(--pri2)}
+.step b{display:inline-block;min-width:20px;height:20px;line-height:20px;text-align:center;background:var(--pri);color:#fff;border-radius:50%;font-size:.75rem;margin-right:7px}
+.step[aria-pressed=true]{background:var(--pri2);border-color:var(--pri)}
+.chips{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:.86rem;color:var(--mut)}
+.chip{background:#fff;border:1px solid #C4D0DC;border-radius:999px;padding:5px 13px;font-size:.84rem;font-weight:600}
+.chip:hover:not([aria-pressed=true]){background:var(--pri2)}
+.chip[aria-pressed=true]{background:var(--pri);border-color:var(--pri);color:#fff}
+.demo{background:var(--warn);border:1px solid var(--warnb);border-radius:10px;padding:9px 14px;font-size:.88rem;margin:0 0 14px;color:#3E300A}
+.fase{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;background:#fff}
+.fhead{display:flex;align-items:center;gap:12px;width:100%;background:#F7F9FA;border:0;padding:12px 16px;text-align:left;font:400 1.1rem/1.3 var(--font-d);color:var(--ink)}
+.fhead:hover{background:var(--pri2)}
+.fhead .n{background:var(--pri);color:#fff;border-radius:50%;width:26px;height:26px;line-height:26px;text-align:center;font:700 .8rem/26px var(--font);flex:none}
+.fhead .c{margin-left:auto;font:400 .84rem var(--font);color:var(--mut)}
+.chev{display:inline-block;width:10px}
+.fnota{font-size:.86rem;color:var(--mut);margin:8px 16px 2px}
+.doc{border-top:1px solid var(--line2)}
+.drow{display:grid;grid-template-columns:minmax(0,1.6fr) 210px minmax(0,1fr) 190px 18px;gap:10px;align-items:center;width:100%;text-align:left;background:#fff;border:0;padding:11px 16px;font-size:.95rem}
+.drow:hover{background:#F7FBFB}
+.drow .nm{font-weight:700}
+.drow .q{color:var(--mut);font-size:.88rem}
+.dd{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;padding:4px 16px 16px;background:#fff}
+.chk{background:var(--pri2);border:1px solid #BFDADD;border-radius:10px;padding:12px 16px}
+.chk h5,.dd h5{margin:0 0 4px;font:700 .7rem/1.3 var(--font);text-transform:uppercase;letter-spacing:.09em;color:var(--mut2)}
+.chk p{margin:0;font-size:1rem;line-height:1.5;font-weight:600}
+.dd p{margin:0 0 9px;font-size:.95rem;line-height:1.5}
+
+/* ---------- Normativa ---------- */
+.umb{border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:14px;background:#FAFBFC}
+.umb table{border-collapse:collapse;width:100%;font-size:.92rem;margin-top:6px}
+.umb th,.umb td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line2)}
+.umb th{color:var(--mut);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.agrp h3{font:400 1.2rem/1.3 var(--font-d);margin:20px 0 8px;color:var(--ink)}
+.nrow{border:1px solid var(--line);border-radius:12px;margin-bottom:8px;overflow:hidden}
+.nhead{display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:0;padding:11px 16px;text-align:left;font-size:.96rem}
+.nhead:hover{background:#F7FBFB}
+.nhead .tt{font-weight:700}
+.nhead .bs{color:var(--mut);font-size:.88rem;margin-left:6px}
+.nbody{padding:4px 16px 16px;background:#fff}
+.lvl{margin:10px 0 0}
+.lvl h5{margin:0 0 4px;font:700 .7rem/1.3 var(--font);text-transform:uppercase;letter-spacing:.09em;color:var(--mut2)}
+.lvl p{margin:0;font-size:.97rem;line-height:1.55}
+blockquote.lit{margin:0;padding:12px 16px;border:1px solid #D9D3C4;border-left:5px solid var(--navy);border-radius:0 10px 10px 0;background:#FAF8F2;font-family:Georgia,'Times New Roman',serif;font-size:.97rem;line-height:1.6;white-space:pre-line}
+.litmeta{font-size:.8rem;color:var(--mut);margin-top:5px}
+.sinlit{font-size:.88rem;color:var(--mut);border:1px dashed #AEBBC9;padding:7px 11px;border-radius:8px}
+.unres{display:inline-block;margin:2px 6px 2px 0;font-size:.85rem;border:1px dashed #AEBBC9;border-radius:999px;padding:2px 11px;color:var(--mut)}
+
+/* ---------- Búsqueda y comparador ---------- */
+.res{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 16px;margin-bottom:8px}
+.res:hover{background:#F7FBFB;border-color:var(--pri)}
+.res .k{font-size:.72rem;font-weight:700;color:var(--mut2);text-transform:uppercase;letter-spacing:.08em}
+.res .t{font-weight:700;font-size:1rem}
+.res .x{font-size:.9rem;color:var(--mut)}
+.selgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:780px;margin-bottom:14px}
+label{font-size:.85rem;font-weight:700;color:var(--ink)}
+select{display:block;width:100%;margin-top:5px;padding:10px 12px;min-height:42px;border:1px solid #9FB0C1;border-radius:10px;background:#fff}
+select:focus{outline:3px solid var(--pri2);outline-offset:0;border-color:var(--pri)}
+table.cmp{width:100%;border-collapse:collapse;table-layout:fixed;font-size:.92rem}
+.cmp th,.cmp td{padding:11px 12px;border-bottom:1px solid var(--line2);text-align:left;vertical-align:top;line-height:1.5}
+.cmp th{background:var(--pri2);color:var(--pri-d);font:400 1rem/1.3 var(--font-d);border-bottom:2px solid var(--pri)}
+.cmp th:first-child{width:17%}
+.cmp tr.dif td:not(:first-child){background:#F4FAFA}
+.cmp small{display:block;margin-top:5px;color:var(--mut)}
+
+/* ---------- Alcance y fuentes ---------- */
+#alcance{position:fixed;right:24px;top:140px;width:min(780px,calc(100vw - 48px));max-height:calc(100vh - 170px);overflow:auto;background:#fff;border:1px solid var(--line);border-top:4px solid var(--amb);border-radius:14px;padding:16px 22px 20px;z-index:40;box-shadow:0 24px 60px -18px rgba(10,32,54,.55)}
+#alcance[hidden]{display:none}
+#alcance h2{font:400 1.3rem/1.3 var(--font-d);margin:0 0 6px}
+#alcance h3{font:400 1.05rem/1.3 var(--font-d);margin:16px 0 4px}
+#alcance p,#alcance li{font-size:.94rem;line-height:1.55}
+#alcance ul{margin:4px 0 0;padding-left:20px}
+.cerrar{float:right}
+
+/* ---------- Adaptación ---------- */
+@media (max-width:1250px){.cols{grid-template-columns:1fr}.drow{grid-template-columns:minmax(0,1fr) 190px 170px 18px}.drow .q{display:none}.dd{grid-template-columns:1fr}}
+@media (max-width:1100px){nav#nav{grid-template-columns:repeat(3,minmax(0,1fr))}.brand p{display:none}}
+@media (max-width:700px){
+  .hrow,.hrow2,.strip{padding-left:14px;padding-right:14px}
+  .wrap{padding:18px 14px 28px}
+  .fam{margin-left:0}
+  nav#nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mhead{padding:16px 16px 0}.tabs{margin-left:0;flex-wrap:wrap}
+  .pbody{padding:16px}
+  .selgrid{grid-template-columns:1fr}
+  .intro h2{font-size:1.6rem}
+  #alcance{top:auto;bottom:12px;right:12px;left:12px;width:auto;max-height:80vh}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---------- Impresión ---------- */
+@media print{
+  :root{font-size:12pt}
+  body{display:block;background:#fff}
+  header{border-bottom:2px solid #000}
+  .brand svg.logo,.ver,.fam,.hrow2,.leg,nav#nav,.intro,.vista,.puente,.skip,#alcance,.tabs,.tools,.more,.cerrar,.ref{display:none!important}
+  .strip{background:#fff;padding:6px 0;font-size:10pt;border-bottom:1px solid #999}
+  .wrap{padding:0;max-width:none}
+  main{border:0;box-shadow:none}
+  .mhead{border-top:0}
+  .detail[hidden],.dd[hidden],.nbody[hidden],.fbody[hidden]{display:block!important}
+  .detail,.dd,.nbody{display:block!important}
+  .cols{grid-template-columns:1fr 1fr}
+  .card,.doc,.fase,.nrow{break-inside:avoid}
+  .drow{grid-template-columns:2fr 1.2fr 1fr 1fr 0}
+  .chev{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#panel">Ir al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-legal" viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" fill="currentColor"/><path d="M5 8l2 2 4-4" stroke="#fff" fill="none" stroke-width="2"/></symbol>
+  <symbol id="i-cond" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></symbol>
+  <symbol id="i-pliegos" viewBox="0 0 16 16"><path d="M4 2h6l3 3v9H4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 8h5M6 11h5" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-local" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"/><text x="8" y="11.5" text-anchor="middle" font-size="9" font-weight="bold" fill="currentColor" font-family="Arial">?</text></symbol>
+  <symbol id="i-warn" viewBox="0 0 16 16"><path d="M8 2l7 12H1z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 6.5v3.5M8 11.5v1" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 8l2 2 4-4" stroke="currentColor" fill="none" stroke-width="2"/></symbol>
+</svg>
+
+<header>
+  <div class="hrow">
+    <div class="brand"><svg class="logo" viewBox="0 0 48 48" fill="none" stroke="#1F6F78" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 12 C18 8 30 16 42 10"/><path d="M6 38 C18 34 30 42 42 36"/><path d="M10 25 C20 21 28 29 38 25"/><circle cx="10" cy="25" r="3.5" fill="#D9B35A" stroke="none"/></svg><h1>CAUCE</h1><p>Guía jurídica y operativa de contratación</p><span class="ver">Beta 0.6</span></div>
+    <nav class="fam" aria-label="Herramientas de El Canal"></nav>
+  </div>
+  <div class="hrow2">
+    <div class="searchwrap">
+      <label class="sr" for="search">Buscar en todos los procedimientos</label>
+      <input id="search" type="search" autocomplete="off" placeholder="Buscar: «mesa», «garantía», «159»…">
+      <span class="kbd" aria-hidden="true">/</span>
+    </div>
+    <div class="hbtns">
+      <button class="btn" id="btnCmp" type="button" aria-pressed="false">Comparar</button>
+      <button class="btn" id="btnPrint" type="button">Imprimir</button>
+      <button class="btn" id="btnAlc" type="button" aria-expanded="false" aria-controls="alcance">Alcance y fuentes</button>
+    </div>
+  </div>
+  <p class="strip"><b>Herramienta de apoyo, no instrucción oficial.</b> Revisión jurídica: 05/11/2026 · Importes: valor estimado sin IVA · Los contenidos marcados «pendiente» no están validados.</p>
+</header>
+
+<div class="wrap">
+  <div class="intro"><h2>¿Qué procedimiento va a seguir?</h2><p>Elija uno y le mostramos lo que toca, con el artículo a un clic.</p></div>
+  <nav id="nav" aria-label="Procedimientos"></nav>
+  <details class="leg"><summary>Cómo leer las etiquetas</summary><div class="legend" id="legend"></div></details>
+  <main id="panel" tabindex="-1">
+    <div class="mhead" id="mhead"></div>
+    <div class="pbody" id="pbody" aria-live="polite"></div>
+  </main>
+</div>
+
+<section id="alcance" role="region" aria-label="Alcance y fuentes" hidden></section>
+<script id="datos" type="application/json">{}</script>
+<script>
+(function(){
+'use strict';
+var D=JSON.parse(document.getElementById('datos').textContent);
+var ORD=['abierto','simplificado','abreviado','restringido','menor','negociado'];
+D.procs.sort(function(a,b){return ORD.indexOf(a.id)-ORD.indexOf(b.id)});
+var NS='http://www.w3.org/2000/svg',XL='http://www.w3.org/1999/xlink';
+var S={proc:'abierto',det:false,tab:'car',mode:'consulta',q:'',openCard:{},openDoc:{},openFase:{rec:true},openNorm:{},clase:'all',cmpA:'simplificado',cmpB:'abreviado',alc:false};
+
+function $(id){return document.getElementById(id)}
+function h(tag,attrs,kids){
+  var e=document.createElement(tag),k,v;
+  if(attrs)for(k in attrs){v=attrs[k];if(v===null||v===undefined||v===false)continue;
+    if(k==='class')e.className=v;else if(k==='text')e.textContent=v;else if(k.indexOf('on')===0)e[k]=v;else e.setAttribute(k,v===true?'':v)}
+  if(kids!==undefined&&kids!==null){(Array.isArray(kids)?kids:[kids]).forEach(function(c){if(c===null||c===undefined||c===false)return;e.appendChild(typeof c==='string'?document.createTextNode(c):c)})}
+  return e;
+}
+function icon(n){var s=document.createElementNS(NS,'svg');s.setAttribute('class','ic');s.setAttribute('aria-hidden','true');s.setAttribute('focusable','false');var u=document.createElementNS(NS,'use');u.setAttribute('href','#i-'+n);u.setAttributeNS(XL,'xlink:href','#i-'+n);s.appendChild(u);return s}
+function norm(s){s=String(s).toLowerCase();return s.normalize?s.normalize('NFD').replace(/[̀-ͯ]/g,''):s}
+function slug(s){return String(s).replace(/[^a-zA-Z0-9]+/g,'_')}
+
+var TIPOS={
+  legal:{t:'Obligación legal',i:'legal'},
+  cond:{t:'Requisito condicionado',i:'cond'},
+  pliegos:{t:'Previsión de pliegos',i:'pliegos'},
+  local:{t:'Práctica local · pendiente de verificar',i:'local'}
+};
+var TIPOS_DOC={
+  legal:'Obligatorio (LCSP)',cond:'Condicionado',pliegos:'Según pliegos',local:'Práctica local · sin verificar'
+};
+function tag(t,label){return h('span',{class:'tag t-'+t},[icon(TIPOS[t].i),label||TIPOS[t].t])}
+function verBadge(v,dateTxt){
+  var m={BOE:['ok','Contrastado en BOE'],PARCIAL:['warn','Contraste parcial'],SEC:['warn','Fuente secundaria'],LOCAL:['warn','Sin fuente local']};
+  var x=m[v]||m.PARCIAL;
+  return h('span',{class:'badge'+(v==='BOE'?'':' warn'),title:v==='BOE'?'Los artículos citados se han leído en el texto consolidado del BOE el 26/10/2026.':v==='PARCIAL'?'Alguno de los artículos citados no se ha releído en esta revisión.':v==='SEC'?'Apoyado en una fuente secundaria, pendiente de contraste en el BOE.':'Depende de documentación local que no se ha aportado.'},[icon(v==='BOE'?'ok':'warn'),x[1]])
+}
+function pName(id){for(var i=0;i<D.procs.length;i++)if(D.procs[i].id===id)return D.procs[i].n;return id}
+function pObj(id){for(var i=0;i<D.procs.length;i++)if(D.procs[i].id===id)return D.procs[i];return null}
+function cName(id){for(var i=0;i<D.cats.length;i++)if(D.cats[i].id===id)return D.cats[i];return null}
+function refLabel(t){if(/Ley|Orden|^DA /.test(t))return t;return 'LCSP art. '+t}
+
+/* ---------- navegación ---------- */
+function go(o){
+  if(o.proc)S.proc=o.proc;
+  if(o.tab)S.tab=o.tab;
+  S.mode='consulta';
+  if(o.clearSearch!==false){S.q='';$('search').value=''}
+  if(o.card)S.openCard[o.card]=true;
+  if(o.doc){S.openDoc[o.doc.id]=true;S.openFase[o.doc.f]=true}
+  if(o.norm)S.openNorm[o.norm]=true;
+  render();
+  if(o.focus){var el=$(o.focus);if(el){el.scrollIntoView({block:'center'});el.classList.add('flash');setTimeout(function(){el.classList.remove('flash')},2600)}}
+}
+function goNorm(ref){
+  var hit=normMatches([ref]);
+  var key=hit.length?hit[0].k:null;
+  S.proc=S.proc;S.tab='nor';S.mode='consulta';S.q='';$('search').value='';
+  if(key)S.openNorm[key]=true;
+  render();
+  if(key){var el=$('n-'+slug(key));if(el){el.scrollIntoView({block:'center'});el.classList.add('flash');setTimeout(function(){el.classList.remove('flash')},2600)}}
+}
+
+/* ---------- barra lateral ---------- */
+function renderNav(){
+  var nav=$('nav');nav.textContent='';
+  D.procs.forEach(function(p){
+    var b=h('button',{class:'pbtn',type:'button','aria-current':(S.proc===p.id&&S.mode!=='comparar')?'true':null,onclick:function(){S.proc=p.id;S.mode='consulta';S.q='';$('search').value='';render()}},[p.n,h('small',{text:'LCSP art. '+p.art})]);
+    nav.appendChild(b);
+  });
+}
+function renderLegend(){
+  var l=$('legend');l.textContent='';
+  l.appendChild(h('h3',{text:'Tipo de afirmación'}));
+  ['legal','cond','pliegos','local'].forEach(function(t){l.appendChild(h('div',null,[tag(t)]))});
+  l.appendChild(h('h3',{text:'Contraste'}));
+  l.appendChild(h('div',null,[verBadge('BOE')]));
+  l.appendChild(h('div',null,[verBadge('PARCIAL')]));
+}
+
+/* ---------- cabecera de la zona principal ---------- */
+function renderHead(){
+  var hd=$('mhead');hd.textContent='';
+  if(S.mode==='comparar'){hd.appendChild(h('h2',{text:'Comparar dos procedimientos'}));return}
+  if(S.mode==='buscar'){hd.appendChild(h('h2',{text:'Resultados de búsqueda'}));return}
+  var p=pObj(S.proc);
+  hd.appendChild(h('h2',{text:p.n}));
+  hd.appendChild(h('p',{class:'sub',text:'LCSP art. '+p.art}));
+  var tabs=h('div',{class:'tabs',role:'tablist','aria-label':'Secciones del procedimiento'});
+  [['car','Características'],['doc','Documentos'],['nor','Normativa']].forEach(function(t,i){
+    var b=h('button',{class:'tab',role:'tab',id:'tab-'+t[0],type:'button','aria-selected':S.tab===t[0]?'true':'false','aria-controls':'pbody',tabindex:S.tab===t[0]?'0':'-1',text:t[1],
+      onclick:function(){S.tab=t[0];render();$('tab-'+t[0]).focus()},
+      onkeydown:function(e){
+        var order=['car','doc','nor'],ix=order.indexOf(S.tab),n=null;
+        if(e.key==='ArrowRight')n=order[(ix+1)%3];else if(e.key==='ArrowLeft')n=order[(ix+2)%3];else if(e.key==='Home')n='car';else if(e.key==='End')n='nor';
+        if(n){e.preventDefault();S.tab=n;render();$('tab-'+n).focus()}
+      }});
+    tabs.appendChild(b);
+  });
+  hd.appendChild(tabs);
+}
+
+/* ---------- Características ---------- */
+function refChips(f,p){
+  var wrap=h('span',{class:'refs'});
+  f.r.split(';').forEach(function(t){
+    t=t.trim();
+    wrap.appendChild(h('button',{class:'ref',type:'button','aria-label':'Ver en Normativa: '+refLabel(t),onclick:function(e){e.stopPropagation();goNorm(t)},text:refLabel(t)}));
+  });
+  return wrap;
+}
+function card(p,c,includeProc){
+  var f=D.fichas[p][c.id],id='c-'+p+'-'+c.id,open=(id in S.openCard)?!!S.openCard[id]:S.det;
+  var det=h('div',{class:'detail',id:id+'-d',hidden:open?null:true});
+  det.appendChild(h('p',{text:f.d}));
+  det.appendChild(h('p',{class:'meta',text:'Fase: '+c.fase+' · Fundamento: LCSP art. '+f.r+' · Etiqueta original (beta 0.4.1): '+f.st}));
+  det.appendChild(h('p',null,[verBadge(f.ct)]));
+  if(f.nt){
+    det.appendChild(h('div',{class:'nota'},[h('b',{text:'Corrección propuesta · pendiente de validación (no forma parte del texto original)'}),f.nt.texto,h('span',{class:'base',text:'Base: '+f.nt.base})]));
+  }
+  var btn=h('button',{class:'more',type:'button','aria-expanded':open?'true':'false','aria-controls':id+'-d','aria-label':'Ampliar: '+c.n+(includeProc?' ('+pName(p)+')':''),text:open?'Ocultar detalle ▴':'Ampliar ▾',
+    onclick:function(){var cur=(id in S.openCard)?!!S.openCard[id]:S.det;S.openCard[id]=!cur;var o=S.openCard[id];det.hidden=!o;btn.setAttribute('aria-expanded',o?'true':'false');btn.textContent=o?'Ocultar detalle ▴':'Ampliar ▾'}});
+  var head=h('div',{class:'chead'},[h('h4',{text:(includeProc?pName(p)+' · ':'')+c.n}),tag(f.t)]);
+  if(f.t==='local'){head.appendChild(h('span',{class:'badge',text:'Interpretación operativa (beta 0.4.1)'}))}
+  if(f.nt)head.appendChild(h('span',{class:'badge warn'},[icon('warn'),'Corrección propuesta']));
+  return h('article',{class:'card k-'+f.t,id:id},[head,h('p',{class:'resp',text:f.s}),h('div',{class:'crow'},[btn,refChips(f,p)]),det]);
+}
+function renderCar(body){
+  var np=0;D.cats.forEach(function(c){if(D.fichas[S.proc][c.id].nt)np++});
+  var vista=h('div',{class:'vista',role:'group','aria-label':'Nivel de detalle'},[h('span',{text:'Vista:'}),
+    h('button',{class:'chip',type:'button','aria-pressed':S.det?'false':'true',text:'Resumen',onclick:function(){S.det=false;S.openCard={};render()}}),
+    h('button',{class:'chip',type:'button','aria-pressed':S.det?'true':'false',text:'Detalle',onclick:function(){S.det=true;S.openCard={};render()}}),
+    h('span',{class:'meta',text:D.cats.length+' materias · '+np+' con corrección propuesta pendiente de validar. «Ampliar» muestra el detalle, la fase y el fundamento.'})]);
+  body.appendChild(vista);
+  var cols=[h('div',{class:'col'}),h('div',{class:'col'})];
+  D.grupos.forEach(function(g){
+    var gi=D.grupos.indexOf(g)+1;var sec=h('section',{class:'grupo g'+gi,'aria-labelledby':'g-'+g.id},[h('h3',{id:'g-'+g.id},[h('span',{class:'gn','aria-hidden':'true',text:String(gi)}),g.n])]);
+    g.cats.forEach(function(cid){sec.appendChild(card(S.proc,cName(cid)))});
+    cols[g.col].appendChild(sec);
+  });
+  body.appendChild(h('div',{class:'cols'},cols));
+}
+
+/* ---------- Documentos ---------- */
+function renderDoc(body){
+  var fases=D.fases[S.proc],docs=D.docs.filter(function(x){return x.p===S.proc});
+  var demo=docs.some(function(x){return x.demo});
+  if(demo)body.appendChild(h('p',{class:'demo'},[h('b',{text:'Borrador demostrativo. '}),'Inventario parcial construido solo con preceptos revisados o marcado como pendiente. Los documentos de práctica local no se presumen.']));
+  var tools=h('div',{class:'tools'});
+  var st=h('ol',{class:'stepper','aria-label':'Fases de tramitación'});
+  fases.forEach(function(f,i){
+    var cnt=docs.filter(function(x){return x.f===f.id}).length;
+    st.appendChild(h('li',null,[h('button',{class:'step',type:'button','aria-pressed':S.openFase[f.id]?'true':'false',
+      onclick:function(){S.openFase[f.id]=true;render();var el=$('f-'+f.id);if(el)el.scrollIntoView({block:'start'})}},[h('b',{text:String(i+1)}),f.n+' ('+cnt+')'])]));
+  });
+  tools.appendChild(st);
+  var chips=h('div',{class:'chips',role:'group','aria-label':'Filtrar por clase de documento'},[h('span',{text:'Clase:'})]);
+  [['all','Todas'],['1','1 · Expediente'],['2','2 · Licitador'],['3','3 · Valoración, adjudicación y formalización']].forEach(function(c){
+    chips.appendChild(h('button',{class:'chip',type:'button','aria-pressed':S.clase===c[0]?'true':'false',text:c[1],onclick:function(){S.clase=c[0];render()}}));
+  });
+  tools.appendChild(chips);
+  tools.appendChild(h('button',{class:'btn',type:'button',text:'Desplegar todo',onclick:function(){fases.forEach(function(f){S.openFase[f.id]=true});docs.forEach(function(x){S.openDoc[x.id]=true});render()}}));
+  tools.appendChild(h('button',{class:'btn',type:'button',text:'Contraer todo',onclick:function(){S.openFase={};S.openDoc={};render()}}));
+  body.appendChild(tools);
+  fases.forEach(function(f,i){
+    var list=docs.filter(function(x){return x.f===f.id&&(S.clase==='all'||String(x.c)===S.clase)});
+    var open=!!S.openFase[f.id];
+    var fb=h('div',{class:'fbody',id:'fb-'+f.id,hidden:open?null:true});
+    if(f.nota)fb.appendChild(h('p',{class:'fnota',text:f.nota}));
+    if(!list.length)fb.appendChild(h('p',{class:'fnota',text:'Sin documentos de esta clase en esta fase.'}));
+    list.forEach(function(x){fb.appendChild(docItem(x))});
+    var hb=h('button',{class:'fhead',type:'button','aria-expanded':open?'true':'false','aria-controls':'fb-'+f.id,
+      onclick:function(){S.openFase[f.id]=!S.openFase[f.id];render()}},[h('span',{class:'n',text:String(i+1)}),f.n,h('span',{class:'c',text:list.length+' documento'+(list.length===1?'':'s')+(open?' ▴':' ▾')})]);
+    body.appendChild(h('section',{class:'fase',id:'f-'+f.id},[hb,fb]));
+  });
+}
+function docItem(x){
+  var id='d-'+x.id,open=!!S.openDoc[x.id];
+  var dd=h('div',{class:'dd',id:id+'-d',hidden:open?null:true});
+  var left=h('div',{class:'chk'},[h('h5',{text:'Qué debe comprobar el servicio de contratación'}),h('p',{text:x.ck})]);
+  var right=h('div');
+  right.appendChild(h('h5',{text:'Función'}));right.appendChild(h('p',{text:x.fn}));
+  right.appendChild(h('h5',{text:'Fundamento legal'}));
+  var fp=h('p');
+  if(x.fu.length){x.fu.forEach(function(t){fp.appendChild(h('button',{class:'ref',type:'button','aria-label':'Ver en Normativa: '+refLabel(t),onclick:function(){goNorm(t)},text:refLabel(t)}));fp.appendChild(document.createTextNode('  '))})}
+  else fp.appendChild(document.createTextNode('No consta fundamento legal: depende de práctica local pendiente de verificar.'));
+  right.appendChild(fp);
+  right.appendChild(h('p',null,[verBadge(x.ver)]));
+  if(x.nt)right.appendChild(h('div',{class:'nota'},[h('b',{text:'Pendiente de validación'}),x.nt]));
+  dd.appendChild(left);dd.appendChild(right);
+  var row=h('button',{class:'drow',type:'button','aria-expanded':open?'true':'false','aria-controls':id+'-d',
+    onclick:function(){S.openDoc[x.id]=!S.openDoc[x.id];render()}},[
+    h('span',{class:'nm',text:x.n}),
+    h('span',null,[tag(x.t,TIPOS_DOC[x.t])]),
+    h('span',{class:'q',text:x.q}),
+    h('span',null,[x.ver==='BOE'?null:verBadge(x.ver)]),
+    h('span',{class:'chev','aria-hidden':'true',text:open?'▴':'▾'})
+  ]);
+  return h('div',{class:'doc',id:id},[row,dd]);
+}
+
+/* ---------- Normativa ---------- */
+function tokArt(t){var n=parseInt(t,10);return isNaN(n)?null:n}
+function matchTok(k,t){return k===t||t.indexOf(k+'.')===0||k.indexOf(t+'.')===0}
+function normMatches(toks){
+  var out=[],seen={};
+  D.normas.forEach(function(n){
+    for(var i=0;i<toks.length;i++){if(matchTok(n.k,toks[i])){if(!seen[n.k]){seen[n.k]=1;out.push(n)}break}}
+  });
+  return out;
+}
+function procTokens(p){
+  var toks={};
+  Object.keys(D.fichas[p]).forEach(function(c){D.fichas[p][c].tk.forEach(function(t){toks[t]=1})});
+  D.docs.forEach(function(x){if(x.p===p)x.tk.forEach(function(t){toks[t]=1})});
+  return Object.keys(toks);
+}
+function artKey(k){var n=parseInt(k,10);return isNaN(n)?9999:n}
+function renderNor(body){
+  var toks=procTokens(S.proc),matches=normMatches(toks);
+  // umbrales (dato común)
+  var umb=h('div',{class:'umb'},[h('b',{text:'Umbrales vigentes desde el 1/1/2026 (arts. 21 y 22 LCSP)'}),
+    h('table',null,[
+      h('thead',null,[h('tr',null,[h('th',{text:'Concepto'}),h('th',{text:'Importe'}),h('th',{text:'Fuente'})])]),
+      h('tbody',null,[
+        row3('Límite del simplificado en suministros y servicios (art. 159.1.a)','inferior a 140.000 €','Arts. 21.1.a y 22.1.a · BOE'),
+        row3('SARA en suministros y servicios (entidades locales)','216.000 €','Arts. 21.1.b y 22.1.b · BOE'),
+        row3('SARA en servicios del Anexo IV','750.000 €','Art. 22.1.c · BOE'),
+        row3('SARA en obras y concesiones','5.404.000 €','Art. 20.1 · BOE')
+      ])])]);
+  body.appendChild(umb);
+  body.appendChild(h('p',{class:'meta',text:'Artículos citados por las fichas y documentos de este procedimiento. Los textos literales proceden del BOE consolidado y se distinguen de las explicaciones propias. Origen de datos común: un mismo artículo se escribe una sola vez para todos los procedimientos.'}));
+  // agrupar por artículo
+  var groups={},order=[];
+  function addG(key,label){if(!groups[key]){groups[key]={label:label,items:[],un:[]};order.push(key)}return groups[key]}
+  matches.forEach(function(n){
+    if(n.ley==='LCSP'&&!/^DA|^Orden/.test(n.k)){var a=artKey(n.k);addG(String(a),'LCSP art. '+a).items.push(n)}
+    else addG('x'+n.k,n.titulo.split(' · ')[0]).items.push(n);
+  });
+  toks.forEach(function(t){
+    var hit=false;for(var i=0;i<matches.length;i++){if(matchTok(matches[i].k,t)){hit=true;break}}
+    if(hit)return;
+    if(/Ley|Orden|^DA /.test(t)){addG('o'+t,t).un.push(t);return}
+    var a=tokArt(t);if(a===null)return;
+    addG(String(a),'LCSP art. '+a).un.push(t);
+  });
+  order.sort(function(x,y){var a=parseInt(x,10),b=parseInt(y,10);if(isNaN(a))a=99999;if(isNaN(b))b=99999;return a-b||(x<y?-1:1)});
+  var allUn=[];
+  order.forEach(function(k){
+    var g=groups[k],sec=h('section',{class:'agrp'},[h('h3',{text:g.label})]);
+    g.items.forEach(function(n){sec.appendChild(normRow(n))});
+    if(g.un.length){g.un.forEach(function(t){allUn.push(t)})}
+    if(g.items.length)body.appendChild(sec);
+  });
+  if(allUn.length){
+    var u=h('section',{class:'agrp'},[h('h3',{text:'Citados sin desarrollar en la maqueta (consultar el BOE)'})]);
+    var pp=h('p');allUn.forEach(function(t){pp.appendChild(h('span',{class:'unres',text:refLabel(t)}))});
+    u.appendChild(pp);body.appendChild(u);
+  }
+}
+function row3(a,b,c){return h('tr',null,[h('td',{text:a}),h('td',{text:b}),h('td',{text:c})])}
+function normRow(n){
+  var id='n-'+slug(n.k),open=!!S.openNorm[n.k];
+  var bd=h('div',{class:'nbody',id:id+'-b',hidden:open?null:true});
+  bd.appendChild(h('div',{class:'lvl'},[h('h5',{text:'1 · Respuesta sencilla (elaboración propia)'}),h('p',{text:n.breve})]));
+  bd.appendChild(h('div',{class:'lvl'},[h('h5',{text:'2 · Explicación ampliada (elaboración propia, no es texto legal)'}),h('p',{text:n.ampliada})]));
+  var f=h('div',{class:'lvl'},[h('h5',{text:'3 · Fundamento legal'})]);
+  if(n.lit){
+    f.appendChild(h('blockquote',{class:'lit',text:n.lit}));
+    f.appendChild(h('div',{class:'litmeta',text:'Texto literal · '+n.ley+' · BOE consolidado (BOE-A-2017-12902) · '+n.red+' · leído el 26/10/2026. Los […] indican fragmentos omitidos.'}));
+  }else{
+    f.appendChild(h('div',{class:'sinlit',text:'Sin texto literal verificado en la fuente oficial. '+(n.ver==='SEC'?'Apoyado en una fuente secundaria; ':'')+'Consultar el BOE antes de aplicarlo.'}));
+  }
+  bd.appendChild(f);
+  var head=h('button',{class:'nhead',type:'button','aria-expanded':open?'true':'false','aria-controls':id+'-b',
+    onclick:function(){S.openNorm[n.k]=!S.openNorm[n.k];render()}},[
+    h('span',{class:'tt',text:n.titulo}),verBadge(n.lit?'BOE':n.ver),h('span',{class:'bs',text:n.lit?'':''}),h('span',{style:'margin-left:auto','aria-hidden':'true',text:open?'▴':'▾'})]);
+  return h('div',{class:'nrow',id:id},[head,bd]);
+}
+
+/* ---------- Búsqueda ---------- */
+function runSearch(q){
+  var tk=norm(q).split(/\s+/).filter(Boolean),res=[];
+  function ok(txt){var t=norm(txt);return tk.every(function(x){return t.indexOf(x)!==-1})}
+  D.procs.forEach(function(p){
+    D.cats.forEach(function(c){var f=D.fichas[p.id][c.id];
+      if(ok(p.n+' '+c.n+' '+f.s+' '+f.d+' '+f.r+' '+(f.nt?f.nt.texto:'')))res.push({k:'Características · '+p.n,t:c.n,x:f.s,go:{proc:p.id,tab:'car',card:'c-'+p.id+'-'+c.id,focus:'c-'+p.id+'-'+c.id}});
+    });
+  });
+  D.docs.forEach(function(x){if(ok(pName(x.p)+' '+x.n+' '+x.fn+' '+x.ck+' '+x.q+' '+x.fu.join(' ')))res.push({k:'Documentos · '+pName(x.p),t:x.n,x:x.ck,go:{proc:x.p,tab:'doc',doc:x,focus:'d-'+x.id}})});
+  D.normas.forEach(function(n){if(ok(n.k+' '+n.titulo+' '+n.breve+' '+n.ampliada+' '+n.lit))res.push({k:'Normativa · '+n.titulo.split(' · ')[0],t:n.titulo,x:n.breve,go:{proc:S.proc,tab:'nor',norm:n.k,focus:'n-'+slug(n.k)}})});
+  return res;
+}
+function renderBuscar(body){
+  var res=runSearch(S.q);
+  body.appendChild(h('p',{class:'meta',role:'status',text:res.length+' resultado'+(res.length===1?'':'s')+' para «'+S.q+'». Se buscan todas las palabras, sin tener en cuenta acentos ni mayúsculas.'}));
+  if(!res.length)body.appendChild(h('p',{text:'Sin coincidencias. Pruebe con menos palabras o con un número de artículo (por ejemplo 159.4).'}));
+  res.slice(0,80).forEach(function(r){
+    body.appendChild(h('button',{class:'res',type:'button',onclick:function(){r.go.clearSearch=true;go(r.go)}},[h('div',{class:'k',text:r.k}),h('div',{class:'t',text:r.t}),h('div',{class:'x',text:r.x})]));
+  });
+  if(res.length>80)body.appendChild(h('p',{class:'meta',text:'Se muestran los 80 primeros resultados. Afine la búsqueda.'}));
+}
+
+/* ---------- Comparador ---------- */
+function renderCmp(body){
+  var a=h('select',{id:'selA'}),b=h('select',{id:'selB'});
+  D.procs.forEach(function(p){a.appendChild(h('option',{value:p.id,text:p.n}));b.appendChild(h('option',{value:p.id,text:p.n}))});
+  a.value=S.cmpA;b.value=S.cmpB;
+  a.onchange=function(){S.cmpA=a.value;render()};b.onchange=function(){S.cmpB=b.value;render()};
+  body.appendChild(h('div',{class:'selgrid'},[h('div',null,[h('label',{for:'selA',text:'Procedimiento A'}),a]),h('div',null,[h('label',{for:'selB',text:'Procedimiento B'}),b])]));
+  body.appendChild(h('p',{class:'meta',text:'Se comparan las respuestas breves originales. Las filas con diferencias aparecen sombreadas; para ver el detalle y el fundamento, abra la ficha del procedimiento.'}));
+  if(S.cmpA===S.cmpB){body.appendChild(h('p',{text:'Seleccione dos procedimientos diferentes.'}));return}
+  var tb=h('tbody');
+  D.cats.forEach(function(c){
+    var fa=D.fichas[S.cmpA][c.id],fb=D.fichas[S.cmpB][c.id];
+    var tr=h('tr',{class:fa.s!==fb.s?'dif':null},[h('td',null,[h('b',{text:c.n})])]);
+    [fa,fb].forEach(function(f){tr.appendChild(h('td',null,[f.s,h('small',{text:'LCSP art. '+f.r}),h('div',null,[tag(f.t)])]))});
+    tb.appendChild(tr);
+  });
+  body.appendChild(h('table',{class:'cmp'},[h('thead',null,[h('tr',null,[h('th',{text:'Materia'}),h('th',{text:pName(S.cmpA)}),h('th',{text:pName(S.cmpB)})])]),tb]));
+}
+
+/* ---------- Alcance y fuentes ---------- */
+function renderAlcance(){
+  var a=$('alcance');a.textContent='';a.hidden=!S.alc;
+  $('btnAlc').setAttribute('aria-expanded',S.alc?'true':'false');
+  if(!S.alc)return;
+  a.appendChild(h('button',{class:'btn cerrar',type:'button',text:'Cerrar (Esc)',onclick:function(){S.alc=false;renderAlcance();$('btnAlc').focus()}}));
+  a.appendChild(h('h2',{text:'Alcance y fuentes'}));
+  /*__ALCANCE__*/
+}
+
+/* ---------- Render general ---------- */
+function render(){
+  var q=S.q.trim();
+  if(q&&S.mode!=='buscar')S.mode='buscar';
+  if(!q&&S.mode==='buscar')S.mode='consulta';
+  $('btnCmp').setAttribute('aria-pressed',S.mode==='comparar'?'true':'false');
+  renderNav();renderHead();
+  var body=$('pbody');body.textContent='';
+  if(S.mode==='buscar')renderBuscar(body);
+  else if(S.mode==='comparar')renderCmp(body);
+  else if(S.tab==='car')renderCar(body);
+  else if(S.tab==='doc')renderDoc(body);
+  else renderNor(body);
+  body.setAttribute('role',S.mode==='consulta'?'tabpanel':null);
+  if(S.mode==='consulta')body.setAttribute('aria-labelledby','tab-'+S.tab);else body.removeAttribute('aria-labelledby');
+  renderAlcance();
+  document.title='CAUCE · Guía jurídica y operativa de contratación · Beta 0.6';
+  if(S.mode==='consulta'){try{history.replaceState(null,'','?proc='+S.proc+'&tab='+S.tab)}catch(e){}}
+}
+
+/* ---------- eventos ---------- */
+$('search').addEventListener('input',function(e){S.q=e.target.value;render()});
+$('btnCmp').addEventListener('click',function(){S.mode=S.mode==='comparar'?'consulta':'comparar';S.q='';$('search').value='';render()});
+$('btnPrint').addEventListener('click',function(){window.print()});
+$('btnAlc').addEventListener('click',function(){S.alc=!S.alc;renderAlcance()});
+document.addEventListener('keydown',function(e){
+  var t=e.target&&e.target.tagName;
+  if(e.key==='/'&&t!=='INPUT'&&t!=='SELECT'&&t!=='TEXTAREA'){e.preventDefault();$('search').focus();$('search').select()}
+  else if(e.key==='Escape'){
+    if(S.alc){S.alc=false;renderAlcance();$('btnAlc').focus()}
+    else if(S.q){S.q='';$('search').value='';render()}
+  }
+});
+try{var qs=new URLSearchParams(location.search),pp=qs.get('proc'),tt=qs.get('tab');if(pp&&pObj(pp))S.proc=pp;if(tt==='car'||tt==='doc'||tt==='nor')S.tab=tt}catch(e){}
+renderLegend();
+render();
+})();
+</script>
+</body>
+</html>

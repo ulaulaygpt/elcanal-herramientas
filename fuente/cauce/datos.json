@@ -1,0 +1,3107 @@
+{
+ "meta": {
+  "version": "Primera edición pública · v0.1.0",
+  "fecha": "15/11/2026",
+  "contenido": "Contenido jurídico revisado el 05/11/2026 y contrastado con el BOE el 15/11/2026, generalizado para entidades locales"
+ },
+ "procs": [
+  {
+   "id": "menor",
+   "n": "Contrato menor",
+   "art": "118"
+  },
+  {
+   "id": "abierto",
+   "n": "Abierto ordinario",
+   "art": "156–158"
+  },
+  {
+   "id": "simplificado",
+   "n": "Abierto simplificado",
+   "art": "159.1–5"
+  },
+  {
+   "id": "abreviado",
+   "n": "Simplificado abreviado",
+   "art": "159.6"
+  },
+  {
+   "id": "restringido",
+   "n": "Restringido",
+   "art": "160–165"
+  },
+  {
+   "id": "negociado",
+   "n": "Negociado sin publicidad",
+   "art": "168–170"
+  }
+ ],
+ "cats": [
+  {
+   "id": "ambito",
+   "n": "Cuándo procede",
+   "fase": "Preparación"
+  },
+  {
+   "id": "plazos",
+   "n": "Plazo de ofertas",
+   "fase": "Licitación"
+  },
+  {
+   "id": "publicidad",
+   "n": "Publicidad",
+   "fase": "Publicación"
+  },
+  {
+   "id": "solvencia",
+   "n": "Solvencia y clasificación",
+   "fase": "Preparación / licitación"
+  },
+  {
+   "id": "provisional",
+   "n": "Garantía provisional",
+   "fase": "Preparación"
+  },
+  {
+   "id": "definitiva",
+   "n": "Garantía definitiva",
+   "fase": "Adjudicación"
+  },
+  {
+   "id": "criterios",
+   "n": "Criterios y sobres",
+   "fase": "Preparación / apertura"
+  },
+  {
+   "id": "mesa",
+   "n": "Mesa de contratación",
+   "fase": "Preparación / mesa"
+  },
+  {
+   "id": "valoracion",
+   "n": "Apertura y valoración",
+   "fase": "Valoración"
+  },
+  {
+   "id": "adjudicacion",
+   "n": "Adjudicación",
+   "fase": "Adjudicación"
+  },
+  {
+   "id": "formalizacion",
+   "n": "Formalización",
+   "fase": "Formalización"
+  },
+  {
+   "id": "recursos",
+   "n": "Recursos",
+   "fase": "Resoluciones"
+  }
+ ],
+ "grupos": [
+  {
+   "id": "g1",
+   "n": "Procedencia y requisitos",
+   "col": 0,
+   "cats": [
+    "ambito",
+    "solvencia",
+    "provisional",
+    "criterios"
+   ]
+  },
+  {
+   "id": "g2",
+   "n": "Licitación y publicidad",
+   "col": 0,
+   "cats": [
+    "plazos",
+    "publicidad"
+   ]
+  },
+  {
+   "id": "g3",
+   "n": "Mesa y valoración",
+   "col": 1,
+   "cats": [
+    "mesa",
+    "valoracion"
+   ]
+  },
+  {
+   "id": "g4",
+   "n": "Adjudicación y formalización",
+   "col": 1,
+   "cats": [
+    "definitiva",
+    "adjudicacion",
+    "formalizacion",
+    "recursos"
+   ]
+  }
+ ],
+ "fichas": {
+  "menor": {
+   "ambito": {
+    "s": "Obras: VEC inferior a 40.000 €; suministros y servicios: inferior a 15.000 €.",
+    "d": "No se puede fraccionar el objeto para eludir las reglas de contratación. Comprobar duración y ausencia de prórroga ordinaria. La cuantía se refiere al valor estimado, sin IVA.",
+    "r": "118; 29.8; 99.2",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "118",
+     "29.8",
+     "99.2"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "plazos": {
+    "s": "No existe un plazo general de presentación de ofertas como en una licitación abierta.",
+    "d": "La adjudicación directa no impide solicitar presupuestos por práctica interna; esas peticiones no transforman por sí solas el expediente en abierto.",
+    "r": "131.3; 118",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "131.3",
+     "118"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "publicidad": {
+    "s": "Publicación periódica de los contratos menores, con excepciones legales.",
+    "d": "La información del artículo 63.4 se publica al menos trimestralmente; existe excepción para contratos de valor estimado inferior a 5.000 € cuando el pago se realice mediante anticipo de caja fija u otro sistema similar.",
+    "r": "63.4",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "63.4"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "solvencia": {
+    "s": "No se tramita una acreditación de solvencia propia de la licitación abierta.",
+    "d": "La empresa adjudicataria debe tener capacidad de obrar y habilitación profesional necesaria. No confundir ausencia de fase competitiva con ausencia de aptitud.",
+    "r": "131.3; 118",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "131.3",
+     "118"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "provisional": {
+    "s": "No procede exigir garantía provisional en la adjudicación directa ordinaria del menor.",
+    "d": "El contrato menor no incorpora una fase ordinaria de presentación de proposiciones con garantía provisional.",
+    "r": "118; 131.3",
+    "st": "Interpretación operativa",
+    "t": "local",
+    "tk": [
+     "118",
+     "131.3"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "definitiva": {
+    "s": "No hay exigencia general de garantía definitiva propia de la adjudicación abierta.",
+    "d": "Comprobar cualquier régimen excepcional o especial aplicable antes de trasladar esta regla a supuestos atípicos.",
+    "r": "118; 107",
+    "st": "Interpretación operativa",
+    "t": "local",
+    "tk": [
+     "118",
+     "107"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "criterios": {
+    "s": "Adjudicación directa; no hay sobres ni valoración reglada de ofertas.",
+    "d": "Si se recaban presupuestos, comprobar las instrucciones internas sobre su documentación y selección.",
+    "r": "131.3; 118",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "131.3",
+     "118"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "mesa": {
+    "s": "No se constituye mesa de contratación para la adjudicación directa ordinaria.",
+    "d": "La mesa es un órgano de asistencia en los procedimientos de adjudicación que la requieren; el contrato menor se adjudica directamente.",
+    "r": "326.1; 131.3",
+    "st": "Interpretación operativa",
+    "t": "local",
+    "tk": [
+     "326.1",
+     "131.3"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "valoracion": {
+    "s": "No hay apertura formal de sobres.",
+    "d": "La unidad competente debe documentar la justificación y la propuesta conforme a las reglas del expediente menor.",
+    "r": "118; 131.3",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "118",
+     "131.3"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "adjudicacion": {
+    "s": "Informe de necesidad y no alteración del objeto; aprobación del gasto y factura.",
+    "d": "En obras se añade presupuesto de obras y, cuando corresponda, proyecto e informe de supervisión. Hay especialidades para pagos por anticipo de caja fija.",
+    "r": "118",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "118"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "formalizacion": {
+    "s": "No se exige el documento de formalización típico de los contratos mayores.",
+    "d": "La existencia del contrato se acredita con los documentos del art. 118 (153.2) y, en su caso, la documentación de la prestación. A los menores no les alcanza la prohibición de ejecutar antes de formalizar (153.6, con 36.1 y 131.3).",
+    "r": "118; 153.2; 153.6",
+    "st": "Norma general",
+    "t": "local",
+    "tk": [
+     "118",
+     "153",
+     "153.2"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "recursos": {
+    "s": "El recurso depende del acto y de su régimen; no hay pie único.",
+    "d": "No copiar un pie de recurso sin identificar el acto, órgano y régimen de impugnación.",
+    "r": "44; 112 y ss. Ley 39/2015",
+    "st": "Revisión por acto",
+    "t": "cond",
+    "tk": [
+     "44",
+     "112 y ss. Ley 39/2015"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   }
+  },
+  "abierto": {
+   "ambito": {
+    "s": "Procedimiento ordinario, sin límite máximo de valor estimado.",
+    "d": "Cualquier interesado que reúna los requisitos puede presentar proposición. Puede estar sujeto a regulación armonizada según objeto, valor estimado y entidad. Umbrales armonizados desde el 1/1/2026 para entidades locales: obras y concesiones de obras y de servicios, 5.404.000 € (art. 20.1); suministros y servicios, 216.000 € (arts. 21.1.b y 22.1.b); servicios sociales y otros del Anexo IV, 750.000 € (art. 22.1.c).",
+    "r": "131; 156; 20–22; Orden HAC/1517/2025",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "131",
+     "156",
+     "20",
+     "21",
+     "22",
+     "Orden HAC/1517/2025"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "plazos": {
+    "s": "No SARA: mínimo general 15 días naturales; obras y concesiones, 26. SARA: revisar plazos específicos.",
+    "d": "Para contratos SARA, regla general de 35 días en obras, suministros y servicios desde el envío del anuncio a la Oficina de Publicaciones de la UE, con posibles reducciones legalmente tasadas; concesiones: 30 días. En no SARA, desde el día siguiente a la publicación en perfil.",
+    "r": "156; 156.2–6; DA 12ª",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "156",
+     "156.2",
+     "156.3",
+     "156.4",
+     "156.5",
+     "156.6",
+     "DA 12ª"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "publicidad": {
+    "s": "Anuncio en perfil; si es SARA, también DOUE.",
+    "d": "La publicidad en el perfil de contratante es obligatoria en los términos legales. Verificar plataforma y fechas reales.",
+    "r": "135; 156",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "135",
+     "156"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "solvencia": {
+    "s": "Se exige la solvencia prevista en pliegos o clasificación cuando proceda.",
+    "d": "Obras con VEC igual o superior a 500.000 €: clasificación exigible con las especialidades del art. 77. Para otros contratos, comprobar medios de solvencia, proporcionalidad y posibles exenciones.",
+    "r": "74–77; 86–92",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "74",
+     "75",
+     "76",
+     "77",
+     "86",
+     "87",
+     "88",
+     "89",
+     "90",
+     "91",
+     "92"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "provisional": {
+    "s": "Regla general: no se exige; excepcionalmente puede justificarse.",
+    "d": "La exigencia excepcional requiere motivación por razones de interés público y está limitada legalmente.",
+    "r": "106",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "106"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "definitiva": {
+    "s": "Regla general: 5 % del precio final ofertado, excluido IVA.",
+    "d": "Puede haber excepciones justificadas y garantía complementaria en casos previstos legalmente. En precios unitarios, el cálculo presenta particularidades.",
+    "r": "107",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "107"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "criterios": {
+    "s": "Uno o varios criterios; como mínimo dos archivos (documentación y oferta), tres si hay criterios de juicio de valor y de fórmulas.",
+    "d": "La documentación del art. 140 se presenta siempre en un sobre o archivo distinto del de la proposición (157.1). Si hay criterios cuya ponderación depende de un juicio de valor y otros de fórmulas, la proposición se separa en dos archivos (157.2): en total, tres.",
+    "r": "145–146; 157",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "145",
+     "146",
+     "157"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "mesa": {
+    "s": "Mesa de contratación obligatoria con carácter general.",
+    "d": "Comprobar designación, composición y funciones (art. 326). En las entidades locales la composición se rige por la DA 2ª.7: preside un miembro de la Corporación o un funcionario; son vocales el Secretario (o la asesoría jurídica) y el Interventor (o control económico-presupuestario), más los que designe el órgano de contratación entre funcionarios de carrera, personal laboral o miembros electos, con un mínimo de tres en total y electos no más de un tercio; actúa de secretario un funcionario. No puede haber personal eventual, y los interinos solo si no hay funcionarios de carrera suficientemente cualificados y se acredita en el expediente. La composición se publica en el perfil (326.3).",
+    "r": "326.1; 326.6; DA 2ª.7",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "326.1",
+     "326.6",
+     "DA 2ª.7"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "valoracion": {
+    "s": "La mesa abre y califica documentación y valora o propone la valoración de ofertas.",
+    "d": "Si hay criterios sujetos a juicio de valor, se evalúan antes de conocer los criterios automáticos. La apertura de las proposiciones debe hacerse como máximo veinte días después de terminar el plazo de presentación (si hay varios sobres, basta con abrir el primero dentro de plazo: 157.3). La oferta económica se abre en acto público, salvo que se prevean medios electrónicos (157.4).",
+    "r": "146; 157",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "146",
+     "157",
+     "157.3",
+     "157.4"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "adjudicacion": {
+    "s": "Clasificación de ofertas, requerimiento al mejor clasificado y resolución motivada.",
+    "d": "Requerimiento ordinario: diez días hábiles (150.2); si no se cumplimenta, se entiende retirada la oferta, se exige el 3 % del presupuesto base de licitación y se requiere al siguiente. Adjudicación en cinco días hábiles desde la recepción de la documentación (150.3). Plazo máximo desde la apertura: quince días si el único criterio es el precio; dos meses si hay varios criterios o se usa el menor coste del ciclo de vida, más quince días hábiles si hay trámite de anormalidad (158). Vencido el plazo, los licitadores pueden retirar su proposición.",
+    "r": "149–151; 158",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "149",
+     "150",
+     "151",
+     "158"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "formalizacion": {
+    "s": "Documento administrativo; revisar espera si cabe recurso especial.",
+    "d": "Si el contrato es susceptible de recurso especial (art. 44), no puede formalizarse antes de quince días hábiles desde la remisión de la notificación de la adjudicación (las comunidades autónomas pueden ampliar el plazo hasta un mes: comprobar si la comunidad lo ha hecho); después se requiere al adjudicatario para formalizar en un plazo no superior a cinco días. En los demás casos, como máximo quince días hábiles desde la notificación. Si la demora es imputable al adjudicatario: penalidad del 3 % del presupuesto base de licitación, IVA excluido. No puede ejecutarse el contrato antes de formalizarlo, salvo emergencia y contratos menores (art. 153.6).",
+    "r": "153",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "153"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "recursos": {
+    "s": "El recurso especial depende de objeto, VEC y acto.",
+    "d": "Para obras y concesiones, umbral de recurso especial superior a 3 millones de euros; suministros y servicios superior a 100.000 euros, entre otros supuestos. Comprobar art. 44 y régimen administrativo alternativo.",
+    "r": "44; 153",
+    "st": "Revisión por acto",
+    "t": "cond",
+    "tk": [
+     "44",
+     "153"
+    ],
+    "ct": "BOE",
+    "nt": null
+   }
+  },
+  "simplificado": {
+   "ambito": {
+    "s": "Obras: VEC ≤ 2.000.000 €; suministros y servicios: VEC inferior a 140.000 €.",
+    "d": "Además, criterios sujetos a juicio de valor no superiores al 25 % de la puntuación total, salvo prestaciones intelectuales, hasta 45 %. Los umbrales de suministros/servicios se vinculan al art. 22.1.a actualizado para 2026.",
+    "r": "159.1; 22.1.a; Orden HAC/1517/2025",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.1",
+     "22.1.a",
+     "Orden HAC/1517/2025"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "plazos": {
+    "s": "Mínimo 15 días naturales; obras: mínimo 20 días naturales.",
+    "d": "Contados desde el día siguiente a la publicación del anuncio de licitación en el perfil; días naturales (DA 12ª). La declaración de urgencia no reduce estos plazos (159.5), a diferencia del abierto ordinario (156.3.b).",
+    "r": "159.3; 159.5; DA 12ª",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.3",
+     "159.5",
+     "DA 12ª"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "publicidad": {
+    "s": "Solo anuncio de licitación en el perfil de contratante.",
+    "d": "La documentación necesaria para presentar la oferta debe estar disponible electrónicamente desde el día de publicación.",
+    "r": "159.2",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.2"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "solvencia": {
+    "s": "ROLECE o registro autonómico, con matices; solvencia según pliego.",
+    "d": "La inscripción o solicitud previa se rige por el art. 159.4.a; comprobar redacción vigente, condiciones y que no se limite la concurrencia. No confundir este requisito con la exención de acreditación del abreviado.",
+    "r": "159.4.a; 74–77",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.4.a",
+     "74",
+     "75",
+     "76",
+     "77"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "provisional": {
+    "s": "No se exige garantía provisional.",
+    "d": "Regla expresa para la modalidad simplificada.",
+    "r": "159.4.b",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.4.b"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "definitiva": {
+    "s": "Generalmente 5 % del precio final ofertado, sin IVA.",
+    "d": "La exención del art. 159.6.f solo corresponde al abreviado. Verificar base y excepciones del art. 107.",
+    "r": "107; 159.4.f",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "107",
+     "159.4.f"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "criterios": {
+    "s": "Un sobre si solo hay criterios automáticos; dos si hay juicio de valor.",
+    "d": "El art. 159.4.d diferencia el número de sobres o archivos electrónicos según la naturaleza de los criterios.",
+    "r": "159.4.d",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.4.d"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "mesa": {
+    "s": "Mesa de contratación obligatoria; puede tener composición específica simplificada.",
+    "d": "No confundir con el abreviado: la potestatividad de mesa del art. 326.1 se refiere solo al 159.6. El art. 326.6 considera válidamente constituida la mesa con presidente, secretario, un funcionario con asesoramiento jurídico y otro con control económico-presupuestario. En las entidades locales la composición se rige por la DA 2ª.7: preside un miembro de la Corporación o un funcionario; son vocales el Secretario (o la asesoría jurídica) y el Interventor (o control económico-presupuestario), más los que designe el órgano de contratación entre funcionarios de carrera, personal laboral o miembros electos, con un mínimo de tres en total y electos no más de un tercio; actúa de secretario un funcionario. No puede haber personal eventual, y los interinos solo si no hay funcionarios de carrera suficientemente cualificados y se acredita en el expediente. La composición se publica en el perfil (326.3).",
+    "r": "326.1; 326.6; 159.4; DA 2ª.7",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "326.1",
+     "326.6",
+     "159.4",
+     "DA 2ª.7"
+    ],
+    "ct": "BOE",
+    "nt": {
+     "texto": "Pendiente de validación jurídica: cómo se concilia la composición mínima de cuatro miembros del art. 326.6 con la DA 2ª.7 (mínimo tres, con posibles miembros electos) cuando contrata una entidad local.",
+     "base": "Arts. 326.1, 326.5, 326.6 y DA 2ª.7: contrastados en BOE. La conciliación entre ambos no está resuelta en la ley."
+    }
+   },
+   "valoracion": {
+    "s": "Apertura y valoración conforme al orden de criterios.",
+    "d": "Cuando existen juicios de valor, valoración previa a apertura de criterios automáticos; observar el plazo especial de valoración del art. 159.4.e.",
+    "r": "159.4.e–f",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.4.e",
+     "159.4.f"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "adjudicacion": {
+    "s": "Requerimiento al mejor clasificado: 7 días hábiles en el trámite previsto.",
+    "d": "Requerimiento de garantía definitiva, compromiso del art. 75.2 y medios del art. 76.2: siete días hábiles desde el envío (159.4.f). Si la oferta mejor puntuada parece anormalmente baja, la justificación se limita a cinco días hábiles. Adjudicación en plazo no superior a cinco días desde que se presenta la garantía definitiva, previa fiscalización del compromiso de gasto cuando proceda.",
+    "r": "159.4.f",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.4.f"
+    ],
+    "ct": "BOE",
+    "nt": {
+     "texto": "Pendiente de validación jurídica: el régimen local de fiscalización previa; el art. 159.4.f remite a la Ley 47/2003, que es la ley estatal.",
+     "base": "Art. 159.4.f: contrastado en BOE. Régimen local de control: pendiente."
+    }
+   },
+   "formalizacion": {
+    "s": "Formalización conforme a las reglas generales del art. 153.",
+    "d": "Si el contrato es susceptible de recurso especial (art. 44), no puede formalizarse antes de quince días hábiles desde la remisión de la notificación de la adjudicación (las comunidades autónomas pueden ampliar el plazo hasta un mes: comprobar si la comunidad lo ha hecho); después se requiere al adjudicatario para formalizar en un plazo no superior a cinco días. En los demás casos, como máximo quince días hábiles desde la notificación. Si la demora es imputable al adjudicatario: penalidad del 3 % del presupuesto base de licitación, IVA excluido. No puede ejecutarse el contrato antes de formalizarlo, salvo emergencia y contratos menores (art. 153.6). No aplicar automáticamente la aceptación de resolución propia del abreviado (159.6.g).",
+    "r": "153; 159.6.g",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "153",
+     "159.6.g"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "recursos": {
+    "s": "No asumir que por ser simplificado queda excluido el recurso especial.",
+    "d": "En obras (VEC hasta 2.000.000 €) no cabe recurso especial por cuantía, porque el umbral es superior a 3.000.000 €; en suministros y servicios solo cabe si el VEC es superior a 100.000 € (y, para ser simplificado, inferior a 140.000 €). Quedan otros supuestos del art. 44.1. No copiar un pie de recurso sin identificar acto, órgano y régimen.",
+    "r": "44",
+    "st": "Revisión por acto",
+    "t": "cond",
+    "tk": [
+     "44"
+    ],
+    "ct": "BOE",
+    "nt": null
+   }
+  },
+  "abreviado": {
+   "ambito": {
+    "s": "Obras: VEC < 80.000 €; suministros y servicios: VEC < 60.000 €.",
+    "d": "No se aplica a contratos cuyo objeto sean prestaciones de carácter intelectual. Son umbrales estrictamente inferiores, sin IVA.",
+    "r": "159.6",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.6"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "plazos": {
+    "s": "Mínimo 10 días hábiles; 5 para compras corrientes de bienes disponibles en el mercado.",
+    "d": "Desde el día siguiente a la publicación en el perfil. La excepción de cinco días hábiles solo es para compras corrientes de bienes disponibles en el mercado, no para cualquier suministro. La declaración de urgencia no reduce estos plazos (159.5).",
+    "r": "159.6.a; 159.5",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.6.a",
+     "159.5"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "publicidad": {
+    "s": "Anuncio en el perfil de contratante.",
+    "d": "Oferta y documentos disponibles electrónicamente según reglas del procedimiento.",
+    "r": "159.2; 159.6.a",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.2",
+     "159.6.a"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "solvencia": {
+    "s": "Exención de acreditar solvencia económica, financiera y técnica o profesional.",
+    "d": "La exención no elimina la capacidad de obrar ni las prohibiciones de contratar.",
+    "r": "159.6.b",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.6.b"
+    ],
+    "ct": "PARCIAL",
+    "nt": {
+     "texto": "El art. 159.6.b exime de acreditar la solvencia, pero el último párrafo del art. 159.6 remite al régimen del simplificado en lo no previsto, por lo que podría seguir exigiéndose la inscripción en el Registro de Licitadores (159.4.a). Es un punto discutible: validar con asesoramiento jurídico o con informes de las Juntas Consultivas.",
+     "base": "Arts. 159.4.a y 159.6: contrastados en BOE. La interpretación no está validada."
+    }
+   },
+   "provisional": {
+    "s": "No se exige garantía provisional.",
+    "d": "Regla del procedimiento simplificado aplicable al abreviado.",
+    "r": "159.4.b; 159.6",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.4.b",
+     "159.6"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "definitiva": {
+    "s": "No se requiere garantía definitiva.",
+    "d": "Exención expresa del art. 159.6.f.",
+    "r": "159.6.f",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.6.f"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "criterios": {
+    "s": "Un único sobre o archivo electrónico; solo criterios automáticos.",
+    "d": "Los criterios deben ser cuantificables mediante la mera aplicación de fórmulas previstas en pliegos.",
+    "r": "159.6.c",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.6.c"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "mesa": {
+    "s": "Mesa potestativa; si existe, comprobar composición y designación.",
+    "d": "La ley permite que no se constituya mesa (326.1). Si se constituye, se aplica su régimen: En las entidades locales la composición se rige por la DA 2ª.7: preside un miembro de la Corporación o un funcionario; son vocales el Secretario (o la asesoría jurídica) y el Interventor (o control económico-presupuestario), más los que designe el órgano de contratación entre funcionarios de carrera, personal laboral o miembros electos, con un mínimo de tres en total y electos no más de un tercio; actúa de secretario un funcionario. No puede haber personal eventual, y los interinos solo si no hay funcionarios de carrera suficientemente cualificados y se acredita en el expediente. La composición se publica en el perfil (326.3).",
+    "r": "326.1; 326.6; 159.6.d; DA 2ª.7",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "326.1",
+     "326.6",
+     "159.6.d",
+     "DA 2ª.7"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "valoracion": {
+    "s": "Valoración automática o con unidad técnica; sin acto público de apertura.",
+    "d": "Debe garantizarse que la apertura electrónica sea posterior al fin del plazo de presentación.",
+    "r": "159.6.d",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.6.d"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "adjudicacion": {
+    "s": "Requerimiento y adjudicación con las simplificaciones del 159.6; supletoriamente, las del simplificado.",
+    "d": "Se aplican las simplificaciones del apartado 6 (sin garantía definitiva, 159.6.f) y, en lo no previsto, el régimen del simplificado (159.4.f: documentación del compromiso del art. 75.2 y de los medios del art. 76.2 en siete días hábiles). Confirmar el trámite exacto con el asesoramiento jurídico de la entidad.",
+    "r": "159.6; 159.4.f; 150–151",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.6",
+     "150",
+     "151"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "formalizacion": {
+    "s": "Puede formalizarse mediante aceptación firmada de la resolución de adjudicación.",
+    "d": "Es una posibilidad legal específica, no una obligación universal.",
+    "r": "159.6.g",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "159.6.g"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "recursos": {
+    "s": "Por cuantía no cabe recurso especial; no hay pie de recurso único.",
+    "d": "El valor estimado del abreviado (inferior a 80.000 € en obras y a 60.000 € en suministros y servicios) queda por debajo de los umbrales del 44.1.a (3.000.000 € y 100.000 €). Se aplican los recursos de la Ley 39/2015 y la vía contencioso-administrativa (44.6). Revisar las excepciones del 44.1 (acuerdos marco, contratos administrativos especiales sin precio fijable, etc.). No copiar un pie de recurso.",
+    "r": "44; Ley 39/2015",
+    "st": "Revisión por acto",
+    "t": "cond",
+    "tk": [
+     "44",
+     "Ley 39/2015"
+    ],
+    "ct": "BOE",
+    "nt": null
+   }
+  },
+  "restringido": {
+   "ambito": {
+    "s": "Dos fases: solicitudes de participación e invitación a candidatos seleccionados.",
+    "d": "Cualquier interesado puede solicitar participar, pero solo presentan oferta los seleccionados. No se negocian los términos del contrato.",
+    "r": "160–162",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "160",
+     "161",
+     "162"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "plazos": {
+    "s": "Primero solicitudes de participación; después plazo de ofertas para invitados.",
+    "d": "Para SARA, solicitudes de participación generalmente 30 días desde envío del anuncio; ofertas generalmente 30 días desde invitación, con reducciones legales. No SARA: solicitudes mínimo 15 días desde publicación; ofertas mínimo 10 días desde invitación. Comprobar reglas exactas por objeto y circunstancias.",
+    "r": "161; 164",
+    "st": "Condicionado",
+    "t": "cond",
+    "tk": [
+     "161",
+     "164"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "publicidad": {
+    "s": "Anuncio inicial; después invitación a candidatos seleccionados.",
+    "d": "Si está sujeto a regulación armonizada, verificar DOUE y publicidad de perfil.",
+    "r": "135; 161–163",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "135",
+     "161",
+     "162",
+     "163"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "solvencia": {
+    "s": "Se comprueba capacidad y solvencia para seleccionar candidatos.",
+    "d": "Los criterios objetivos de solvencia se fijan antes del anuncio (162.1); se invita como mínimo a cinco candidatos, salvo que haya menos aptos (162.2); los criterios y el número de candidatos se indican en el anuncio (162.3); la invitación es simultánea y por escrito (162.4).",
+    "r": "162",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "162"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "provisional": {
+    "s": "Regla general: no se exige; excepción motivada.",
+    "d": "Se aplica régimen general de garantías provisionales.",
+    "r": "106",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "106"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "definitiva": {
+    "s": "Regla general: 5 % del precio final ofertado sin IVA.",
+    "d": "Comprobar excepciones y condiciones del pliego.",
+    "r": "107",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "107"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "criterios": {
+    "s": "Documentación de selección primero; ofertas de invitados después.",
+    "d": "La separación por fases es esencial. Los sobres concretos de oferta dependen de criterios de adjudicación.",
+    "r": "160–164; 145–146",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "160",
+     "161",
+     "162",
+     "163",
+     "164",
+     "145",
+     "146"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "mesa": {
+    "s": "Mesa de contratación obligatoria con carácter general.",
+    "d": "En las entidades locales la composición se rige por la DA 2ª.7: preside un miembro de la Corporación o un funcionario; son vocales el Secretario (o la asesoría jurídica) y el Interventor (o control económico-presupuestario), más los que designe el órgano de contratación entre funcionarios de carrera, personal laboral o miembros electos, con un mínimo de tres en total y electos no más de un tercio; actúa de secretario un funcionario. No puede haber personal eventual, y los interinos solo si no hay funcionarios de carrera suficientemente cualificados y se acredita en el expediente. La composición se publica en el perfil (326.3). En el restringido la mesa puede seleccionar candidatos si así se delega en el pliego (326.2.e).",
+    "r": "326.1; 326.2; DA 2ª.7",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "326.1",
+     "DA 2ª.7",
+     "326.2"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "valoracion": {
+    "s": "Primero selección de candidatos; después evaluación de ofertas.",
+    "d": "No confundir criterios de solvencia para selección con criterios de adjudicación.",
+    "r": "162–165",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "162",
+     "163",
+     "164",
+     "165"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "adjudicacion": {
+    "s": "Adjudicación tras valoración de ofertas de candidatos invitados.",
+    "d": "Requerimiento ordinario: diez días hábiles (150.2); si no se cumplimenta, se entiende retirada la oferta, se exige el 3 % del presupuesto base de licitación y se requiere al siguiente. Adjudicación en cinco días hábiles desde la recepción de la documentación (150.3). Plazo máximo desde la apertura: quince días si el único criterio es el precio; dos meses si hay varios criterios o se usa el menor coste del ciclo de vida, más quince días hábiles si hay trámite de anormalidad (158). Vencido el plazo, los licitadores pueden retirar su proposición. El art. 165 remite a las reglas del abierto, salvo la calificación previa de la documentación.",
+    "r": "150–151; 158; 165",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "150",
+     "151",
+     "165",
+     "158"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "formalizacion": {
+    "s": "Formalización según art. 153; revisar plazo de espera.",
+    "d": "Si el contrato es susceptible de recurso especial (art. 44), no puede formalizarse antes de quince días hábiles desde la remisión de la notificación de la adjudicación (las comunidades autónomas pueden ampliar el plazo hasta un mes: comprobar si la comunidad lo ha hecho); después se requiere al adjudicatario para formalizar en un plazo no superior a cinco días. En los demás casos, como máximo quince días hábiles desde la notificación. Si la demora es imputable al adjudicatario: penalidad del 3 % del presupuesto base de licitación, IVA excluido. No puede ejecutarse el contrato antes de formalizarlo, salvo emergencia y contratos menores (art. 153.6).",
+    "r": "153",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "153"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "recursos": {
+    "s": "Depende del acto, contrato y valor estimado.",
+    "d": "En la fase de selección pueden existir actos de trámite cualificados; no emplear texto genérico.",
+    "r": "44",
+    "st": "Revisión por acto",
+    "t": "cond",
+    "tk": [
+     "44"
+    ],
+    "ct": "BOE",
+    "nt": null
+   }
+  },
+  "negociado": {
+   "ambito": {
+    "s": "Solo cuando concurre una causa legal tasada del art. 168.",
+    "d": "Supuestos tasados (art. 168, Ley 31/2022): a) 1.º sin ofertas o solicitudes adecuadas en un abierto o restringido previo; 2.º empresario determinado (obra de arte única, razones técnicas, derechos exclusivos); 3.º contratos secretos o de seguridad; b) 1.º imperiosa urgencia por hechos imprevisibles y no imputables al órgano, que no pueda lograrse con la tramitación de urgencia del art. 119; 2.º ofertas irregulares o inaceptables en el supuesto del art. 167.e); c) suministros; d) servicios; e) repetición de obras o servicios. No existe negociado por razón de la cuantía. Documentar y justificar la causa concreta.",
+    "r": "168; 169–170",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "168",
+     "169",
+     "170"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "plazos": {
+    "s": "No hay un plazo único de ofertas válido para todos los supuestos.",
+    "d": "Los plazos se fijan según modalidad, invitaciones y circunstancias justificadas; revisar art. 170 y remisiones legales.",
+    "r": "169–170",
+    "st": "Condicionado",
+    "t": "cond",
+    "tk": [
+     "169",
+     "170"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "publicidad": {
+    "s": "Sin anuncio previo de licitación; no equivale a ausencia total de publicidad.",
+    "d": "Comprobar obligaciones de publicación del expediente, adjudicación y formalización. La causa de omisión del anuncio debe quedar acreditada.",
+    "r": "168; 170; 63; 154",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "168",
+     "170",
+     "63",
+     "154"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "solvencia": {
+    "s": "Exigir aptitud y solvencia según el objeto y el expediente.",
+    "d": "La negociación no suprime los requisitos de capacidad y solvencia.",
+    "r": "74–77; 169–170",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "74",
+     "75",
+     "76",
+     "77",
+     "169",
+     "170"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "provisional": {
+    "s": "Regla general: no se exige, salvo excepción justificada.",
+    "d": "Aplicar art. 106 si procede.",
+    "r": "106",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "106"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "definitiva": {
+    "s": "Regla general: 5 % del precio final ofertado sin IVA.",
+    "d": "Revisar excepciones y régimen del contrato.",
+    "r": "107",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "107"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "criterios": {
+    "s": "Se negocian los aspectos previstos en pliegos, dentro de límites legales.",
+    "d": "No se negocian requisitos mínimos ni criterios de adjudicación; documentar invitaciones y negociación. En ciertos supuestos puede haber un único candidato.",
+    "r": "169; 170",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "169",
+     "170"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "mesa": {
+    "s": "Generalmente potestativa; excepción legal en supuesto específico de urgencia.",
+    "d": "En negociado sin publicidad la mesa es potestativa, salvo el supuesto del art. 168.b).1.º, en el que es obligatoria.",
+    "r": "326.1",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "326.1"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "valoracion": {
+    "s": "Negociación documentada y evaluación conforme a los pliegos.",
+    "d": "La trazabilidad de las invitaciones, ofertas, negociaciones y decisión es esencial.",
+    "r": "169–170",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "169",
+     "170"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "adjudicacion": {
+    "s": "Resolución motivada tras comprobar la causa y el resultado de negociación.",
+    "d": "La ausencia de anuncio previo no elimina los requisitos de motivación y adjudicación.",
+    "r": "151; 168–170",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "151",
+     "168",
+     "169",
+     "170"
+    ],
+    "ct": "PARCIAL",
+    "nt": null
+   },
+   "formalizacion": {
+    "s": "Régimen general de formalización; verificar supuestos especiales.",
+    "d": "Si el contrato es susceptible de recurso especial (art. 44), no puede formalizarse antes de quince días hábiles desde la remisión de la notificación de la adjudicación (las comunidades autónomas pueden ampliar el plazo hasta un mes: comprobar si la comunidad lo ha hecho); después se requiere al adjudicatario para formalizar en un plazo no superior a cinco días. En los demás casos, como máximo quince días hábiles desde la notificación. Si la demora es imputable al adjudicatario: penalidad del 3 % del presupuesto base de licitación, IVA excluido. No puede ejecutarse el contrato antes de formalizarlo, salvo emergencia y contratos menores (art. 153.6).",
+    "r": "153",
+    "st": "Norma general",
+    "t": "legal",
+    "tk": [
+     "153"
+    ],
+    "ct": "BOE",
+    "nt": null
+   },
+   "recursos": {
+    "s": "Puede haber recurso especial, según acto y contrato.",
+    "d": "No presumir ausencia de recursos por falta de anuncio previo.",
+    "r": "44",
+    "st": "Revisión por acto",
+    "t": "cond",
+    "tk": [
+     "44"
+    ],
+    "ct": "BOE",
+    "nt": null
+   }
+  }
+ },
+ "fases": {
+  "abierto": [
+   {
+    "id": "rec",
+    "n": "Recepción"
+   },
+   {
+    "id": "prep",
+    "n": "Preparación"
+   },
+   {
+    "id": "lic",
+    "n": "Licitación"
+   },
+   {
+    "id": "val",
+    "n": "Valoración"
+   },
+   {
+    "id": "adj",
+    "n": "Adjudicación"
+   },
+   {
+    "id": "for",
+    "n": "Formalización"
+   }
+  ],
+  "simplificado": [
+   {
+    "id": "rec",
+    "n": "Recepción"
+   },
+   {
+    "id": "prep",
+    "n": "Preparación"
+   },
+   {
+    "id": "lic",
+    "n": "Licitación"
+   },
+   {
+    "id": "val",
+    "n": "Valoración"
+   },
+   {
+    "id": "adj",
+    "n": "Adjudicación"
+   },
+   {
+    "id": "for",
+    "n": "Formalización"
+   }
+  ],
+  "abreviado": [
+   {
+    "id": "rec",
+    "n": "Recepción"
+   },
+   {
+    "id": "prep",
+    "n": "Preparación"
+   },
+   {
+    "id": "lic",
+    "n": "Licitación"
+   },
+   {
+    "id": "val",
+    "n": "Valoración"
+   },
+   {
+    "id": "adj",
+    "n": "Adjudicación"
+   },
+   {
+    "id": "for",
+    "n": "Formalización"
+   }
+  ],
+  "restringido": [
+   {
+    "id": "rec",
+    "n": "Recepción"
+   },
+   {
+    "id": "prep",
+    "n": "Preparación"
+   },
+   {
+    "id": "lic",
+    "n": "Licitación (solicitudes de participación)"
+   },
+   {
+    "id": "val",
+    "n": "Selección y valoración"
+   },
+   {
+    "id": "adj",
+    "n": "Adjudicación"
+   },
+   {
+    "id": "for",
+    "n": "Formalización"
+   }
+  ],
+  "negociado": [
+   {
+    "id": "rec",
+    "n": "Recepción"
+   },
+   {
+    "id": "prep",
+    "n": "Preparación"
+   },
+   {
+    "id": "lic",
+    "n": "Invitación"
+   },
+   {
+    "id": "val",
+    "n": "Negociación y valoración"
+   },
+   {
+    "id": "adj",
+    "n": "Adjudicación"
+   },
+   {
+    "id": "for",
+    "n": "Formalización"
+   }
+  ],
+  "menor": [
+   {
+    "id": "rec",
+    "n": "Recepción"
+   },
+   {
+    "id": "prep",
+    "n": "Preparación"
+   },
+   {
+    "id": "adj",
+    "n": "Adjudicación"
+   },
+   {
+    "id": "acr",
+    "n": "Acreditación y publicación",
+    "nota": "En el contrato menor no hay formalización: la existencia del contrato se acredita con los documentos del art. 118 (art. 153.2)."
+   }
+  ]
+ },
+ "docs": [
+  {
+   "id": "simplificado-1",
+   "p": "simplificado",
+   "f": "rec",
+   "c": 1,
+   "n": "Solicitud o memoria de la unidad promotora y documentación que la acompaña (modelo propio de cada entidad)",
+   "q": "Unidad promotora",
+   "t": "local",
+   "fn": "Es la documentación con la que el servicio de contratación de la entidad inicia su intervención.",
+   "ck": "Cada entidad define el modelo y contenido de su solicitud o memoria y de los documentos que deben acompañarla. Aquí no se presume ningún contenido.",
+   "fu": [],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "tk": []
+  },
+  {
+   "id": "simplificado-2",
+   "p": "simplificado",
+   "f": "rec",
+   "c": 1,
+   "n": "Justificación de la necesidad y del procedimiento elegido",
+   "q": "Unidad promotora / órgano de contratación",
+   "t": "legal",
+   "fn": "Motiva el contrato y la elección del procedimiento y de los criterios.",
+   "ck": "Que el valor estimado cabe en el simplificado (obras hasta 2.000.000 €; suministros y servicios por debajo de 140.000 €) y que los criterios sujetos a juicio de valor no superan el 25 % de la puntuación (45 % si son prestaciones de carácter intelectual).",
+   "fu": [
+    "116",
+    "159.1"
+   ],
+   "tk": [
+    "116",
+    "159.1"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "simplificado-3",
+   "p": "simplificado",
+   "f": "rec",
+   "c": 1,
+   "n": "Pliego de cláusulas administrativas particulares, con modelo de oferta como anexo",
+   "q": "Unidad promotora",
+   "t": "legal",
+   "fn": "Fija las condiciones de la licitación y el modelo de oferta que debe presentar el licitador.",
+   "ck": "Que el anexo contenga el modelo de oferta con la declaración responsable (representación, solvencia o clasificación, autorizaciones, ausencia de prohibición de contratar y compromiso del art. 75.2) y que fije si la oferta va en uno o dos archivos según haya o no criterios de juicio de valor.",
+   "fu": [
+    "122",
+    "159.4.c",
+    "159.4.d"
+   ],
+   "tk": [
+    "122",
+    "159.4.c",
+    "159.4.d"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "simplificado-4",
+   "p": "simplificado",
+   "f": "rec",
+   "c": 1,
+   "n": "Pliego de prescripciones técnicas",
+   "q": "Unidad promotora",
+   "t": "legal",
+   "fn": "Define técnicamente la prestación.",
+   "ck": "Que figure en el expediente. El contenido técnico corresponde a la unidad promotora.",
+   "fu": [
+    "124"
+   ],
+   "tk": [
+    "124"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "simplificado-5",
+   "p": "simplificado",
+   "f": "rec",
+   "c": 1,
+   "n": "Informe jurídico del Secretario (o de la asesoría jurídica)",
+   "q": "Secretaría o asesoría jurídica",
+   "t": "legal",
+   "fn": "Informe previo a la aprobación del expediente de contratación en las entidades locales.",
+   "ck": "Que conste antes de la aprobación del expediente. Alcance y momento exactos: pendiente de validación jurídica.",
+   "fu": [
+    "DA 3ª"
+   ],
+   "ver": "SEC",
+   "tk": [
+    "DA 3ª"
+   ]
+  },
+  {
+   "id": "simplificado-6",
+   "p": "simplificado",
+   "f": "rec",
+   "c": 1,
+   "n": "Documentos contables y de fiscalización previa",
+   "q": "Intervención",
+   "t": "local",
+   "fn": "Acreditan la existencia de crédito y el control del gasto.",
+   "ck": "Qué documentos contables y de fiscalización exige cada entidad local y en qué momento depende de su régimen interno y de la normativa aplicable.",
+   "fu": [
+    "DA 3ª"
+   ],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "tk": [
+    "DA 3ª"
+   ]
+  },
+  {
+   "id": "simplificado-7",
+   "p": "simplificado",
+   "f": "prep",
+   "c": 1,
+   "n": "Acuerdo de aprobación del expediente y del gasto",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Aprueba el expediente de contratación y autoriza el gasto.",
+   "ck": "Que lo adopta el órgano competente (compruebe las delegaciones de competencias vigentes en su entidad) y que aprueba expediente y gasto.",
+   "fu": [
+    "117"
+   ],
+   "tk": [
+    "117"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "simplificado-8",
+   "p": "simplificado",
+   "f": "prep",
+   "c": 1,
+   "n": "Composición de la mesa de contratación",
+   "q": "Órgano de contratación (nombra)",
+   "t": "legal",
+   "fn": "Determina quién forma la mesa que abrirá y evaluará las ofertas.",
+   "ck": "Que está publicada en el perfil de contratante y que reúne al menos presidente, secretario, un funcionario de asesoramiento jurídico y uno de control económico-presupuestario (art. 326.6). El contraste con la DA 2ª.7 (entidades locales) está pendiente de validar.",
+   "fu": [
+    "326.3",
+    "326.6",
+    "DA 2ª.7"
+   ],
+   "tk": [
+    "326.3",
+    "326.6",
+    "DA 2ª.7"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "simplificado-9",
+   "p": "simplificado",
+   "f": "lic",
+   "c": 2,
+   "n": "Anuncio de licitación en el perfil de contratante",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Abre el plazo de presentación de ofertas.",
+   "ck": "Que toda la documentación necesaria para ofertar esté disponible electrónicamente desde el día de publicación y que el plazo sea de al menos 15 días naturales (20 en obras) desde el día siguiente a la publicación. La urgencia no reduce el plazo.",
+   "fu": [
+    "159.2",
+    "159.3",
+    "159.5"
+   ],
+   "tk": [
+    "159.2",
+    "159.3",
+    "159.5"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-10",
+   "p": "simplificado",
+   "f": "lic",
+   "c": 2,
+   "n": "Oferta del licitador con declaración responsable",
+   "q": "Licitador",
+   "t": "legal",
+   "fn": "Contiene la proposición y la declaración responsable del firmante.",
+   "ck": "Que la presenta el licitador únicamente en el registro indicado en el anuncio y que la declaración cubre representación, solvencia o clasificación, autorizaciones, ausencia de prohibición de contratar y pronunciamiento sobre el compromiso del art. 75.2.",
+   "fu": [
+    "159.4.c"
+   ],
+   "tk": [
+    "159.4.c"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-11",
+   "p": "simplificado",
+   "f": "lic",
+   "c": 2,
+   "n": "Acreditación de inscripción en el Registro Oficial de Licitadores (o solicitud con acuse)",
+   "q": "Licitador",
+   "t": "legal",
+   "fn": "Acredita la inscripción exigida a todos los licitadores del simplificado.",
+   "ck": "Inscripción a la fecha final de presentación de ofertas o, si no, solicitud anterior a esa fecha con acuse de recibo y declaración responsable de haber aportado la documentación y de no haber recibido requerimiento de subsanación.",
+   "fu": [
+    "159.4.a"
+   ],
+   "tk": [
+    "159.4.a"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-12",
+   "p": "simplificado",
+   "f": "lic",
+   "c": 2,
+   "n": "Compromiso de constitución de UTE / sometimiento al fuero español",
+   "q": "Licitador",
+   "t": "cond",
+   "fn": "Documentos adicionales según la naturaleza del licitador.",
+   "ck": "Solo si la oferta la presenta una unión temporal de empresarios (compromiso de constitución) o una empresa extranjera (declaración de sometimiento al fuero español).",
+   "fu": [
+    "159.4.c"
+   ],
+   "tk": [
+    "159.4.c"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-13",
+   "p": "simplificado",
+   "f": "lic",
+   "c": 2,
+   "n": "Archivo o archivos electrónicos de la oferta",
+   "q": "Licitador",
+   "t": "cond",
+   "fn": "Estructura formal de la proposición.",
+   "ck": "Un archivo si no hay criterios cuya cuantificación dependa de un juicio de valor; dos si los hay.",
+   "fu": [
+    "159.4.d"
+   ],
+   "tk": [
+    "159.4.d"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-14",
+   "p": "simplificado",
+   "f": "val",
+   "c": 3,
+   "n": "Informe de valoración de los criterios de juicio de valor",
+   "q": "Servicios técnicos del órgano de contratación",
+   "t": "cond",
+   "fn": "Valora las ofertas en lo que no es automático.",
+   "ck": "Solo si hay criterios de juicio de valor: emitido en un plazo no superior a siete días, suscrito por el técnico o técnicos que valoran y anterior a la apertura del archivo de criterios por fórmula.",
+   "fu": [
+    "159.4.e",
+    "159.4.f"
+   ],
+   "tk": [
+    "159.4.e",
+    "159.4.f"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-15",
+   "p": "simplificado",
+   "f": "val",
+   "c": 3,
+   "n": "Actuación de la mesa: apertura, evaluación, clasificación y propuesta",
+   "q": "Mesa de contratación",
+   "t": "legal",
+   "fn": "Recoge el resultado de la apertura de las ofertas y la propuesta de adjudicación.",
+   "ck": "Que tras la apertura, y en la misma sesión, la mesa excluye las ofertas que no cumplen los pliegos, evalúa y clasifica, y propone la adjudicación al candidato con mejor puntuación.",
+   "fu": [
+    "159.4.d",
+    "159.4.f",
+    "326.2"
+   ],
+   "tk": [
+    "159.4.d",
+    "159.4.f",
+    "326.2"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-16",
+   "p": "simplificado",
+   "f": "val",
+   "c": 3,
+   "n": "Comprobación en el Registro Oficial de Licitadores",
+   "q": "Mesa de contratación",
+   "t": "legal",
+   "fn": "Verifica la aptitud del licitador propuesto.",
+   "ck": "Que consta la comprobación de constitución de la empresa, poder del firmante, solvencia o clasificación y ausencia de prohibición de contratar. Si el licitador invocó solicitud de inscripción, la mesa le requiere justificación documental de esos extremos.",
+   "fu": [
+    "159.4.f"
+   ],
+   "tk": [
+    "159.4.f"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-17",
+   "p": "simplificado",
+   "f": "val",
+   "c": 3,
+   "n": "Justificación de oferta anormalmente baja",
+   "q": "Licitador / mesa",
+   "t": "cond",
+   "fn": "Permite al licitador justificar su oferta cuando parece anormalmente baja.",
+   "ck": "Solo si la oferta mejor puntuada se presume anormalmente baja: el plazo máximo de justificación es de cinco días hábiles desde la comunicación.",
+   "fu": [
+    "149",
+    "159.4.f"
+   ],
+   "tk": [
+    "149",
+    "159.4.f"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "simplificado-18",
+   "p": "simplificado",
+   "f": "adj",
+   "c": 3,
+   "n": "Requerimiento electrónico al mejor clasificado",
+   "q": "Mesa de contratación",
+   "t": "legal",
+   "fn": "Pide al propuesto la garantía y la documentación pendiente.",
+   "ck": "Que se envía por comunicación electrónica y concede siete días hábiles desde el envío para constituir la garantía definitiva, aportar el compromiso del art. 75.2 y justificar los medios del art. 76.2, así como cualquier documentación no inscrita en el Registro.",
+   "fu": [
+    "159.4.f"
+   ],
+   "tk": [
+    "159.4.f"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-19",
+   "p": "simplificado",
+   "f": "adj",
+   "c": 3,
+   "n": "Garantía definitiva",
+   "q": "Adjudicatario propuesto",
+   "t": "cond",
+   "fn": "Responde del cumplimiento del contrato.",
+   "ck": "Generalmente el 5 % del precio final ofertado, sin IVA. El órgano de contratación puede eximirla justificándolo en el pliego, salvo en obras. Si no se presenta en plazo, se propone al siguiente candidato.",
+   "fu": [
+    "107.1",
+    "159.4.f"
+   ],
+   "tk": [
+    "107.1",
+    "159.4.f"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-20",
+   "p": "simplificado",
+   "f": "adj",
+   "c": 3,
+   "n": "Fiscalización del compromiso de gasto",
+   "q": "Intervención",
+   "t": "local",
+   "fn": "Control previo del compromiso de gasto cuando proceda.",
+   "ck": "El art. 159.4.f lo prevé cuando sea preceptiva y remite a la Ley 47/2003 (estatal). El régimen local de fiscalización previa debe confirmarse con la Intervención de la entidad.",
+   "fu": [
+    "159.4.f"
+   ],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "tk": [
+    "159.4.f"
+   ]
+  },
+  {
+   "id": "simplificado-21",
+   "p": "simplificado",
+   "f": "adj",
+   "c": 3,
+   "n": "Resolución de adjudicación",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Adjudica el contrato al licitador propuesto.",
+   "ck": "Que se dicta en un plazo no superior a cinco días desde que se presentó la garantía definitiva. Motivación y notificación: art. 151 (no releído en esta revisión).",
+   "fu": [
+    "159.4.f",
+    "151"
+   ],
+   "tk": [
+    "159.4.f",
+    "151"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "simplificado-22",
+   "p": "simplificado",
+   "f": "for",
+   "c": 3,
+   "n": "Documento de formalización",
+   "q": "Órgano de contratación y adjudicatario",
+   "t": "legal",
+   "fn": "Formaliza el contrato.",
+   "ck": "Que se ajusta con exactitud a las condiciones de la licitación y no incluye cláusulas que alteren la adjudicación. Plazos: con recurso especial, no antes de 15 días hábiles desde la notificación y requerimiento de 5 días; sin él, como máximo 15 días hábiles desde la notificación.",
+   "fu": [
+    "153.1",
+    "153.3"
+   ],
+   "tk": [
+    "153.1",
+    "153.3"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "simplificado-23",
+   "p": "simplificado",
+   "f": "for",
+   "c": 3,
+   "n": "Anuncio de formalización",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Da publicidad a la formalización del contrato.",
+   "ck": "Pendiente de contraste: régimen y plazos del art. 154 (no releído en esta revisión).",
+   "fu": [
+    "154"
+   ],
+   "tk": [
+    "154"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "abreviado-24",
+   "p": "abreviado",
+   "f": "rec",
+   "c": 1,
+   "n": "Solicitud o memoria de la unidad promotora y documentación que la acompaña (modelo propio de cada entidad)",
+   "q": "Unidad promotora",
+   "t": "local",
+   "fn": "Es la documentación con la que el servicio de contratación de la entidad inicia su intervención.",
+   "ck": "Cada entidad define el modelo y contenido de su solicitud o memoria y de los documentos que deben acompañarla. Aquí no se presume ningún contenido.",
+   "fu": [],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "demo": true,
+   "tk": []
+  },
+  {
+   "id": "abreviado-25",
+   "p": "abreviado",
+   "f": "rec",
+   "c": 1,
+   "n": "Pliego con criterios solo cuantificables por fórmula",
+   "q": "Unidad promotora",
+   "t": "legal",
+   "fn": "Fija las condiciones y los criterios automáticos.",
+   "ck": "Que todos los criterios de adjudicación son cuantificables mediante la mera aplicación de fórmulas y que el contrato no tiene por objeto prestaciones de carácter intelectual. Valor estimado inferior a 80.000 € (obras) o 60.000 € (suministros y servicios).",
+   "fu": [
+    "159.6.c",
+    "159.6"
+   ],
+   "demo": true,
+   "tk": [
+    "159.6.c",
+    "159.6"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abreviado-26",
+   "p": "abreviado",
+   "f": "prep",
+   "c": 1,
+   "n": "Decisión sobre la constitución de la mesa",
+   "q": "Órgano de contratación",
+   "t": "cond",
+   "fn": "En el abreviado la mesa es potestativa.",
+   "ck": "Si se constituye mesa, su composición. Si no, qué unidad o persona formula la propuesta: depende de la organización de cada entidad (la ley permite la valoración automática o con unidad técnica).",
+   "fu": [
+    "326.1",
+    "159.6",
+    "DA 2ª.7"
+   ],
+   "demo": true,
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "tk": [
+    "326.1",
+    "159.6",
+    "DA 2ª.7"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "abreviado-27",
+   "p": "abreviado",
+   "f": "lic",
+   "c": 2,
+   "n": "Anuncio en el perfil de contratante",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Abre el plazo de ofertas.",
+   "ck": "Plazo de al menos diez días hábiles desde el día siguiente a la publicación (cinco días hábiles en compras corrientes de bienes disponibles en el mercado). Documentación disponible electrónicamente desde ese día.",
+   "fu": [
+    "159.6",
+    "159.2"
+   ],
+   "demo": true,
+   "tk": [
+    "159.6",
+    "159.2"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abreviado-28",
+   "p": "abreviado",
+   "f": "lic",
+   "c": 2,
+   "n": "Oferta única con declaración responsable",
+   "q": "Licitador",
+   "t": "legal",
+   "fn": "Proposición del licitador en un solo archivo.",
+   "ck": "Un único sobre o archivo electrónico; no se exige acreditar solvencia económica y financiera ni técnica o profesional. Inscripción en el Registro de Licitadores: pendiente de validar si sigue exigible.",
+   "fu": [
+    "159.6",
+    "159.4.c",
+    "159.4.a"
+   ],
+   "demo": true,
+   "tk": [
+    "159.6",
+    "159.4.c",
+    "159.4.a"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abreviado-29",
+   "p": "abreviado",
+   "f": "val",
+   "c": 3,
+   "n": "Valoración automática o por unidad técnica",
+   "q": "Dispositivo informático / unidad técnica",
+   "t": "cond",
+   "fn": "Valora las ofertas sin acto público.",
+   "ck": "Que un dispositivo electrónico garantiza que la apertura no se hace antes de terminar el plazo de presentación. Cómo lo garantiza la plataforma de licitación electrónica utilizada: debe verificarse en cada entidad.",
+   "fu": [
+    "159.6"
+   ],
+   "demo": true,
+   "tk": [
+    "159.6"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abreviado-30",
+   "p": "abreviado",
+   "f": "val",
+   "c": 3,
+   "n": "Acceso abierto a ofertas y documentación de valoración",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Transparencia posterior a la adjudicación.",
+   "ck": "Que las ofertas y la documentación de valoración son accesibles por medios informáticos desde la notificación de la adjudicación.",
+   "fu": [
+    "159.6"
+   ],
+   "demo": true,
+   "tk": [
+    "159.6"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abreviado-31",
+   "p": "abreviado",
+   "f": "adj",
+   "c": 3,
+   "n": "Resolución de adjudicación",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Adjudica el contrato.",
+   "ck": "No se requiere garantía definitiva. En lo no previsto, se aplica el régimen general del simplificado.",
+   "fu": [
+    "159.6",
+    "150.3"
+   ],
+   "demo": true,
+   "tk": [
+    "159.6",
+    "150.3"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abreviado-32",
+   "p": "abreviado",
+   "f": "for",
+   "c": 3,
+   "n": "Aceptación firmada de la resolución de adjudicación",
+   "q": "Contratista",
+   "t": "cond",
+   "fn": "Puede sustituir al documento de formalización.",
+   "ck": "Es una posibilidad legal, no una obligación: la formalización «podrá efectuarse» mediante la firma de aceptación de la resolución de adjudicación.",
+   "fu": [
+    "159.6"
+   ],
+   "demo": true,
+   "tk": [
+    "159.6"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abierto-33",
+   "p": "abierto",
+   "f": "rec",
+   "c": 1,
+   "n": "Solicitud o memoria de la unidad promotora y documentación que la acompaña (modelo propio de cada entidad)",
+   "q": "Unidad promotora",
+   "t": "local",
+   "fn": "Es la documentación con la que el servicio de contratación de la entidad inicia su intervención.",
+   "ck": "Cada entidad define el modelo y contenido de su solicitud o memoria y de los documentos que deben acompañarla. Aquí no se presume ningún contenido.",
+   "fu": [],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "demo": true,
+   "tk": []
+  },
+  {
+   "id": "abierto-34",
+   "p": "abierto",
+   "f": "rec",
+   "c": 1,
+   "n": "Pliegos de cláusulas administrativas y de prescripciones técnicas",
+   "q": "Unidad promotora",
+   "t": "legal",
+   "fn": "Fijan las condiciones jurídicas y técnicas de la licitación.",
+   "ck": "Que figuran ambos en el expediente y que los criterios de adjudicación y su ponderación constan en el pliego administrativo.",
+   "fu": [
+    "122",
+    "124",
+    "145"
+   ],
+   "demo": true,
+   "tk": [
+    "122",
+    "124",
+    "145"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "abierto-35",
+   "p": "abierto",
+   "f": "prep",
+   "c": 1,
+   "n": "Composición de la mesa de contratación",
+   "q": "Órgano de contratación (nombra)",
+   "t": "legal",
+   "fn": "Mesa obligatoria en el abierto.",
+   "ck": "Que está publicada en el perfil de contratante. Composición exigible en entidades locales: DA 2ª.7 y art. 326 (conciliación pendiente de validación jurídica).",
+   "fu": [
+    "326.1",
+    "326.3",
+    "DA 2ª.7"
+   ],
+   "demo": true,
+   "tk": [
+    "326.1",
+    "326.3",
+    "DA 2ª.7"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "abierto-36",
+   "p": "abierto",
+   "f": "lic",
+   "c": 2,
+   "n": "Anuncio de licitación",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Abre el plazo de proposiciones.",
+   "ck": "No SARA: al menos 15 días desde el día siguiente a la publicación en el perfil (26 en obras y concesiones). SARA: 35 días (30 en concesiones) desde el envío del anuncio a la UE, con las reducciones del art. 156.3. El anuncio debe estar en el perfil con antelación mínima igual al plazo.",
+   "fu": [
+    "156.2",
+    "156.6"
+   ],
+   "demo": true,
+   "tk": [
+    "156.2",
+    "156.6"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abierto-37",
+   "p": "abierto",
+   "f": "lic",
+   "c": 2,
+   "n": "Archivo de documentación (art. 140)",
+   "q": "Licitador",
+   "t": "legal",
+   "fn": "Declaración responsable de cumplimiento de los requisitos previos.",
+   "ck": "Que se presenta en un sobre o archivo distinto al de la proposición. Contenido exacto de la declaración: art. 140 (no releído en esta revisión).",
+   "fu": [
+    "157.1",
+    "140"
+   ],
+   "demo": true,
+   "tk": [
+    "157.1",
+    "140"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "abierto-38",
+   "p": "abierto",
+   "f": "val",
+   "c": 3,
+   "n": "Calificación de la documentación y subsanación",
+   "q": "Mesa de contratación",
+   "t": "legal",
+   "fn": "La mesa califica la documentación antes de abrir las proposiciones.",
+   "ck": "Que la mesa califica la documentación del art. 140 y, en su caso, concede trámite de subsanación antes de excluir.",
+   "fu": [
+    "157.1",
+    "326.2"
+   ],
+   "demo": true,
+   "tk": [
+    "157.1",
+    "326.2"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abierto-39",
+   "p": "abierto",
+   "f": "val",
+   "c": 3,
+   "n": "Apertura de proposiciones y propuesta de adjudicación",
+   "q": "Mesa de contratación",
+   "t": "legal",
+   "fn": "Abre las ofertas y propone la adjudicación.",
+   "ck": "Apertura como máximo veinte días después del fin del plazo de presentación; oferta económica en acto público salvo medios electrónicos; la propuesta no crea derechos y el órgano debe motivar si se aparta de ella.",
+   "fu": [
+    "157.3",
+    "157.4",
+    "157.1"
+   ],
+   "demo": true,
+   "tk": [
+    "157.3",
+    "157.4",
+    "157.1"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abierto-40",
+   "p": "abierto",
+   "f": "adj",
+   "c": 3,
+   "n": "Requerimiento al mejor clasificado",
+   "q": "Servicios del órgano de contratación",
+   "t": "legal",
+   "fn": "Pide la documentación y la garantía definitiva.",
+   "ck": "Diez días hábiles desde el siguiente a la recepción del requerimiento; si no se cumplimenta, se entiende retirada la oferta y se exige el 3 % del presupuesto base de licitación.",
+   "fu": [
+    "150.2"
+   ],
+   "demo": true,
+   "tk": [
+    "150.2"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "abierto-41",
+   "p": "abierto",
+   "f": "adj",
+   "c": 3,
+   "n": "Resolución de adjudicación",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Adjudica el contrato.",
+   "ck": "Cinco días hábiles desde la recepción de la documentación; plazos máximos desde la apertura: 15 días si el único criterio es el precio, dos meses si hay varios criterios.",
+   "fu": [
+    "150.3",
+    "158.1",
+    "151"
+   ],
+   "demo": true,
+   "tk": [
+    "150.3",
+    "158.1",
+    "151"
+   ],
+   "ver": "PARCIAL"
+  },
+  {
+   "id": "abierto-42",
+   "p": "abierto",
+   "f": "for",
+   "c": 3,
+   "n": "Documento de formalización",
+   "q": "Órgano de contratación y adjudicatario",
+   "t": "legal",
+   "fn": "Formaliza el contrato.",
+   "ck": "Plazos del art. 153.3 según sea o no susceptible de recurso especial. Recurso especial por cuantía: obras por encima de 3.000.000 € y suministros y servicios por encima de 100.000 €.",
+   "fu": [
+    "153.3",
+    "44.1.a"
+   ],
+   "demo": true,
+   "tk": [
+    "153.3",
+    "44.1.a"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "restringido-43",
+   "p": "restringido",
+   "f": "rec",
+   "c": 1,
+   "n": "Solicitud o memoria de la unidad promotora y documentación que la acompaña (modelo propio de cada entidad)",
+   "q": "Unidad promotora",
+   "t": "local",
+   "fn": "Es la documentación con la que el servicio de contratación de la entidad inicia su intervención.",
+   "ck": "Cada entidad define el modelo y contenido de su solicitud o memoria y de los documentos que deben acompañarla. Aquí no se presume ningún contenido.",
+   "fu": [],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "demo": true,
+   "tk": []
+  },
+  {
+   "id": "restringido-44",
+   "p": "restringido",
+   "f": "rec",
+   "c": 1,
+   "n": "Criterios objetivos de solvencia para seleccionar candidatos",
+   "q": "Unidad promotora",
+   "t": "legal",
+   "fn": "Deben estar fijados antes del anuncio.",
+   "ck": "Que figuran los criterios objetivos de solvencia con los que se elegirá a los candidatos y el número mínimo (no inferior a cinco) y, en su caso, máximo de invitados.",
+   "fu": [
+    "162"
+   ],
+   "demo": true,
+   "tk": [
+    "162"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "restringido-45",
+   "p": "restringido",
+   "f": "lic",
+   "c": 2,
+   "n": "Anuncio y solicitudes de participación",
+   "q": "Órgano de contratación / empresas",
+   "t": "legal",
+   "fn": "Abre la primera fase.",
+   "ck": "No SARA: plazo mínimo de quince días desde la publicación. Las solicitudes llevan la documentación del art. 140, salvo la garantía provisional.",
+   "fu": [
+    "161.3",
+    "161"
+   ],
+   "demo": true,
+   "tk": [
+    "161.3",
+    "161"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "restringido-46",
+   "p": "restringido",
+   "f": "val",
+   "c": 3,
+   "n": "Selección de candidatos",
+   "q": "Órgano de contratación (o mesa si se delega en el pliego)",
+   "t": "legal",
+   "fn": "Elige a quiénes se invitará.",
+   "ck": "Que se comprueban personalidad y solvencia, que se respeta el número mínimo salvo que haya menos candidatos aptos, y que se invita a la vez y por escrito.",
+   "fu": [
+    "162",
+    "326.2"
+   ],
+   "demo": true,
+   "tk": [
+    "162",
+    "326.2"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "restringido-47",
+   "p": "restringido",
+   "f": "val",
+   "c": 3,
+   "n": "Invitación a los candidatos y proposiciones",
+   "q": "Órgano de contratación / candidatos",
+   "t": "legal",
+   "fn": "Segunda fase: ofertas de los seleccionados.",
+   "ck": "No SARA: plazo mínimo de diez días desde el envío de la invitación. Contenido de la invitación: art. 163.",
+   "fu": [
+    "163",
+    "164.2"
+   ],
+   "demo": true,
+   "tk": [
+    "163",
+    "164.2"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "restringido-48",
+   "p": "restringido",
+   "f": "adj",
+   "c": 3,
+   "n": "Adjudicación",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Rige el régimen del abierto.",
+   "ck": "Se aplican las reglas del abierto, salvo la calificación previa de la documentación del art. 140 (ya realizada con la solicitud).",
+   "fu": [
+    "165"
+   ],
+   "demo": true,
+   "tk": [
+    "165"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "negociado-49",
+   "p": "negociado",
+   "f": "rec",
+   "c": 1,
+   "n": "Solicitud o memoria de la unidad promotora y documentación que la acompaña (modelo propio de cada entidad)",
+   "q": "Unidad promotora",
+   "t": "local",
+   "fn": "Es la documentación con la que el servicio de contratación de la entidad inicia su intervención.",
+   "ck": "Cada entidad define el modelo y contenido de su solicitud o memoria y de los documentos que deben acompañarla. Aquí no se presume ningún contenido.",
+   "fu": [],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "demo": true,
+   "tk": []
+  },
+  {
+   "id": "negociado-50",
+   "p": "negociado",
+   "f": "rec",
+   "c": 1,
+   "n": "Informe que acredita el supuesto del art. 168",
+   "q": "Unidad promotora / órgano de contratación",
+   "t": "legal",
+   "fn": "Justifica por qué se utiliza este procedimiento.",
+   "ck": "Que identifica el supuesto concreto del art. 168 (letra y número) y acredita sus requisitos. No existe negociado por razón de la cuantía.",
+   "fu": [
+    "168",
+    "170"
+   ],
+   "demo": true,
+   "tk": [
+    "168",
+    "170"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "negociado-51",
+   "p": "negociado",
+   "f": "prep",
+   "c": 1,
+   "n": "Pliego con los aspectos a negociar",
+   "q": "Unidad promotora",
+   "t": "pliegos",
+   "fn": "Fija qué se negocia y cómo.",
+   "ck": "Que determina los aspectos económicos y técnicos objeto de negociación, los requisitos mínimos, el procedimiento de negociación y los criterios de adjudicación.",
+   "fu": [
+    "166"
+   ],
+   "demo": true,
+   "tk": [
+    "166"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "negociado-52",
+   "p": "negociado",
+   "f": "prep",
+   "c": 1,
+   "n": "Decisión sobre la constitución de la mesa",
+   "q": "Órgano de contratación",
+   "t": "cond",
+   "fn": "La mesa es potestativa, salvo urgencia imperiosa.",
+   "ck": "Que si el supuesto es el de imperiosa urgencia del art. 168.b).1.º, la mesa está constituida.",
+   "fu": [
+    "326.1"
+   ],
+   "demo": true,
+   "tk": [
+    "326.1"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "negociado-53",
+   "p": "negociado",
+   "f": "lic",
+   "c": 2,
+   "n": "Invitaciones a los empresarios",
+   "q": "Órgano de contratación",
+   "t": "cond",
+   "fn": "Cursa la invitación a negociar.",
+   "ck": "Que queda constancia de las invitaciones; si se limita el número de invitados, el mínimo es tres; si participa un solo candidato, se negocia con él cuando sea posible.",
+   "fu": [
+    "169.6",
+    "170"
+   ],
+   "demo": true,
+   "tk": [
+    "169.6",
+    "170"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "negociado-54",
+   "p": "negociado",
+   "f": "val",
+   "c": 3,
+   "n": "Constancia de la negociación",
+   "q": "Órgano de contratación / mesa",
+   "t": "legal",
+   "fn": "Documenta el desarrollo de la negociación.",
+   "ck": "Que consta qué ofertas se recibieron, por qué se aceptaron o rechazaron y qué ventajas se obtuvieron; que no se negociaron los requisitos mínimos ni los criterios de adjudicación.",
+   "fu": [
+    "169.5",
+    "169.6"
+   ],
+   "demo": true,
+   "tk": [
+    "169.5",
+    "169.6"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "negociado-55",
+   "p": "negociado",
+   "f": "adj",
+   "c": 3,
+   "n": "Requerimiento y resolución de adjudicación",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Concreta y fija los términos definitivos del contrato.",
+   "ck": "Que la adjudicación concreta y fija los términos definitivos del contrato.",
+   "fu": [
+    "150.2",
+    "150.3"
+   ],
+   "demo": true,
+   "tk": [
+    "150.2",
+    "150.3"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "negociado-56",
+   "p": "negociado",
+   "f": "for",
+   "c": 3,
+   "n": "Documento de formalización",
+   "q": "Órgano de contratación y adjudicatario",
+   "t": "legal",
+   "fn": "Formaliza el contrato.",
+   "ck": "Plazos del art. 153.3 según sea o no susceptible de recurso especial.",
+   "fu": [
+    "153.3"
+   ],
+   "demo": true,
+   "tk": [
+    "153.3"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "menor-57",
+   "p": "menor",
+   "f": "rec",
+   "c": 1,
+   "n": "Documentación remitida por la unidad promotora (según el modelo propio de la entidad, en su caso)",
+   "q": "Unidad promotora",
+   "t": "local",
+   "fn": "Inicia la intervención del servicio de contratación.",
+   "ck": "Cada entidad define qué se recibe en un contrato menor y qué modelo interno aplica.",
+   "fu": [],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "demo": true,
+   "tk": []
+  },
+  {
+   "id": "menor-58",
+   "p": "menor",
+   "f": "prep",
+   "c": 1,
+   "n": "Informe del órgano de contratación: necesidad y no alteración del objeto",
+   "q": "Órgano de contratación",
+   "t": "cond",
+   "fn": "Justifica el contrato menor.",
+   "ck": "Que motiva la necesidad y que no se está alterando el objeto para eludir los umbrales (40.000 € obras; 15.000 € suministros y servicios). Quedan exceptuados los pagos por anticipo de caja fija hasta 5.000 €.",
+   "fu": [
+    "118.1",
+    "118.2",
+    "118.5"
+   ],
+   "demo": true,
+   "tk": [
+    "118.1",
+    "118.2",
+    "118.5"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "menor-59",
+   "p": "menor",
+   "f": "prep",
+   "c": 1,
+   "n": "Presupuesto, proyecto e informe de supervisión (solo obras)",
+   "q": "Unidad promotora / oficina de supervisión",
+   "t": "cond",
+   "fn": "Documentación específica del menor de obras.",
+   "ck": "Presupuesto de las obras; proyecto cuando lo exijan las disposiciones vigentes; informe de supervisión cuando el trabajo afecte a la estabilidad, seguridad o estanqueidad.",
+   "fu": [
+    "118.4"
+   ],
+   "demo": true,
+   "tk": [
+    "118.4"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "menor-60",
+   "p": "menor",
+   "f": "prep",
+   "c": 1,
+   "n": "Presupuestos u ofertas solicitadas",
+   "q": "Unidad promotora",
+   "t": "local",
+   "fn": "Práctica que algunas entidades exigen antes de adjudicar.",
+   "ck": "El art. 118 no lo exige. Si la entidad lo exige, deberá constar en su instrucción interna.",
+   "fu": [],
+   "ver": "LOCAL",
+   "nt": "Práctica particular de cada entidad: no se presume ni es de aplicación general; consulte la instrucción interna de su entidad.",
+   "demo": true,
+   "tk": []
+  },
+  {
+   "id": "menor-61",
+   "p": "menor",
+   "f": "adj",
+   "c": 3,
+   "n": "Aprobación del gasto",
+   "q": "Órgano competente",
+   "t": "legal",
+   "fn": "Autoriza el gasto del contrato.",
+   "ck": "Que consta la aprobación del gasto.",
+   "fu": [
+    "118.3"
+   ],
+   "demo": true,
+   "tk": [
+    "118.3"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "menor-62",
+   "p": "menor",
+   "f": "acr",
+   "c": 3,
+   "n": "Factura",
+   "q": "Contratista",
+   "t": "legal",
+   "fn": "Documento que acredita la prestación y el importe.",
+   "ck": "Que se incorpora al expediente y reúne los requisitos de las normas de desarrollo.",
+   "fu": [
+    "118.3"
+   ],
+   "demo": true,
+   "tk": [
+    "118.3"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "menor-63",
+   "p": "menor",
+   "f": "acr",
+   "c": 3,
+   "n": "Acreditación de la existencia del contrato",
+   "q": "Servicio de contratación",
+   "t": "legal",
+   "fn": "Sustituye al documento de formalización.",
+   "ck": "Que la existencia del contrato se acredita con los documentos del art. 118.",
+   "fu": [
+    "153.2"
+   ],
+   "demo": true,
+   "tk": [
+    "153.2"
+   ],
+   "ver": "BOE"
+  },
+  {
+   "id": "menor-64",
+   "p": "menor",
+   "f": "acr",
+   "c": 3,
+   "n": "Publicación de los contratos menores",
+   "q": "Órgano de contratación",
+   "t": "legal",
+   "fn": "Da publicidad a los contratos menores.",
+   "ck": "Pendiente de contraste: forma y periodicidad del art. 63.4 (no releído en esta revisión).",
+   "fu": [
+    "118.6",
+    "63.4"
+   ],
+   "demo": true,
+   "tk": [
+    "118.6",
+    "63.4"
+   ],
+   "ver": "PARCIAL"
+  }
+ ],
+ "normas": [
+  {
+   "k": "21.1",
+   "ley": "LCSP",
+   "titulo": "Art. 21.1 · Umbral SARA en suministros",
+   "breve": "Suministros: regulación armonizada desde 140.000 € (AGE) o 216.000 € (resto de entidades), desde el 1/1/2026.",
+   "ampliada": "El art. 159.1.a toma como límite del simplificado la cifra de los arts. 21.1.a y 22.1.a (140.000 €), aunque contrate una entidad local. El umbral SARA de las entidades locales en suministros es 216.000 € (art. 21.1.b).",
+   "lit": "1. Están sujetos a regulación armonizada los contratos de suministro cuyo valor estimado sea igual o superior a las siguientes cantidades:\na) 140.000 euros, cuando se trate de contratos adjudicados por la Administración General del Estado, sus Organismos Autónomos, o las Entidades Gestoras y Servicios Comunes de la Seguridad Social. […]\nb) 216.000 euros, cuando se trate de contratos de suministro distintos, por razón del sujeto contratante o por razón de su objeto, de los contemplados en la letra anterior.",
+   "red": "Redacción dada por BOE-A-2025-26605 · vigente desde 01/01/2026",
+   "ver": "BOE"
+  },
+  {
+   "k": "22.1",
+   "ley": "LCSP",
+   "titulo": "Art. 22.1 · Umbral SARA en servicios",
+   "breve": "Servicios: regulación armonizada desde 140.000 € (AGE), 216.000 € (resto) o 750.000 € (servicios sociales y otros del Anexo IV).",
+   "ampliada": "Para las entidades locales, el umbral general de servicios es 216.000 € (letra b). Los servicios sociales y otros servicios específicos del Anexo IV tienen umbral propio de 750.000 € (letra c).",
+   "lit": "1. Están sujetos a regulación armonizada los contratos de servicios cuyo valor estimado sea igual o superior a las siguientes cantidades:\na) 140.000 euros, cuando los contratos hayan de ser adjudicados por la Administración General del Estado, sus Organismos Autónomos, o las Entidades Gestoras y Servicios Comunes de la Seguridad Social.\nb) 216.000 euros, cuando los contratos hayan de adjudicarse por entidades del sector público distintas a la Administración General del Estado, sus Organismos Autónomos o las Entidades Gestoras y Servicios Comunes de la Seguridad Social.\nc) 750.000 euros, cuando se trate de contratos que tengan por objeto los servicios sociales y otros servicios específicos enumerados en el anexo IV.",
+   "red": "Redacción dada por BOE-A-2025-26605 · vigente desde 01/01/2026",
+   "ver": "BOE"
+  },
+  {
+   "k": "44.1.a",
+   "ley": "LCSP",
+   "titulo": "Art. 44.1.a · Contratos sujetos a recurso especial (cuantía)",
+   "breve": "Cabe recurso especial en obras de más de 3.000.000 € y en suministros y servicios de más de 100.000 € (valor estimado).",
+   "ampliada": "Es la regla por cuantía. Existen otros supuestos del art. 44.1 (acuerdos marco, concesiones, contratos administrativos especiales). Por debajo de esos umbrales, los actos de adjudicación se recurren por la vía de la Ley 39/2015 (art. 44.6).",
+   "lit": "a) Contratos de obras cuyo valor estimado sea superior a tres millones de euros, y de suministro y servicios, que tenga un valor estimado superior a cien mil euros.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "44.6",
+   "ley": "LCSP",
+   "titulo": "Art. 44.6 · Recursos cuando no cabe recurso especial",
+   "breve": "Si no se cumplen los requisitos del apartado 1, se aplica la Ley 39/2015 y la jurisdicción contencioso-administrativa.",
+   "ampliada": "No se propone ningún pie de recurso: depende del acto, del órgano y del contrato.",
+   "lit": "6. Los actos que se dicten en los procedimientos de adjudicación de contratos de las Administraciones Públicas que no reúnan los requisitos del apartado 1 podrán ser objeto de recurso de conformidad con lo dispuesto en la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas; así como en la Ley 29/1998, de 13 de julio, Reguladora de la Jurisdicción Contencioso-administrativa. […]",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "77.1.a",
+   "ley": "LCSP",
+   "titulo": "Art. 77.1.a · Clasificación en obras",
+   "breve": "En obras de valor estimado igual o superior a 500.000 € la clasificación es requisito indispensable.",
+   "ampliada": "Por debajo de 500.000 € la clasificación acredita la solvencia, pero el empresario puede acreditarla también por los requisitos específicos del pliego. En servicios no es exigible.",
+   "lit": "a) Para los contratos de obras cuyo valor estimado sea igual o superior a 500.000 euros será requisito indispensable que el empresario se encuentre debidamente clasificado como contratista de obras de los poderes adjudicadores. Para dichos contratos, la clasificación del empresario en el grupo o subgrupo que en función del objeto del contrato corresponda, con categoría igual o superior a la exigida para el contrato, acreditará sus condiciones de solvencia para contratar. […]",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "106.1",
+   "ley": "LCSP",
+   "titulo": "Art. 106.1 · Garantía provisional",
+   "breve": "Regla general: no se exige garantía provisional. Solo excepcionalmente y con motivación en el expediente.",
+   "ampliada": "Si se exige, no puede superar el 3 % del presupuesto base de licitación (art. 106.2). En el simplificado y en el abreviado está excluida expresamente (art. 159.4.b).",
+   "lit": "1. En el procedimiento de contratación no procederá la exigencia de garantía provisional, salvo cuando de forma excepcional el órgano de contratación, por motivos de interés público, lo considere necesario y lo justifique motivadamente en el expediente. En este último caso, se podrá exigir a los licitadores la constitución previa de una garantía que responda del mantenimiento de sus ofertas hasta la perfección del contrato.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "107.1",
+   "ley": "LCSP",
+   "titulo": "Art. 107.1 · Garantía definitiva",
+   "breve": "La garantía definitiva es del 5 % del precio final ofertado, sin IVA, y la constituye el licitador con la mejor oferta.",
+   "ampliada": "El órgano de contratación puede eximirla justificándolo en el pliego, salvo en obras y concesiones de obras. Existe también una garantía complementaria de hasta otro 5 % en casos especiales (art. 107.2). En el abreviado no se requiere (art. 159.6.f).",
+   "lit": "1. A salvo de lo dispuesto en los apartados 4 y 5, los licitadores que, en las licitaciones de los contratos que celebren las Administraciones Públicas, presenten las mejores ofertas de conformidad con lo dispuesto en el artículo 145, deberán constituir a disposición del órgano de contratación una garantía de un 5 por 100 del precio final ofertado por aquellos, excluido el Impuesto sobre el Valor Añadido. […]\nNo obstante, atendidas las circunstancias concurrentes en el contrato, el órgano de contratación podrá eximir al adjudicatario de la obligación de constituir garantía definitiva, justificándolo adecuadamente en el pliego de cláusulas administrativas particulares, […]. Esta exención no será posible en el caso de contratos de obras, ni de concesión de obras.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "118.1",
+   "ley": "LCSP",
+   "titulo": "Art. 118.1 · Contratos menores: límites",
+   "breve": "Menor: valor estimado inferior a 40.000 € en obras y a 15.000 € en suministros y servicios.",
+   "ampliada": "El valor estimado se calcula sin IVA. No se puede fraccionar el contrato para eludir los límites.",
+   "lit": "1. Se consideran contratos menores los contratos de valor estimado inferior a 40.000 euros, cuando se trate de contratos de obras, o a 15.000 euros, cuando se trate de contratos de suministro o de servicios, sin perjuicio de lo dispuesto en el artículo 229 en relación con las obras, servicios y suministros centralizados en el ámbito estatal.",
+   "red": "Redacción dada por RDL 3/2020 · vigente desde 06/02/2020",
+   "ver": "BOE"
+  },
+  {
+   "k": "118.2",
+   "ley": "LCSP",
+   "titulo": "Art. 118.2 · Informe en el contrato menor",
+   "breve": "El expediente exige un informe motivado de necesidad y de que no se altera el objeto para evitar los umbrales.",
+   "ampliada": "No se exige este informe cuando el pago se hace por anticipo de caja fija u otro sistema similar y el valor estimado no excede de 5.000 € (art. 118.5).",
+   "lit": "2. En los contratos menores la tramitación del expediente exigirá la emisión de un informe del órgano de contratación justificando de manera motivada la necesidad del contrato y que no se está alterando su objeto con el fin de evitar la aplicación de los umbrales descritos en el apartado anterior.",
+   "red": "Redacción dada por RDL 3/2020 · vigente desde 06/02/2020",
+   "ver": "BOE"
+  },
+  {
+   "k": "118.3",
+   "ley": "LCSP",
+   "titulo": "Art. 118.3 · Gasto y factura en el contrato menor",
+   "breve": "Hay que aprobar el gasto y unir la factura al expediente.",
+   "ampliada": "La factura debe reunir los requisitos que fijen las normas de desarrollo.",
+   "lit": "3. Asimismo se requerirá la aprobación del gasto y la incorporación al mismo de la factura correspondiente, que deberá reunir los requisitos que las normas de desarrollo de esta Ley establezcan.",
+   "red": "Redacción dada por RDL 3/2020 · vigente desde 06/02/2020",
+   "ver": "BOE"
+  },
+  {
+   "k": "118.4",
+   "ley": "LCSP",
+   "titulo": "Art. 118.4 · Contrato menor de obras",
+   "breve": "En obras se añade el presupuesto de obras y, si se exige, proyecto e informe de supervisión.",
+   "ampliada": "El informe de la oficina o unidad de supervisión (art. 235) se solicita cuando el trabajo afecta a la estabilidad, seguridad o estanqueidad de la obra.",
+   "lit": "4. En el contrato menor de obras, deberá añadirse, además, el presupuesto de las obras, sin perjuicio de que deba existir el correspondiente proyecto cuando sea requerido por las disposiciones vigentes. Deberá igualmente solicitarse el informe de las oficinas o unidades de supervisión a que se refiere el artículo 235 cuando el trabajo afecte a la estabilidad, seguridad o estanqueidad de la obra.",
+   "red": "Redacción dada por RDL 3/2020 · vigente desde 06/02/2020",
+   "ver": "BOE"
+  },
+  {
+   "k": "118.5",
+   "ley": "LCSP",
+   "titulo": "Art. 118.5 · Excepción por anticipo de caja fija",
+   "breve": "Con anticipo de caja fija y valor estimado de hasta 5.000 € no se exige el informe del apartado 2.",
+   "ampliada": "La excepción se refiere solo al informe del apartado 2, no a la aprobación del gasto ni a la factura.",
+   "lit": "5. Lo dispuesto en el apartado 2.º de este artículo no será de aplicación en aquellos contratos cuyo pago se verifique a través del sistema de anticipos de caja fija u otro similar para realizar pagos menores, siempre y cuando el valor estimado del contrato no exceda de 5.000 euros.",
+   "red": "Redacción dada por RDL 3/2020 · vigente desde 06/02/2020",
+   "ver": "BOE"
+  },
+  {
+   "k": "118.6",
+   "ley": "LCSP",
+   "titulo": "Art. 118.6 · Publicidad de los contratos menores",
+   "breve": "Los contratos menores se publican en la forma del art. 63.4.",
+   "ampliada": "El art. 63.4 (no releído en esta revisión) regula la publicación periódica y su excepción para pagos menores por anticipo de caja fija.",
+   "lit": "6. Los contratos menores se publicarán en la forma prevista en el artículo 63.4.",
+   "red": "Redacción dada por RDL 3/2020 · vigente desde 06/02/2020",
+   "ver": "BOE"
+  },
+  {
+   "k": "150.2",
+   "ley": "LCSP",
+   "titulo": "Art. 150.2 · Requerimiento al mejor clasificado",
+   "breve": "Se requiere al licitador con la mejor oferta para que aporte la documentación y la garantía en diez días hábiles.",
+   "ampliada": "Si no cumplimenta el requerimiento, se entiende que retira su oferta y se le exige el 3 % del presupuesto base de licitación; se pide la documentación al siguiente. En el simplificado el plazo es de siete días hábiles (art. 159.4.f).",
+   "lit": "2. Una vez aceptada la propuesta de la mesa por el órgano de contratación, los servicios correspondientes requerirán al licitador que haya presentado la mejor oferta, de conformidad con lo dispuesto en el artículo 145 para que, dentro del plazo de diez días hábiles, a contar desde el siguiente a aquel en que hubiera recibido el requerimiento, presente la documentación justificativa de las circunstancias a las que se refieren las letras a) a c) del apartado 1 del artículo 140 si no se hubiera aportado con anterioridad, […]; de disponer efectivamente de los medios que se hubiese comprometido a dedicar o adscribir a la ejecución del contrato conforme al artículo 76.2; y de haber constituido la garantía definitiva que sea procedente. […]",
+   "red": "Redacción dada por Ley 31/2022 · vigente desde 01/01/2023",
+   "ver": "BOE"
+  },
+  {
+   "k": "150.3",
+   "ley": "LCSP",
+   "titulo": "Art. 150.3 · Adjudicación tras el requerimiento",
+   "breve": "El órgano de contratación adjudica dentro de los cinco días hábiles siguientes a recibir la documentación.",
+   "ampliada": "No puede declararse desierta una licitación si existe alguna oferta admisible según los criterios del pliego.",
+   "lit": "3. El órgano de contratación adjudicará el contrato dentro de los cinco días hábiles siguientes a la recepción de la documentación. En los procedimientos negociados, de diálogo competitivo y de asociación para la innovación, la adjudicación concretará y fijará los términos definitivos del contrato.\nNo podrá declararse desierta una licitación cuando exista alguna oferta o proposición que sea admisible de acuerdo con los criterios que figuren en el pliego.",
+   "red": "Redacción dada por Ley 31/2022 · vigente desde 01/01/2023",
+   "ver": "BOE"
+  },
+  {
+   "k": "153.1",
+   "ley": "LCSP",
+   "titulo": "Art. 153.1 · Formalización en documento administrativo",
+   "breve": "El contrato se formaliza en documento administrativo que se ajuste con exactitud a las condiciones de la licitación.",
+   "ampliada": "No pueden incluirse cláusulas que alteren los términos de la adjudicación. El contratista puede pedir elevarlo a escritura pública a su costa.",
+   "lit": "1. Los contratos que celebren las Administraciones Públicas deberán formalizarse en documento administrativo que se ajuste con exactitud a las condiciones de la licitación, constituyendo dicho documento título suficiente para acceder a cualquier registro público. No obstante, el contratista podrá solicitar que el contrato se eleve a escritura pública, corriendo de su cargo los correspondientes gastos. En ningún caso se podrán incluir en el documento en que se formalice el contrato cláusulas que impliquen alteración de los términos de la adjudicación. […]",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "153.2",
+   "ley": "LCSP",
+   "titulo": "Art. 153.2 · Contratos menores",
+   "breve": "En el contrato menor la existencia del contrato se acredita con los documentos del art. 118.",
+   "ampliada": "No hay documento de formalización como en los demás contratos.",
+   "lit": "2. En el caso de los contratos menores definidos en el artículo 118 se acreditará su existencia con los documentos a los que se refiere dicho artículo.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "153.3",
+   "ley": "LCSP",
+   "titulo": "Art. 153.3 · Plazos de formalización",
+   "breve": "Con recurso especial: no antes de 15 días hábiles tras la notificación y requerimiento de 5 días. Sin él: como máximo 15 días hábiles.",
+   "ampliada": "Las comunidades autónomas pueden ampliar la espera hasta un mes. Si la causa es del adjudicatario, penalidad del 3 % (art. 153.4).",
+   "lit": "3. Si el contrato es susceptible de recurso especial en materia de contratación conforme al artículo 44, la formalización no podrá efectuarse antes de que transcurran quince días hábiles desde que se remita la notificación de la adjudicación a los licitadores y candidatos. Las Comunidades Autónomas podrán incrementar este plazo, sin que exceda de un mes.\nLos servicios dependientes del órgano de contratación requerirán al adjudicatario para que formalice el contrato en plazo no superior a cinco días a contar desde el siguiente a aquel en que hubiera recibido el requerimiento, una vez transcurrido el plazo previsto en el párrafo anterior sin que se hubiera interpuesto recurso que lleve aparejada la suspensión de la formalización del contrato. De igual forma procederá cuando el órgano competente para la resolución del recurso hubiera levantado la suspensión.\nEn los restantes casos, la formalización del contrato deberá efectuarse no más tarde de los quince días hábiles siguientes a aquel en que se realice la notificación de la adjudicación a los licitadores y candidatos en la forma prevista en el artículo 151.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "156.2",
+   "ley": "LCSP",
+   "titulo": "Art. 156.2 · Plazo en abierto SARA",
+   "breve": "Abierto con regulación armonizada: 35 días (obras, suministros y servicios) o 30 (concesiones) desde el envío del anuncio a la UE.",
+   "ampliada": "El apartado 3 permite reducirlo (anuncio de información previa, urgencia, ofertas electrónicas); en las concesiones solo la reducción por medios electrónicos.",
+   "lit": "2. En procedimientos abiertos de adjudicación de contratos sujetos a regulación armonizada, el plazo de presentación de proposiciones no será inferior a treinta y cinco días, para los contratos de obras, suministros y servicios, y a treinta días para las concesiones de obras y servicios, contados desde la fecha de envío del anuncio de licitación a la Oficina de Publicaciones de la Unión Europea.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "156.6",
+   "ley": "LCSP",
+   "titulo": "Art. 156.6 · Plazo en abierto no SARA",
+   "breve": "Abierto sin regulación armonizada: mínimo 15 días desde el día siguiente a la publicación en el perfil; 26 en obras y concesiones.",
+   "ampliada": "Según el art. 156.5, el anuncio debe estar en el perfil con una antelación mínima igual al plazo de presentación. Los plazos por días son naturales salvo que la ley diga hábiles; si el último día es inhábil, se prorroga al primer hábil siguiente (DA 12ª).",
+   "lit": "6. En los contratos de las Administraciones Públicas que no estén sujetos a regulación armonizada, el plazo de presentación de proposiciones no será inferior a quince días, contados desde el día siguiente al de la publicación del anuncio de licitación del contrato en el perfil de contratante. En los contratos de obras y de concesión de obras y concesión de servicios, el plazo será, como mínimo, de veintiséis días.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "157.1",
+   "ley": "LCSP",
+   "titulo": "Art. 157.1 · Calificación, apertura y propuesta",
+   "breve": "La mesa califica primero la documentación del art. 140, que va en archivo distinto al de la proposición, y luego abre las proposiciones y propone la adjudicación.",
+   "ampliada": "Por eso, en el abierto ordinario hay siempre al menos dos archivos. La propuesta no crea derechos; si el órgano no adjudica según ella, debe motivarlo (art. 157.6).",
+   "lit": "1. La Mesa de contratación calificará la documentación a que se refiere el artículo 140, que deberá presentarse por los licitadores en sobre o archivo electrónico distinto al que contenga la proposición.\nPosteriormente, el mismo órgano procederá a la apertura y examen de las proposiciones, formulando la correspondiente propuesta de adjudicación al órgano de contratación, una vez ponderados los criterios que deban aplicarse para efectuar la selección del adjudicatario.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "157.3",
+   "ley": "LCSP",
+   "titulo": "Art. 157.3 · Plazo para abrir proposiciones",
+   "breve": "Las proposiciones se abren como máximo veinte días después del fin del plazo de presentación.",
+   "ampliada": "Si hay varios sobres, se cumple el plazo al abrir el primero.",
+   "lit": "3. En todo caso la apertura de las proposiciones deberá efectuarse en el plazo máximo de veinte días contado desde la fecha de finalización del plazo para presentar las mismas.\nSi la proposición se contuviera en más de un sobre o archivo electrónico, de tal forma que estos deban abrirse en varios actos independientes, el plazo anterior se entenderá cumplido cuando se haya abierto, dentro del mismo, el primero de los sobres o archivos electrónicos que componen la proposición.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "157.4",
+   "ley": "LCSP",
+   "titulo": "Art. 157.4 · Acto público de la oferta económica",
+   "breve": "La oferta económica se abre en acto público, salvo que se prevean medios electrónicos.",
+   "ampliada": "En el abreviado no hay acto público de apertura (art. 159.6.d).",
+   "lit": "4. En todo caso, la apertura de la oferta económica se realizará en acto público, salvo cuando se prevea que en la licitación puedan emplearse medios electrónicos.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "158.1",
+   "ley": "LCSP",
+   "titulo": "Art. 158 · Plazos máximos de adjudicación",
+   "breve": "Adjudicar en 15 días desde la apertura si el criterio único es el precio; en 2 meses si hay varios criterios.",
+   "ampliada": "Se amplían 15 días hábiles si hay trámite de anormalidad (art. 149.4). Si no se adjudica en plazo, los licitadores pueden retirar su proposición.",
+   "lit": "1. Cuando el único criterio para seleccionar al adjudicatario del contrato sea el del precio, la adjudicación deberá recaer en el plazo máximo de quince días a contar desde el siguiente al de apertura de las proposiciones.\n2. Cuando para la adjudicación del contrato deban tenerse en cuenta una pluralidad de criterios, o utilizándose un único criterio sea este el del menor coste del ciclo de vida, el plazo máximo para efectuar la adjudicación será de dos meses a contar desde la apertura de las proposiciones, salvo que se hubiese establecido otro en el pliego de cláusulas administrativas particulares. […]\n4. De no producirse la adjudicación dentro de los plazos señalados, los licitadores tendrán derecho a retirar su proposición, y a la devolución de la garantía provisional, de existir esta.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.1",
+   "ley": "LCSP",
+   "titulo": "Art. 159.1 · Cuándo procede el abierto simplificado",
+   "breve": "Obras hasta 2.000.000 €; suministros y servicios por debajo de 140.000 €; y criterios de juicio de valor hasta el 25 % (45 % en prestaciones intelectuales).",
+   "ampliada": "Deben cumplirse las dos condiciones a la vez. El límite de 140.000 € es el de los arts. 21.1.a y 22.1.a, no el umbral SARA de 216.000 € de las entidades locales.",
+   "lit": "1. Los órganos de contratación podrán acordar la utilización de un procedimiento abierto simplificado en los contratos de obras, suministro y servicios cuando se cumplan las dos condiciones siguientes:\na) Que su valor estimado sea igual o inferior a 2.000.000 de euros en el caso de contratos de obras, y en el caso de contratos de suministro y de servicios, que su valor estimado sea inferior a las cantidades establecidas en los artículos 21.1, letra a), y 22.1, letra a), de esta Ley, respectivamente, o a sus correspondientes actualizaciones.\nb) Que entre los criterios de adjudicación previstos en el pliego no haya ninguno evaluable mediante juicio de valor o, de haberlos, su ponderación no supere el veinticinco por ciento del total, salvo en el caso de que el contrato tenga por objeto prestaciones de carácter intelectual, como los servicios de ingeniería y arquitectura, en que su ponderación no podrá superar el cuarenta y cinco por ciento del total.",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.2",
+   "ley": "LCSP",
+   "titulo": "Art. 159.2 · Publicidad en el simplificado",
+   "breve": "Solo se publica el anuncio en el perfil de contratante, con toda la documentación disponible desde ese día.",
+   "ampliada": "Basta la publicación en el perfil de contratante; este artículo no exige otro medio de publicidad para el anuncio de licitación.",
+   "lit": "2. El anuncio de licitación del contrato únicamente precisará de publicación en el perfil de contratante del órgano de contratación. Toda la documentación necesaria para la presentación de la oferta tiene que estar disponible por medios electrónicos desde el día de la publicación del anuncio en dicho perfil de contratante.",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.3",
+   "ley": "LCSP",
+   "titulo": "Art. 159.3 · Plazo de ofertas en el simplificado",
+   "breve": "Mínimo 15 días, desde el día siguiente a la publicación; 20 días en obras.",
+   "ampliada": "Días naturales, salvo indicación expresa (DA 12ª); si el último día es inhábil, pasa al primer hábil siguiente. En el abreviado el plazo es de 10 días hábiles (art. 159.6.a).",
+   "lit": "3. El plazo para la presentación de proposiciones no podrá ser inferior a quince días a contar desde el siguiente a la publicación en el perfil de contratante del anuncio de licitación. En los contratos de obras el plazo será como mínimo de veinte días.",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.4.a",
+   "ley": "LCSP",
+   "titulo": "Art. 159.4.a · Registro de licitadores",
+   "breve": "Los licitadores deben estar inscritos en el Registro Oficial de Licitadores (o el autonómico) en la fecha final de presentación de ofertas.",
+   "ampliada": "También se admite acreditar que se ha presentado la solicitud de inscripción, con acuse de recibo y declaración responsable, si es anterior a la fecha final de presentación.",
+   "lit": "a) Todos los licitadores que se presenten a licitaciones realizadas a través de este procedimiento simplificado deberán estar inscritos en el Registro Oficial de Licitadores y Empresas Clasificadas del Sector Público, o cuando proceda de conformidad con lo establecido en el apartado 2 del artículo 96 en el Registro Oficial de la correspondiente Comunidad Autónoma, en la fecha final de presentación de ofertas siempre que no se vea limitada la concurrencia. […]",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.4.b",
+   "ley": "LCSP",
+   "titulo": "Art. 159.4.b · Sin garantía provisional",
+   "breve": "En el simplificado no se constituye garantía provisional.",
+   "ampliada": "Es una regla expresa de la modalidad; en el resto de procedimientos rige el art. 106.",
+   "lit": "b) No procederá la constitución de garantía provisional por parte de los licitadores.",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.4.c",
+   "ley": "LCSP",
+   "titulo": "Art. 159.4.c · Registro de presentación y declaración responsable",
+   "breve": "Las ofertas se presentan solo en el registro indicado en el anuncio y llevan declaración responsable en el modelo del pliego.",
+   "ampliada": "La declaración cubre representación, solvencia o clasificación, autorizaciones, prohibiciones de contratar y el compromiso del art. 75.2. La empresa extranjera se somete al fuero español; la UTE aporta el compromiso de constitución.",
+   "lit": "c) Las proposiciones deberán presentarse necesaria y únicamente en el registro indicado en el anuncio de licitación.\nLa presentación de la oferta exigirá la declaración responsable del firmante respecto a ostentar la representación de la sociedad que presenta la oferta; a contar con la adecuada solvencia económica, financiera y técnica o, en su caso, la clasificación correspondiente; a contar con las autorizaciones necesarias para ejercer la actividad; a no estar incurso en prohibición de contratar alguna; y se pronunciará sobre la existencia del compromiso a que se refiere el artículo 75.2. A tales efectos, el modelo de oferta que figure como anexo al pliego recogerá esa declaración responsable. […]",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.4.d",
+   "ley": "LCSP",
+   "titulo": "Art. 159.4.d · Número de sobres o archivos",
+   "breve": "Un solo archivo si no hay criterios de juicio de valor; dos si los hay.",
+   "ampliada": "La apertura la hace la mesa de contratación.",
+   "lit": "d) La oferta se presentará en un único sobre o archivo electrónico en los supuestos en que en el procedimiento no se contemplen criterios de adjudicación cuya cuantificación dependa de un juicio de valor. En caso contrario, la oferta se presentará en dos sobres o archivos electrónicos. […]",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.4.e",
+   "ley": "LCSP",
+   "titulo": "Art. 159.4.e · Valoración de criterios de juicio de valor",
+   "breve": "Los servicios técnicos valoran en un plazo no superior a siete días, con informe firmado por el técnico.",
+   "ampliada": "Esa valoración debe estar hecha antes de abrir el archivo de criterios por fórmula (art. 159.4.f).",
+   "lit": "e) En los supuestos en que en el procedimiento se contemplen criterios de adjudicación cuya cuantificación dependa de un juicio de valor, la valoración de las proposiciones se hará por los servicios técnicos del órgano de contratación en un plazo no superior a siete días, debiendo ser suscritas por el técnico o técnicos que realicen la valoración.",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.4.f",
+   "ley": "LCSP",
+   "titulo": "Art. 159.4.f · Sesión de la mesa y requerimiento",
+   "breve": "En la misma sesión de apertura, la mesa evalúa y clasifica, propone, comprueba el Registro y requiere al mejor clasificado (7 días hábiles).",
+   "ampliada": "Si la oferta mejor puntuada parece anormalmente baja, la justificación se limita a cinco días hábiles. La adjudicación se hace en un plazo no superior a cinco días desde la garantía definitiva. Para la fiscalización, el precepto remite a la Ley 47/2003 (estatal).",
+   "lit": "f) […] Tras la apertura del sobre o archivo electrónico y en la misma sesión la mesa procederá a:\n1.º Previa exclusión, en su caso, de las ofertas que no cumplan los requerimientos del pliego, evaluar y clasificar las ofertas.\n2.º Realizar la propuesta de adjudicación a favor del candidato con mejor puntuación. […]\n4.º Requerir a la empresa que ha obtenido la mejor puntuación mediante comunicación electrónica para que constituya la garantía definitiva, así como para que aporte el compromiso al que se refiere el artículo 75.2 y la documentación justificativa de que dispone efectivamente de los medios que se hubiese comprometido a dedicar o adscribir a la ejecución del contrato conforme al artículo 76.2; y todo ello en el plazo de siete días hábiles a contar desde el envío de la comunicación. […]",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.5",
+   "ley": "LCSP",
+   "titulo": "Art. 159.5 · Urgencia en el simplificado",
+   "breve": "La urgencia no reduce los plazos en el simplificado.",
+   "ampliada": "En el abierto ordinario sí cabe reducir el plazo por urgencia (art. 156.3.b).",
+   "lit": "5. En los casos de declaración de urgencia del expediente de contratación en el que el procedimiento de adjudicación utilizado sea el procedimiento abierto simplificado regulado en el presente artículo, no se producirá la reducción de plazos a la que se refiere la letra b) del apartado 2 del artículo 119.",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "159.6",
+   "ley": "LCSP",
+   "titulo": "Art. 159.6 · Simplificado abreviado",
+   "breve": "Obras por debajo de 80.000 € y suministros y servicios por debajo de 60.000 € (salvo intelectuales): 10 días hábiles, un solo sobre, sin garantía definitiva.",
+   "ampliada": "La formalización puede hacerse con la firma de aceptación de la resolución de adjudicación. En todo lo no previsto se aplica el régimen general del simplificado.",
+   "lit": "6. En contratos de obras de valor estimado inferior a 80.000 euros, y en contratos de suministros y de servicios de valor estimado inferior a 60.000 euros, excepto los que tengan por objeto prestaciones de carácter intelectual a los que no será de aplicación este apartado, el procedimiento abierto simplificado podrá seguir la siguiente tramitación:\na) El plazo para la presentación de proposiciones no podrá ser inferior a diez días hábiles, a contar desde el siguiente a la publicación del anuncio de licitación en el perfil de contratante. No obstante lo anterior, cuando se trate de compras corrientes de bienes disponibles en el mercado el plazo será de 5 días hábiles.\nb) Se eximirá a los licitadores de la acreditación de la solvencia económica y financiera y técnica o profesional.\nc) La oferta se entregará en un único sobre o archivo electrónico y se evaluará, en todo caso, con arreglo a criterios de adjudicación cuantificables mediante la mera aplicación de fórmulas establecidas en los pliegos.\nd) La valoración de las ofertas se podrá efectuar automáticamente mediante dispositivos informáticos, o con la colaboración de una unidad técnica que auxilie al órgano de contratación.\nSe garantizará, mediante un dispositivo electrónico, que la apertura de las proposiciones no se realiza hasta que haya finalizado el plazo para su presentación, por lo que no se celebrará acto público de apertura de las mismas.\ne) Las ofertas presentadas y la documentación relativa a la valoración de las mismas serán accesibles de forma abierta por medios informáticos sin restricción alguna desde el momento en que se notifique la adjudicación del contrato.\nf) No se requerirá la constitución de garantía definitiva.\ng) La formalización del contrato podrá efectuarse mediante la firma de aceptación por el contratista de la resolución de adjudicación.\nEn todo lo no previsto en este apartado se aplicará la regulación general del procedimiento abierto simplificado prevista en este artículo.",
+   "red": "Redacción dada por Ley 22/2021 · vigente desde 01/01/2022",
+   "ver": "BOE"
+  },
+  {
+   "k": "161.3",
+   "ley": "LCSP",
+   "titulo": "Art. 161.3 · Solicitudes de participación (no SARA)",
+   "breve": "Restringido sin regulación armonizada: solicitudes de participación como mínimo 15 días desde la publicación.",
+   "ampliada": "En SARA, no inferior a 30 días desde el envío del anuncio a la UE (art. 161.1). Las solicitudes se acompañan de la documentación del art. 140 (art. 161.4).",
+   "lit": "3. Si se trata de contratos no sujetos a regulación armonizada, el plazo para la presentación de solicitudes de participación será, como mínimo, de quince días, contados desde la publicación del anuncio de licitación.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "162",
+   "ley": "LCSP",
+   "titulo": "Art. 162 · Selección de candidatos (restringido)",
+   "breve": "Los criterios de solvencia se fijan antes del anuncio; se invita al menos a cinco candidatos, salvo que haya menos aptos.",
+   "ampliada": "Los criterios y el número mínimo y máximo se publican en el anuncio. Las invitaciones se envían a la vez y por escrito.",
+   "lit": "1. Con carácter previo al anuncio de licitación, el órgano de contratación deberá haber establecido los criterios objetivos de solvencia, de entre los señalados en los artículos 87 a 91, con arreglo a los cuales serán elegidos los candidatos que serán invitados a presentar proposiciones.\n2. El órgano de contratación señalará el número mínimo de empresarios a los que invitará a participar en el procedimiento, que no podrá ser inferior a cinco. Cuando el número de candidatos que cumplan los criterios de selección sea inferior a ese número mínimo, el órgano de contratación podrá continuar el procedimiento con los que reúnan las condiciones exigidas, sin que pueda invitarse a empresarios que no hayan solicitado participar en el mismo, o a candidatos que no posean esas condiciones. […]\n3. Los criterios o normas objetivos y no discriminatorios con arreglo a los cuales se seleccionará a los candidatos, así como el número mínimo y, en su caso, el número máximo de aquellos a los que se invitará a presentar proposiciones se indicarán en el anuncio de licitación.\n4. El órgano de contratación, una vez comprobada la personalidad y solvencia de los solicitantes, seleccionará a los que deban pasar a la siguiente fase, a los que invitará, simultáneamente y por escrito, a presentar sus proposiciones en el plazo que proceda conforme a lo señalado en el artículo 164.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "164.2",
+   "ley": "LCSP",
+   "titulo": "Art. 164.2 · Proposiciones en el restringido (no SARA)",
+   "breve": "Restringido sin regulación armonizada: proposiciones como mínimo 10 días desde el envío de la invitación.",
+   "ampliada": "En SARA, no inferior a 30 días desde el envío de la invitación, con las reducciones del art. 164.1 (hasta 25 días por medios electrónicos).",
+   "lit": "2. En los procedimientos restringidos relativos a contratos no sujetos a regulación armonizada, el plazo para la presentación de proposiciones no será inferior a diez días, contados desde la fecha de envío de la invitación.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "165",
+   "ley": "LCSP",
+   "titulo": "Art. 165 · Adjudicación en el restringido",
+   "breve": "Se aplican las reglas del abierto, salvo la calificación previa de la documentación del art. 140.",
+   "ampliada": "La documentación ya se calificó con la solicitud de participación.",
+   "lit": "En la adjudicación del contrato será de aplicación lo previsto en esta Ley para el procedimiento abierto, salvo lo que se refiere a la necesidad de calificar previamente la documentación a que se refiere el artículo 140.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "168",
+   "ley": "LCSP",
+   "titulo": "Art. 168 · Supuestos del negociado sin publicidad",
+   "breve": "Solo en los casos tasados de este artículo; no existe negociado por razón de la cuantía.",
+   "ampliada": "Redacción de la Ley 31/2022: a) 1.º a 3.º; b) 1.º imperiosa urgencia imprevisible, no imputable y que no pueda lograrse con la tramitación de urgencia del art. 119; 2.º situación del art. 167.e); c) suministros; d) servicios; e) repetición de obras o servicios.",
+   "lit": "Los órganos de contratación podrán adjudicar contratos utilizando el procedimiento negociado sin la previa publicación de un anuncio de licitación únicamente en los siguientes casos: […]\nb) En los contratos de obras, suministros y servicios, en los casos en que:\n1.º Una imperiosa urgencia resultante de acontecimientos imprevisibles para el órgano de contratación y no imputables al mismo, demande una pronta ejecución del contrato que no pueda lograrse mediante la aplicación de la tramitación de urgencia regulada en el artículo 119. […]",
+   "red": "Redacción dada por Ley 31/2022 · vigente desde 01/01/2023",
+   "ver": "BOE"
+  },
+  {
+   "k": "169.5",
+   "ley": "LCSP",
+   "titulo": "Art. 169.5 · Qué no se negocia",
+   "breve": "No se negocian los requisitos mínimos ni los criterios de adjudicación.",
+   "ampliada": "La negociación se hace sobre las ofertas iniciales y las ulteriores, para identificar la mejor oferta.",
+   "lit": "5. […]\nNo se negociarán los requisitos mínimos de la prestación objeto del contrato ni tampoco los criterios de adjudicación.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "169.6",
+   "ley": "LCSP",
+   "titulo": "Art. 169.6 · Constancia en el expediente",
+   "breve": "Debe quedar constancia de invitaciones, ofertas, razones de aceptación o rechazo y ventajas obtenidas.",
+   "ampliada": "Es la trazabilidad que exige el negociado.",
+   "lit": "6. En el expediente deberá dejarse constancia de las invitaciones cursadas, de las ofertas recibidas, de las razones para su aceptación o rechazo y de las ventajas obtenidas en la negociación.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "170",
+   "ley": "LCSP",
+   "titulo": "Art. 170 · Tramitación del negociado sin publicidad",
+   "breve": "Se tramita con las normas del art. 169, salvo la publicidad previa; con un solo candidato se negocia con él si es posible.",
+   "ampliada": "La mesa es potestativa, salvo en el supuesto de urgencia imperiosa del art. 168.b).1.º (art. 326.1).",
+   "lit": "1. Los órganos de contratación únicamente harán uso del procedimiento negociado sin publicación previa de un anuncio de licitación cuando se dé alguna de las situaciones que establece el artículo 168 y lo tramitarán con arreglo a las normas que establece el artículo 169, en todo lo que resulten de aplicación según el número de participantes que concurran en cada caso, a excepción de lo relativo a la publicidad previa.\n2. Cuando únicamente participe un candidato, la mesa de contratación, o en su defecto, el órgano de contratación, siempre y cuando sea posible, deberá negociar con él en los términos que se señalan en el apartado 5 del artículo 169.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "326.1",
+   "ley": "LCSP",
+   "titulo": "Art. 326.1 · Cuándo hay mesa",
+   "breve": "Mesa obligatoria en abierto, simplificado, restringido y otros; potestativa en el negociado sin publicidad (salvo urgencia imperiosa) y en el abreviado.",
+   "ampliada": "En una entidad local hay que tener en cuenta además la DA 2ª.7 sobre composición.",
+   "lit": "1. Salvo en el caso en que la competencia para contratar corresponda a una Junta de Contratación, en los procedimientos abiertos, abierto simplificado, restringidos, de diálogo competitivo, de licitación con negociación y de asociación para la innovación, los órganos de contratación de las Administraciones Públicas estarán asistidos por una mesa de contratación. En los procedimientos negociados en que no sea necesario publicar anuncios de licitación, la constitución de la mesa será potestativa para el órgano de contratación, salvo cuando se fundamente en la existencia de una imperiosa urgencia prevista en la letra b) 1.º del artículo 168, en el que será obligatoria la constitución de la mesa. En los procedimientos a los que se refiere el artículo 159.6 será igualmente potestativa la constitución de la mesa.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "326.3",
+   "ley": "LCSP",
+   "titulo": "Art. 326.3 · Composición y publicidad de la mesa",
+   "breve": "La mesa tiene presidente, vocales y secretario, y su composición se publica en el perfil de contratante.",
+   "ampliada": "Los miembros los nombra el órgano de contratación (art. 326.4).",
+   "lit": "3. La mesa estará constituida por un Presidente, los vocales que se determinen reglamentariamente, y un Secretario.\nLa composición de la mesa se publicará en el perfil de contratante del órgano de contratación correspondiente.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "326.6",
+   "ley": "LCSP",
+   "titulo": "Art. 326.6 · Mesa en el simplificado",
+   "breve": "En el simplificado la mesa se considera válidamente constituida con presidente, secretario, un funcionario de asesoramiento jurídico y uno de control económico-presupuestario.",
+   "ampliada": "Cómo se concilia con la DA 2ª.7 en una entidad local está pendiente de validación jurídica.",
+   "lit": "6. Salvo lo dispuesto en el apartado 1 del presente artículo, la mesa de contratación que intervenga en el procedimiento abierto simplificado regulado en el artículo 159 de la presente Ley se considerará válidamente constituida si lo está por el Presidente, el Secretario, un funcionario de entre quienes tengan atribuido legal o reglamentariamente el asesoramiento jurídico del órgano de contratación y un funcionario que tenga atribuidas las funciones relativas a su control económico-presupuestario.",
+   "red": "Ley 9/2017 · vigente desde 09/03/2018",
+   "ver": "BOE"
+  },
+  {
+   "k": "DA 2ª.7",
+   "ley": "LCSP",
+   "titulo": "DA 2ª.7 · Mesa de contratación en entidades locales",
+   "breve": "En las entidades locales, la mesa la preside un miembro de la Corporación o un funcionario y tiene al menos tres miembros.",
+   "ampliada": "Vocales: el Secretario (o titular de la asesoría jurídica) y el Interventor (o control económico-presupuestario), más los designados entre funcionarios de carrera, personal laboral o miembros electos; los electos, como máximo un tercio; actúa de secretario un funcionario de la Corporación. Puede integrarse personal procedente de administraciones provinciales en las mesas de determinados entes locales. No puede formar parte personal eventual; el interino solo si no hay funcionarios de carrera suficientemente cualificados. Pueden constituirse mesas permanentes.",
+   "lit": "",
+   "red": "LCSP, disposición adicional segunda",
+   "ver": "BOE"
+  },
+  {
+   "k": "DA 3ª",
+   "ley": "LCSP",
+   "titulo": "DA 3ª · Informes y fiscalización en entidades locales",
+   "breve": "En entidades locales, el informe jurídico del Secretario es preceptivo en la aprobación de expedientes de contratación y la fiscalización corresponde a la Intervención.",
+   "ampliada": "Verificado en el BOE: el apartado 8 hace preceptivo el informe jurídico del Secretario en la aprobación de expedientes de contratación, modificaciones, prórrogas, etc.; el apartado 3 atribuye la fiscalización a la Intervención y añade que recae también sobre la valoración de las repercusiones del contrato en estabilidad presupuestaria y sostenibilidad financiera, excepto en los contratos menores (la excepción afecta a esa valoración, no a la fiscalización en general). Alcance y momento concretos: pendiente de validación jurídica.",
+   "lit": "",
+   "red": "LCSP, disposición adicional tercera",
+   "ver": "SEC"
+  },
+  {
+   "k": "Orden HAC/1517/2025",
+   "ley": "LCSP",
+   "titulo": "Orden HAC/1517/2025 · Umbrales 2026",
+   "breve": "Actualiza desde el 1/1/2026 los umbrales: 5.404.000 €, 216.000 € y 140.000 €.",
+   "ampliada": "Orden HAC/1517/2025, de 18 de diciembre (BOE núm. 311, de 26/12/2025, BOE-A-2025-26605): sustituye 5.538.000 € por 5.404.000 € (art. 20.1), 221.000 € por 216.000 € (arts. 21.1.b y 22.1.b) y 143.000 € por 140.000 € (arts. 21.1.a y 22.1.a), con efectos desde el 1/1/2026.",
+   "lit": "",
+   "red": "Orden HAC/1517/2025, de 18 de diciembre",
+   "ver": "SEC"
+  },
+  {
+   "k": "20.1",
+   "ley": "LCSP",
+   "titulo": "Art. 20.1 · Umbral SARA en obras y concesiones",
+   "breve": "Obras y concesiones de obras y de servicios: regulación armonizada desde 5.404.000 €, desde el 1/1/2026.",
+   "ampliada": "Es el umbral de todas las entidades. El art. 20.2 permite exceptuar lotes de valor inferior a un millón de euros si no superan el 20 % del total.",
+   "lit": "",
+   "red": "LCSP",
+   "ver": "BOE"
+  },
+  {
+   "k": "29.8",
+   "ley": "LCSP",
+   "titulo": "Art. 29.8 · Duración del contrato menor",
+   "breve": "Los contratos menores no pueden durar más de un año ni prorrogarse.",
+   "ampliada": "Hay una excepción para ciertos servicios complementarios de un menor de obras (art. 29.7, hasta 30 meses, por el periodo de garantía y la liquidación).",
+   "lit": "",
+   "red": "LCSP",
+   "ver": "BOE"
+  },
+  {
+   "k": "63.4",
+   "ley": "LCSP",
+   "titulo": "Art. 63.4 · Publicación de los contratos menores",
+   "breve": "Se publican al menos trimestralmente: objeto, duración, importe con IVA e identidad del adjudicatario, ordenados por adjudicatario.",
+   "ampliada": "Exceptuados los contratos de valor estimado inferior a 5.000 € pagados por anticipo de caja fija u otro sistema similar para pagos menores.",
+   "lit": "",
+   "red": "LCSP",
+   "ver": "BOE"
+  },
+  {
+   "k": "131.3",
+   "ley": "LCSP",
+   "titulo": "Art. 131.3 · Adjudicación directa del menor",
+   "breve": "Los contratos menores pueden adjudicarse directamente a cualquier empresario con capacidad de obrar y habilitación profesional necesaria, cumpliendo el art. 118.",
+   "ampliada": "",
+   "lit": "",
+   "red": "LCSP",
+   "ver": "BOE"
+  },
+  {
+   "k": "DA 12ª",
+   "ley": "LCSP",
+   "titulo": "DA 12ª · Cómputo de plazos",
+   "breve": "Los plazos por días son naturales salvo que se indique que son hábiles; si el último día es inhábil, se prorroga al primer hábil siguiente.",
+   "ampliada": "",
+   "lit": "",
+   "red": "LCSP",
+   "ver": "BOE"
+  },
+  {
+   "k": "DA 2ª.1",
+   "ley": "LCSP",
+   "titulo": "DA 2ª.1–2 · Órgano de contratación en entidades locales",
+   "breve": "Corresponde al Alcalde o Presidente de la entidad local la contratación hasta el 10 % de los recursos ordinarios del presupuesto y 6 millones de euros; por encima, al Pleno.",
+   "ampliada": "Se aplica a obras, suministros, servicios, concesiones y contratos administrativos especiales; incluye los plurianuales de hasta cuatro años con prórrogas si no superan esos límites (DA 2ª.1 y 2).",
+   "lit": "",
+   "red": "LCSP",
+   "ver": "BOE"
+  }
+ ],
+ "alcance": [
+  "Base: Ley 9/2017, de Contratos del Sector Público (LCSP), texto consolidado del BOE. Umbrales armonizados vigentes desde el 1/1/2026: art. 20.1 (obras y concesiones, 5.404.000 €), art. 21.1.b y 22.1.b (suministros y servicios, 216.000 € para entidades distintas de la AGE, sus organismos autónomos y la Seguridad Social) y art. 22.1.c (servicios sociales y Anexo IV, 750.000 €). El límite de 140.000 € del abierto simplificado en suministros y servicios procede de los arts. 21.1.a y 22.1.a por remisión del art. 159.1.a.",
+  "<a href=\"https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902\" target=\"_blank\" rel=\"noopener noreferrer\">LCSP consolidada · BOE</a>",
+  "Las respuestas son una síntesis operativa revisable, no una transcripción literal de la ley ni asesoramiento jurídico. Las normas y excepciones deben confirmarse antes de tomar decisiones. CAUCE no recoge ni envía datos: funciona en su navegador y no necesita conexión, salvo para abrir los enlaces al BOE.",
+  "Contraste jurídico de esta edición (15/11/2026): arts. 20, 21, 22, 159 y 326 y disposiciones adicionales 2ª y 3ª de la LCSP, cotejados con el texto consolidado del BOE (BOE-A-2017-12902). Pendientes de contraste: arts. 77, 99.2, 145–146, 149, 154, 160, 169 y 170, y la Ley 39/2015. Las cuestiones marcadas «pendiente de validación jurídica» no han sido validadas por ningún órgano o servicio jurídico.",
+  "Ámbito: pensada para entidades locales (DA 2ª y 3ª LCSP). No es una herramienta oficial ni ha sido validada institucionalmente. Las prácticas internas de cada entidad no se presumen: figuran como «práctica particular de cada entidad»."
+ ]
+}

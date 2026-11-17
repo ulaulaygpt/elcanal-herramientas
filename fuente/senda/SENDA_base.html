@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SENDA · Contratación</title>
+<style>
+/* ==========================================================================
+   SENDA · Contratación — Hoja de estilos (sin recursos externos)
+   ========================================================================== */
+:root{
+  --ink:#14283B; --ink-2:#44586B; --ink-3:#586A7C;
+  --bg:#EEF1F4; --card:#FFFFFF; --line:#DAE2EA; --line-2:#EAEFF4;
+  --navy-9:#0F2237; --navy-8:#12263F; --navy-7:#1A3556;
+  --primary:#1F4E79; --primary-d:#163A5C; --primary-t:#E8EEF5;
+  --amber:#B08D3C; --amber-d:#5C4410;
+  --ok:#17653A; --ok-bg:#E6F4EB; --ok-line:#A9D2B8;
+  --warn:#7A4E00; --warn-bg:#FFF3D6; --warn-line:#EBCB84;
+  --err:#9E2219; --err-bg:#FDECE9; --err-line:#EBB0A8;
+  --radius:8px;
+  --font:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-d:Georgia,Cambria,"Source Serif 4","Liberation Serif","Times New Roman",serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+.hide{display:none!important}
+svg.i{width:1.15em;height:1.15em;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:6px}
+
+/* ---------- Botones ---------- */
+.btn{font:600 .92rem/1 var(--font);display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border-radius:6px;border:1px solid #AEBBC9;background:#fff;color:var(--primary-d);cursor:pointer;white-space:nowrap;transition:background .12s,border-color .12s,box-shadow .12s}
+.btn:hover{background:var(--primary-t);border-color:#8FB0CA}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-d);border-color:var(--primary-d)}
+.btn.danger-solid{background:#B3261E;border-color:#B3261E;color:#fff}
+.btn.danger-solid:hover{background:#8F1D17;border-color:#8F1D17}
+.btn.ghost{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.32);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.55)}
+.btn.ghost.on{background:rgba(255,255,255,.16)}
+.btn.ghost.on .dot{background:#5ED08A}
+.btn.accent{background:#C9A24A;border-color:#C9A24A;color:#1E1604}
+.btn.accent:hover{background:#D6B25E;border-color:#D6B25E}
+.btn .dot{width:8px;height:8px;border-radius:50%;background:#D8B25A;flex:none}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* ---------- Cabecera ---------- */
+.hero{position:relative;background:var(--navy-8);color:#fff;overflow:hidden;border-bottom:4px solid var(--amber)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='320' viewBox='0 0 900 320' fill='none' stroke='%23ffffff' stroke-opacity='.05' stroke-width='1.4'><path d='M-20 250C120 250 150 120 290 130S430 250 560 200 760 60 920 90'/><path d='M-20 285C130 290 170 160 300 170S450 290 580 240 780 110 920 140'/><path d='M-20 215C110 210 140 80 280 90S410 210 540 160 740 20 920 50'/></svg>") right bottom/cover no-repeat}
+.hero-in{position:relative;max-width:1280px;margin:0 auto;padding:22px 24px 30px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand svg.logo{width:46px;height:46px;flex:none;filter:drop-shadow(0 4px 10px rgba(0,0,0,.28))}
+.brand h1{margin:0;font:700 1.7rem/1 var(--font-d);letter-spacing:.2em;padding-left:.04em}
+.brand p{margin:5px 0 0;font-size:.88rem;color:rgba(255,255,255,.78);letter-spacing:.01em}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.search-wrap{max-width:780px;margin:30px auto 0;text-align:center}
+.search-box{position:relative;display:block}
+.search-box svg.i{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:22px;height:22px;color:var(--ink-3);pointer-events:none}
+.search-box input.search{width:100%;height:58px;min-height:58px;border:2px solid transparent;border-radius:8px;background:#fff;color:var(--ink);font:500 1.12rem/1 var(--font);padding:0 64px 0 56px;box-shadow:0 12px 34px -12px rgba(0,0,0,.55);outline:none}
+.search-box input.search::placeholder{color:#66788A;font-weight:400}
+.search-box input.search:focus{border-color:var(--amber);box-shadow:0 0 0 4px rgba(201,162,74,.4),0 12px 34px -12px rgba(0,0,0,.55)}
+.kbd{position:absolute;right:18px;top:50%;transform:translateY(-50%);font:600 .8rem/1 var(--font);color:var(--ink-3);border:1px solid #C6D2DE;border-bottom-width:2px;border-radius:6px;padding:5px 8px;background:#F5F8FB;pointer-events:none}
+.search-box input.search:not(:placeholder-shown)~.kbd{display:none}
+.status{min-height:24px;margin:12px 0 0;font-size:.9rem;color:rgba(255,255,255,.82)}
+.status.error{color:#FFD3CC;font-weight:600}
+
+/* ---------- Contenido ---------- */
+.shell{max-width:1280px;margin:0 auto;padding:26px 24px 20px}
+
+/* ---------- Barra de edición ---------- */
+.editbar{position:sticky;top:0;z-index:30;margin:-48px 0 24px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px -12px rgba(10,32,54,.35)}
+.editbar-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 14px}
+.editbar .tag{display:inline-flex;align-items:center;gap:8px;font:700 .8rem/1 var(--font);letter-spacing:.06em;text-transform:uppercase;color:var(--amber-d);background:var(--warn-bg);border:1px solid var(--warn-line);padding:8px 11px;border-radius:999px}
+.chip{display:inline-flex;align-items:center;gap:7px;font:600 .84rem/1 var(--font);padding:8px 11px;border-radius:999px;border:1px solid var(--line);background:#F5F8FB;color:var(--ink-2)}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:#8CA0B3}
+.chip[data-s=ok]{background:var(--ok-bg);border-color:var(--ok-line);color:var(--ok)}
+.chip[data-s=ok]::before{background:#2BA05A}
+.chip[data-s=dirty]{background:var(--warn-bg);border-color:var(--warn-line);color:var(--warn)}
+.chip[data-s=dirty]::before{background:#E09A14}
+.spacer{flex:1 1 20px}
+.save-status{margin:0;padding:10px 16px;border-top:1px solid var(--line-2);font-size:.9rem;display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#F5F8FB;color:var(--ink-2);border-radius:0 0 var(--radius) var(--radius)}
+.save-status.ok{background:var(--ok-bg);color:var(--ok)}
+.save-status.warn{background:var(--warn-bg);color:var(--warn)}
+.save-status.error{background:var(--err-bg);color:var(--err);font-weight:600}
+.save-status .btn{min-height:32px;padding:0 12px;font-size:.84rem}
+
+/* Menú de copias */
+.menu{position:relative}
+.menu>summary{list-style:none}
+.menu>summary::-webkit-details-marker{display:none}
+.menu[open]>summary{background:var(--primary-t);border-color:#8FB0CA}
+.menu-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:40;min-width:290px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 18px 44px -14px rgba(10,32,54,.45);padding:8px}
+.menu-panel .lbl{font:700 .72rem/1 var(--font);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:10px 10px 6px}
+.menu-panel button{width:100%;display:flex;align-items:center;gap:10px;text-align:left;font:500 .93rem/1.2 var(--font);color:var(--ink);background:none;border:0;border-radius:6px;padding:10px;cursor:pointer}
+.menu-panel button:hover{background:var(--primary-t)}
+.menu-panel button svg{color:var(--primary)}
+.menu-panel hr{border:0;border-top:1px solid var(--line-2);margin:6px 4px}
+
+/* ---------- Módulos ---------- */
+.modules{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:20px;align-items:stretch}
+.module{--t:#E3EEFA;--s:#2F6DB5;--k:#123B66;--b:#C5D9EE;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 2px rgba(15,40,70,.05),0 10px 24px -16px rgba(15,40,70,.28);min-width:0;display:flex;flex-direction:column}
+.tone-0{--t:#E8EEF4;--s:#2F5B8A;--k:#1B3552;--b:#CBD6E2}
+.tone-1{--t:#E7EFEA;--s:#3E6B52;--k:#213F2E;--b:#CADACF}
+.tone-2{--t:#F0E8EB;--s:#7A2E45;--k:#471A29;--b:#DCC8D0}
+.tone-3{--t:#F2EDE0;--s:#8A6A22;--k:#4C3A10;--b:#DFD3B4}
+.tone-4{--t:#E5EEEF;--s:#2F6B70;--k:#183F43;--b:#C3D8DA}
+.tone-5{--t:#EDEAE7;--s:#5E5A57;--k:#312E2C;--b:#D5CFCA}
+.module-head{border-top:4px solid var(--s);display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--t);color:var(--k);border-bottom:1px solid var(--b)}
+.mico{width:34px;height:34px;border-radius:6px;background:var(--s);color:#fff;display:grid;place-items:center;flex:none}
+.mico svg.i{width:19px;height:19px}
+.module-head h2{margin:0;flex:1;min-width:0;font:700 1.08rem/1.25 var(--font-d);overflow-wrap:anywhere}
+.pill{font:700 .78rem/1 var(--font);min-width:26px;text-align:center;padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.75);color:var(--k);border:1px solid var(--b)}
+.reslist{list-style:none;margin:0;padding:6px}
+.res{display:flex;align-items:center;gap:6px;border-radius:6px}
+.res:hover{background:var(--t)}
+.res-link{flex:1;min-width:0;display:flex;align-items:center;gap:12px;padding:9px 10px;color:var(--ink);text-decoration:none;border-radius:6px}
+.fico{width:34px;height:34px;border-radius:6px;background:var(--cb,#EDF1F5);color:var(--c,#566A7D);display:grid;place-items:center;flex:none}
+.fico svg.i{width:18px;height:18px}
+.k-pdf{--c:#8E2F2A;--cb:#F3E7E5}.k-doc,.k-xls,.k-ppt,.k-html,.k-web,.k-mail,.k-file{--c:#2F4E70;--cb:#E8EEF4}
+.rtxt{min-width:0;flex:1}
+.rname{display:block;font:600 .97rem/1.3 var(--font);color:var(--ink);overflow-wrap:anywhere}
+.res-link:hover .rname{color:var(--primary-d);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
+.rmeta{display:block;margin-top:2px;font-size:.8rem;line-height:1.3;color:var(--ink-3);overflow-wrap:anywhere}
+.rdesc{display:block;margin-top:2px;font-size:.84rem;line-height:1.35;color:var(--ink-2);overflow-wrap:anywhere}
+.go{color:#8A9BAC;opacity:0;transition:opacity .12s}
+.res:hover .go,.res-link:focus-visible .go{opacity:1}
+.empty{margin:0;padding:18px 18px 20px;color:var(--ink-3);font-size:.92rem}
+.noresults{grid-column:1/-1;text-align:center;padding:48px 16px;color:var(--ink-2)}
+.noresults strong{display:block;font:700 1.15rem var(--font-d);color:var(--ink);margin-bottom:6px}
+.noresults .btn{margin-top:14px}
+
+/* Acciones de administración por recurso */
+.itemactions{display:flex;gap:2px;flex:none;padding-right:6px}
+.ib{width:34px;height:34px;display:grid;place-items:center;border:1px solid transparent;border-radius:6px;background:none;color:var(--ink-2);cursor:pointer}
+.ib:hover{background:#fff;border-color:var(--line);color:var(--primary-d)}
+.ib.del:hover{color:#B3261E;border-color:var(--err-line);background:var(--err-bg)}
+body.editing .module{border-style:dashed;border-color:#A8BBCD}
+body.editing .go{display:none}
+
+/* ---------- Diálogos ---------- */
+dialog{padding:0;border:0;border-radius:10px;width:min(640px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;color:var(--ink);box-shadow:0 30px 90px -20px rgba(5,20,36,.6);background:#fff}
+dialog::backdrop{background:rgba(10,32,54,.55)}
+.dlg-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#F1F5F9;border-bottom:1px solid var(--line)}
+.dlg-head h2{margin:0;font:700 1.12rem/1.3 var(--font-d)}
+.dlg-body{padding:18px 22px 22px}
+.dlg-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-top:20px}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+label:first-child{margin-top:0}
+input:not([type=checkbox]),select,textarea{width:100%;border:1px solid #9FB0C1;border-radius:6px;font:inherit;padding:10px 12px;background:#fff;color:var(--ink);min-height:42px}
+input:not([type=search]):focus,select:focus,textarea:focus{outline:3px solid rgba(240,178,74,.7);outline-offset:0;border-color:#B07A12}
+textarea{min-height:80px;resize:vertical}
+.formgrid{display:grid;grid-template-columns:1fr 150px;gap:14px}
+.hint{font-size:.82rem;color:var(--ink-3);margin:5px 0 0}
+.ask-msg{margin:0;white-space:pre-line;font-size:1rem;line-height:1.5}
+.dlg-sm{width:min(460px,calc(100vw - 24px))}
+.modrow{display:flex;align-items:center;gap:8px;margin:10px 0}
+.modrow .ib{border-color:var(--line);background:#fff}
+#itemErr{border-radius:10px;border:1px solid var(--err-line);margin-bottom:14px}
+
+/* ---------- Aviso emergente ---------- */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,24px);opacity:0;pointer-events:none;z-index:100;display:flex;align-items:center;gap:12px;max-width:min(560px,calc(100vw - 24px));padding:13px 18px;border-radius:12px;background:var(--ink);color:#fff;font:600 .95rem/1.35 var(--font);box-shadow:0 18px 44px -12px rgba(0,0,0,.55);transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast.ok{background:#14532D}
+.toast.error{background:#8C1D14}
+.toast svg.i{width:20px;height:20px}
+
+.footer{max-width:1280px;margin:0 auto;padding:6px 24px 36px;font-size:.82rem;color:var(--ink-3);display:flex;gap:8px;flex-wrap:wrap}
+
+/* ---------- Adaptación ---------- */
+@media (max-width:760px){
+  .hero-in{padding:18px 14px 24px}
+  .shell{padding:20px 14px 14px}
+  .footer{padding:6px 14px 30px}
+  .brand h1{font-size:1.35rem}
+  .brand svg.logo{width:40px;height:40px}
+  .search-box input.search{height:54px;min-height:54px;font-size:1rem}
+  .editbar{margin-top:-40px}
+  .editbar .spacer{display:none}
+  .editbar-row .btn{flex:1 1 auto}
+  .menu{flex:1 1 auto}.menu>summary{width:100%}
+  .menu-panel{left:0;right:0;min-width:0}
+  .formgrid{grid-template-columns:1fr}
+  .kbd{display:none}
+}
+@media (max-width:480px){
+  .actions{width:100%;flex-wrap:nowrap}.actions .btn{flex:1 1 0;padding:0 8px;font-size:.86rem;min-width:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{.hero .actions,.editbar,.search-wrap .kbd{display:none}.hero{background:#fff;color:#000}.hero::before{display:none}}
+
+/* Conservar mejoras aprobadas: cabecera compacta y tarjetas fijas con cuatro accesos */
+.hero-in{padding:14px 24px 15px}
+.brand{gap:11px}
+.brand svg.logo{width:38px;height:38px}
+.brand h1{font-size:1.45rem}
+.brand p{margin-top:3px;font-size:.8rem}
+.search-wrap{max-width:520px;margin:13px auto 0}
+.search-box svg.i{left:14px;width:18px;height:18px}
+.search-box input.search{height:43px;min-height:43px;font-size:.98rem;padding:0 54px 0 42px}
+.status{min-height:18px;margin:6px 0 0;font-size:.8rem}
+.shell{padding:18px 24px 20px}
+.editbar{margin:0 0 18px}
+.module{height:444px}
+.reslist{list-style:none;margin:0;padding:6px;min-height:0;flex:1;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#BECBD7 transparent;scrollbar-width:thin}
+.res{min-height:78px;height:78px}
+.res-link{min-height:100%;gap:10px;padding:6px 10px}
+.module-footer{flex:none;min-height:42px;border-top:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;background:#FBFCFD}
+.module-footer .more{border:0;background:transparent;cursor:pointer;padding:8px 12px;color:var(--primary);font:700 .86rem/1.1 var(--font);display:inline-flex;align-items:center;gap:7px}
+.module-footer .more:hover{text-decoration:underline;text-underline-offset:3px}
+.module-footer .more:focus-visible{outline:3px solid var(--amber)}
+.module-footer .all-visible{font-size:.76rem;color:var(--ink-3)}
+/* Beta 0.4.3: filas compactas, sin descripción ni subtítulo */
+.module{height:296px}
+.reslist{padding:4px 6px}
+.res{min-height:40px;height:auto}
+.res-link{min-height:0;gap:10px;padding:5px 10px}
+.fico{width:28px;height:28px}
+.fico svg.i{width:16px;height:16px}
+.rname{font-size:.94rem;line-height:1.25}
+.module-head{padding:11px 16px}
+.module-footer{min-height:38px}
+body.editing .module{height:auto;min-height:296px}
+.dlg-md{width:min(560px,calc(100vw - 24px))}
+.conn-lead{margin:0 0 10px;font-size:1rem}
+.pathbox{display:flex;gap:10px;align-items:stretch}
+.pathcode{flex:1;min-width:0;margin:0;padding:10px 12px;background:#F1F5F9;border:1px solid var(--line);border-radius:6px;font:600 .86rem/1.4 Consolas,'Cascadia Mono',monospace;color:var(--ink);overflow-wrap:anywhere;user-select:all}
+.conn-hint{margin:12px 0 0;font-size:.9rem;color:var(--ink-2)}
+body.editing .reslist{overflow:visible;flex:none}
+@media (max-width:760px){.hero-in{padding:12px 14px 14px}.shell{padding:20px 14px 14px}.brand svg.logo{width:34px;height:34px}.search-box input.search{height:42px;min-height:42px;font-size:.97rem}.editbar{margin-top:0}}
+
+/* ==========================================================================
+   Familia visual El Canal (solo presentación)
+   ========================================================================== */
+:root{--bg:#F5F3EE;--amb:#D9B35A;--radius:14px}
+body{background:var(--bg)}
+.btn{border-radius:999px;border-color:#C4D0DC}
+.btn.ghost{border-color:rgba(255,255,255,.34)}
+.hero{border-bottom:3px solid var(--amb)}
+.brand h1{font-weight:400;letter-spacing:.22em}
+.brand svg.logo{filter:none;width:36px;height:36px}
+.topbar{gap:12px 16px}
+.fam{display:flex;gap:4px;background:rgba(255,255,255,.1);border-radius:999px;padding:4px;margin-left:auto}
+.fam a{text-decoration:none;color:#fff;font:700 .82rem/1 var(--font);padding:8px 16px;border-radius:999px}
+.fam a:hover{background:rgba(255,255,255,.18)}
+.fam a[aria-current=page]{background:#fff;color:var(--navy-8)}
+.greet{margin:0 0 10px;font:400 1.3rem/1.2 var(--font-d);color:#fff;letter-spacing:.2px}
+.search-box input.search{border-radius:999px}
+.search-wrap{margin-top:12px}
+.editbar{border-radius:14px}
+.save-status{border-radius:0 0 14px 14px}
+.module{border-radius:14px;box-shadow:0 1px 2px rgba(18,38,63,.04),0 10px 24px -18px rgba(18,38,63,.3)}
+.module-head{border-top:0;padding:12px 16px}
+.mico{border-radius:50%;width:32px;height:32px}
+.module-head h2{font-weight:400;font-size:1.12rem}
+.res,.res-link{border-radius:10px}
+.fico{border-radius:8px}
+dialog{border-radius:14px}
+.dlg-head{background:#fff;border-bottom:3px solid var(--amb)}
+.dlg-head h2{font-weight:400}
+.footer{font-size:.82rem}
+@media (max-width:760px){.fam{margin-left:0}}
+@media print{.fam{display:none}}
+
+</style>
+</head>
+<body>
+
+<!-- ============================ CABECERA ============================ -->
+<header class="hero">
+ <div class="hero-in">
+  <div class="topbar">
+   <div class="brand">
+    <svg class="logo" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M8 40 C8 26 24 32 24 22 S40 16 40 8"/><circle cx="40" cy="8" r="3.5" fill="#D9B35A" stroke="none"/></svg>
+    <div><h1>SENDA</h1><p>Contratación · Centro de acceso a recursos</p></div>
+   </div>
+   <nav class="fam" aria-label="Herramientas de El Canal"></nav>
+   <div class="actions">
+    <button id="connect" class="btn ghost hide" type="button" title="Conectar con la carpeta de SENDA"><span class="dot" aria-hidden="true"></span><span id="connectLabel">Conectar</span></button>
+    <button id="edit" class="btn ghost" type="button" title="Administrar recursos" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></svg><span id="editLabel">Editar</span></button>
+   </div>
+  </div>
+  <div class="search-wrap">
+   <p class="greet" id="greet">¿Qué necesita hoy?</p>
+   <div class="search-box">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="search" class="search" type="search" placeholder="Buscar un recurso…" aria-label="Buscar recursos" autocomplete="off" spellcheck="false">
+    <span class="kbd" aria-hidden="true">/</span>
+   </div>
+   <div class="status" id="status" role="status"></div>
+  </div>
+ </div>
+</header>
+
+<div class="shell">
+
+ <!-- ====================== BARRA DE EDICIÓN ====================== -->
+ <section id="manager" class="editbar hide" aria-label="Administración de recursos">
+  <div class="editbar-row">
+   <span class="tag"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/></svg>Modo edición</span>
+   <span id="dirty" class="chip" data-s="">Sin conectar</span>
+   <span class="spacer"></span>
+   <button id="add" class="btn" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Añadir recurso</button>
+   <button id="manageModules" class="btn" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Organizar módulos</button>
+   <details class="menu" id="backupMenu">
+    <summary class="btn" role="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0-4-4m4 4 4-4M5 19h14"/></svg>Copias y enlaces<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 10 6 6 6-6"/></svg></summary>
+    <div class="menu-panel">
+     <div class="lbl">Copias de seguridad</div>
+     <button id="backupNow" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg>Hacer copia de seguridad</button>
+     <button id="exportJson" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V4m0 0L8 8m4-4 4 4M5 19h14"/></svg>Exportar copia de seguridad</button>
+     <button id="importJson" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>Importar copia de seguridad</button>
+     <hr>
+     <div class="lbl">Enlaces</div>
+     <button id="importHtml" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 10 18.7l1-1"/></svg>Importar listado de enlaces</button>
+     <button id="restoreStarter" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg>Recuperar enlaces iniciales</button>
+     <hr>
+     <button id="discard" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>Descartar cambios sin guardar</button>
+    </div>
+   </details>
+   <button id="headerSave" class="btn primary" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg>Guardar</button>
+  </div>
+  <p id="saveStatus" class="save-status" role="status" aria-live="polite"><span id="saveText">Para guardar cambios, indica dónde está la carpeta de SENDA.</span><button id="connect2" class="btn primary" type="button">Conectar</button></p>
+  <input type="file" id="fileJson" accept=".json,application/json" class="hide">
+  <input type="file" id="fileHtml" accept=".html,.htm,text/html" class="hide">
+ </section>
+
+ <main class="modules" id="modules"></main>
+</div>
+
+<div class="footer"><span>SENDA · Contratación · Beta 0.5</span><span>·</span><span>Funciona sin conexión a Internet</span></div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- ============================ DIÁLOGOS ============================ -->
+<dialog id="itemDlg" aria-labelledby="itemHeading">
+ <div class="dlg-head"><h2 id="itemHeading">Recurso</h2><button class="ib" id="closeItem" type="button" aria-label="Cerrar"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+ <form id="itemForm" class="dlg-body">
+  <p id="itemErr" class="save-status error hide" role="alert"></p>
+  <label for="itemName">Nombre</label>
+  <input id="itemName" required maxlength="180">
+  <label for="itemUrl">Enlace (dirección web o ruta del archivo; vale pegar la ruta del Explorador)</label>
+  <input id="itemUrl" required maxlength="2000" placeholder="https://… · C:\carpeta\archivo.pdf · ../manuales/archivo.pdf">
+  <div class="formgrid">
+   <div><label for="itemModule">Módulo</label><select id="itemModule" required></select></div>
+   <div><label for="itemPosition">Posición</label><input id="itemPosition" type="number" min="1" step="1" value="1"></div>
+  </div>
+  <div class="dlg-actions"><button type="button" class="btn" id="cancelItem">Cancelar</button><button class="btn primary" type="submit">Guardar</button></div>
+ </form>
+</dialog>
+
+<dialog id="modulesDlg" aria-labelledby="modulesHeading">
+ <div class="dlg-head"><h2 id="modulesHeading">Organizar módulos</h2><button class="ib" id="closeModules" type="button" aria-label="Cerrar"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+ <div class="dlg-body">
+  <p class="hint" style="margin-top:0">Cambia el nombre o el orden. Renombrar un módulo conserva sus recursos.</p>
+  <div id="moduleEditor"></div>
+  <div class="dlg-actions"><button id="addModule" class="btn" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Crear módulo</button><button id="doneModules" class="btn primary" type="button">Terminar</button></div>
+ </div>
+</dialog>
+
+<dialog id="connDlg" class="dlg-md" aria-labelledby="connTitle">
+ <div class="dlg-head"><h2 id="connTitle">Para editar, indica dónde está SENDA</h2></div>
+ <div class="dlg-body">
+  <p class="conn-lead">La carpeta de SENDA es esta:</p>
+  <div class="pathbox"><div id="connPath" class="pathcode"></div><button id="connCopy" class="btn" type="button">Copiar ruta</button></div>
+  <p class="conn-hint">Pulsa «Seleccionar carpeta», pega la ruta en la barra de direcciones de la ventana que se abre (Ctrl+V y Intro) y confirma.</p>
+  <div class="dlg-actions"><button id="connNo" class="btn" type="button">Ahora no</button><button id="connGo" class="btn primary" type="button">Seleccionar carpeta</button></div>
+ </div>
+</dialog>
+
+<dialog id="askDlg" class="dlg-sm" aria-labelledby="askTitle">
+ <div class="dlg-head"><h2 id="askTitle"></h2></div>
+ <div class="dlg-body">
+  <p id="askMsg" class="ask-msg"></p>
+  <input id="askInput" class="hide" style="margin-top:14px" aria-label="Valor" maxlength="120">
+  <div class="dlg-actions"><button id="askNo" class="btn" type="button">Cancelar</button><button id="askOk" class="btn primary" type="button">Aceptar</button></div>
+ </div>
+</dialog>
+
+<script src="recursos.js"></script>
+<script>(function(){var h=new Date().getHours(),g=h<14?"Buenos días":(h<21?"Buenas tardes":"Buenas noches"),e=document.getElementById("greet");if(e)e.textContent=g+". ¿Qué necesita hoy?"})()</script>
+<script>
+'use strict';
+const VERSION='0.5.0-beta';
+// Catálogo inicial de la edición pública: enlaces de ejemplo, editables y borrables.
+// Nunca se generan enlaces ficticios. Los cambios del usuario se guardan en su carpeta (recursos.json), no aquí.
+const DEFAULT={};
+const expandedModules=new Set();
+let db=structuredClone(DEFAULT),source='inicial',dir=null,fileHandle=null,dirty=false,editing=null,managerOpen=false,lastLoaded=null;
+// Lectura sin permisos: recursos.js es una copia de recursos.json que SENDA regenera al guardar.
+// recursos.json sigue siendo la fuente de verdad; si recursos.js falta o no es válido se usa el catálogo inicial.
+try{if(window.SENDA_RECURSOS){db=validate(structuredClone(window.SENDA_RECURSOS));source='espejo'}}catch(e){db=structuredClone(DEFAULT);source='inicial'}
+const $=x=>document.getElementById(x), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uuid=()=>globalThis.crypto?.randomUUID?.()||('local-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));
+const norm=s=>String(s??'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLocaleLowerCase('es');
+
+/* ===================== Iconos (SVG en línea, sin recursos externos) ===================== */
+const P={
+ apps:'<rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/>',
+ book:'<path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/>',
+ scale:'<path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-2.5 6a3 3 0 0 0 5 0zM19 7l-2.5 6a3 3 0 0 0 5 0z"/>',
+ bank:'<path d="M3 9.5 12 4l9 5.5M5 10.5v7M9.5 10.5v7M14.5 10.5v7M19 10.5v7M3 20h18"/>',
+ form:'<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/>',
+ layers:'<path d="M12 4 3 9l9 5 9-5zM3 14l9 5 9-5"/>',
+ folder:'<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',
+ globe:'<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.5 3.6 5.4 3.6 8.5s-1 6-3.6 8.5c-2.6-2.5-3.6-5.4-3.6-8.5s1-6 3.6-8.5z"/>',
+ pdf:'<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 14h1.8a1.4 1.4 0 0 0 0-2.8H10V17"/>',
+ doc:'<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 12h6M10 15h6M10 18h4"/>',
+ xls:'<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 12l4 6M14 12l-4 6"/>',
+ ppt:'<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 18v-6h2.2a1.7 1.7 0 0 1 0 3.4H10"/>',
+ code:'<path d="m9 8-4 4 4 4M15 8l4 4-4 4M13 6l-2 12"/>',
+ mail:'<rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/>',
+ file:'<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/>',
+ ext:'<path d="M8 16 16 8M9 8h7v7"/>',
+ up:'<path d="m6 14 6-6 6 6"/>', down:'<path d="m6 10 6 6 6-6"/>',
+ pen:'<path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="m13.5 6.5 4 4"/>',
+ trash:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6"/>',
+ check:'<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+ alert:'<circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.1"/>',
+ link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 10 18.7l1-1"/>'
+};
+const ico=n=>`<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${P[n]||P.file}</svg>`;
+const MODICON={m1:'apps',m2:'book',m3:'scale',m4:'bank',m5:'form',m6:'layers'};
+function kindOf(u){
+ if(/^https?:/i.test(u))return{k:'web',i:'globe',l:'Web'};
+ if(/^mailto:/i.test(u))return{k:'mail',i:'mail',l:'Correo'};
+ const p=u.split(/[?#]/)[0].toLowerCase();
+ if(p.endsWith('.pdf'))return{k:'pdf',i:'pdf',l:'PDF'};
+ if(/\.(docx?|dotx?|odt|rtf)$/.test(p))return{k:'doc',i:'doc',l:'Word'};
+ if(/\.(xlsx?|xlsm|csv|ods)$/.test(p))return{k:'xls',i:'xls',l:'Excel'};
+ if(/\.(pptx?|odp)$/.test(p))return{k:'ppt',i:'ppt',l:'PowerPoint'};
+ if(/\.html?$/.test(p))return{k:'html',i:'code',l:'Aplicación / página'};
+ return{k:'file',i:'file',l:'Archivo'};
+}
+function hostOf(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch{return''}}
+
+/* ===================== Avisos ===================== */
+let toastTimer=null;
+function toast(s,kind='ok'){const t=$('toast');t.className='toast show '+kind;t.innerHTML=ico(kind==='ok'?'check':'alert')+'<span></span>';t.lastChild.textContent=s;clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),kind==='ok'?3600:9000)}
+$('toast').addEventListener('click',()=>$('toast').classList.remove('show'));
+function message(s,error=false){$('status').textContent=s;$('status').classList.toggle('error',error)}
+function notice(s,kind=''){
+ $('saveText').textContent=s;$('saveStatus').className='save-status'+(kind?' '+kind:'');
+ // Si hay un formulario abierto, el error también se muestra dentro para que no quede tapado.
+ const dlg=$('itemDlg');if(dlg.open){const e=$('itemErr');e.textContent=s;e.classList.toggle('hide',kind!=='error')}
+}
+/* Diálogo propio que sustituye a confirm / alert / prompt (no bloquea el navegador). */
+function ask(title,msg,o={}){return new Promise(resolve=>{
+ const d=$('askDlg'),ok=$('askOk'),no=$('askNo'),inp=$('askInput');
+ $('askTitle').textContent=title;$('askMsg').textContent=msg;
+ inp.classList.toggle('hide',!o.input);inp.value='';
+ ok.textContent=o.ok||'Aceptar';no.textContent=o.no||'Cancelar';no.classList.toggle('hide',!!o.info);
+ ok.className='btn '+(o.danger?'danger-solid':'primary');
+ let result=o.input?null:false;
+ const finish=()=>{d.removeEventListener('close',finish);ok.onclick=no.onclick=inp.onkeydown=null;resolve(result)};
+ ok.onclick=()=>{result=o.input?inp.value:true;d.close()};
+ no.onclick=()=>d.close();
+ inp.onkeydown=ev=>{if(ev.key==='Enter'){ev.preventDefault();ok.click()}};
+ d.addEventListener('close',finish);d.showModal();
+ (o.input?inp:(o.danger?no:ok)).focus();
+})}
+
+function mark(){dirty=true;notice('Hay cambios sin guardar. Pulsa Guardar para registrarlos en la carpeta.','warn');render()}
+function clean(){dirty=false}
+
+function syncChrome(){
+ $('connect').classList.toggle('on',!!dir);
+ $('connect').classList.toggle('hide',!(managerOpen&&dir));
+ $('connectLabel').textContent=dir?'Carpeta conectada':'Conectar';
+ $('connect').title=dir?'Carpeta conectada. Pulsa para elegir otra':'Conectar con la carpeta de SENDA';
+ $('connect2').classList.toggle('hide',!!dir);
+ const c=$('dirty');
+ if(dirty){c.textContent='Cambios sin guardar';c.dataset.s='dirty'}
+ else if(dir){c.textContent='Todo guardado';c.dataset.s='ok'}
+ else{c.textContent='Sin conectar';c.dataset.s=''}
+}
+function startEditing(){managerOpen=true;document.body.classList.add('editing');$('manager').classList.remove('hide');$('headerSave').classList.remove('hide');$('edit').setAttribute('aria-pressed','true');$('edit').classList.add('accent');$('edit').classList.remove('ghost');$('editLabel').textContent='Finalizar edición';
+ notice(dir?'Conectado. Puedes editar y guardar.':'Para guardar cambios, indica dónde está la carpeta de SENDA.',dir?'':'warn');render()}
+function stopEditing(){managerOpen=false;document.body.classList.remove('editing');$('manager').classList.add('hide');$('headerSave').classList.add('hide');$('backupMenu').open=false;$('edit').setAttribute('aria-pressed','false');$('edit').classList.remove('accent');$('edit').classList.add('ghost');$('editLabel').textContent='Editar';render()}
+function needFolder(){if(dir)return true;if(!managerOpen)startEditing();notice('Primero hay que conectar SENDA con su carpeta. No se ha alterado ningún archivo.','error');$('connect2').focus();return false}
+function mergeStarter(){const seen=new Set(db.resources.map(r=>r.id));const seenRoutes=new Set(db.resources.map(r=>r.url+'|'+r.name));let added=0;for(const src of DEFAULT.resources){if(seen.has(src.id)||seenRoutes.has(src.url+'|'+src.name))continue;const r=structuredClone(src);r.order=1+Math.max(0,...db.resources.filter(x=>x.moduleId===r.moduleId).map(x=>x.order));db.resources.push(r);added++}return added}
+// Acepta rutas de Windows pegadas desde el Explorador («Copiar como ruta de acceso», con o sin comillas) y las convierte en enlaces file://.
+function normalizeUrl(raw){
+ let u=String(raw||'').trim().replace(/^["'“«]+|["'”»]+$/g,'').trim();
+ const enc=p=>encodeURI(p).replace(/#/g,'%23').replace(/\?/g,'%3F');
+ if(/^[A-Za-z]:[\\\/]/.test(u))return 'file:///'+u[0]+':'+enc(u.slice(2).replace(/\\/g,'/'));
+ if(/^\\\\[^\\\/]/.test(u))return 'file://'+enc(u.slice(2).replace(/\\/g,'/'));
+ if(!/^[a-z][a-z0-9+.-]*:/i.test(u))u=u.replace(/\\/g,'/');
+ return u}
+function validUrl(raw){const url=raw.trim();if(!url||/^(javascript|data|vbscript):/i.test(url)||/[\u0000-\u001f]/.test(url))return false; if(/^[a-z][a-z0-9+.-]*:/i.test(url))return /^https?:\/\//i.test(url)||/^mailto:/i.test(url)||/^file:\/\/[^\s]/i.test(url);return !url.startsWith('\\\\')&&!url.startsWith('//')&&!url.includes('\\');}
+
+/* ===================== Pintado ===================== */
+function rowHtml(r){
+ const k=kindOf(r.url),web=/^https?:/i.test(r.url);
+ const meta=web?(k.l+' · '+hostOf(r.url)):k.l;
+ const acts=managerOpen?`<div class="itemactions">
+  <button class="ib" data-act="up" data-id="${esc(r.id)}" title="Subir" aria-label="Subir ${esc(r.name)}">${ico('up')}</button>
+  <button class="ib" data-act="down" data-id="${esc(r.id)}" title="Bajar" aria-label="Bajar ${esc(r.name)}">${ico('down')}</button>
+  <button class="ib" data-act="edit" data-id="${esc(r.id)}" title="Editar" aria-label="Editar ${esc(r.name)}">${ico('pen')}</button>
+  <button class="ib del" data-act="delete" data-id="${esc(r.id)}" title="Eliminar" aria-label="Eliminar ${esc(r.name)}">${ico('trash')}</button></div>`:'';
+ return `<li class="res"><a class="res-link" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer" title="${esc(meta?meta+' · '+r.url:r.url)}"><span class="fico k-${k.k}">${ico(k.i)}</span><span class="rtxt"><span class="rname">${esc(r.name)}</span></span>${web?`<span class="go">${ico('ext')}</span>`:''}</a>${acts}</li>`;
+}
+function fmtDate(s){const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('es-ES',{day:'2-digit',month:'2-digit',year:'numeric'})}
+function statusLine(){const n=db.resources.length,f=fmtDate(db.updatedAt);
+ if(dirty)return `${n} recursos · Cambios sin guardar`;
+ if(dir||source==='espejo')return `${n} recursos${f?' · Catálogo actualizado el '+f:''}`;
+ return `${n} recursos · Catálogo inicial (puede no estar al día)`}
+function render(){
+ const previousScroll=new Map(Array.from(document.querySelectorAll('.module[data-module] .reslist')).map(el=>[el.closest('.module').dataset.module,el.scrollTop]));
+ const words=norm($('search').value.trim()).split(/\s+/).filter(Boolean);let count=0;const out=[];
+ for(const [index,m] of db.modules.entries()){
+  const items=db.resources.filter(r=>r.moduleId===m.id).sort((a,b)=>a.order-b.order||a.name.localeCompare(b.name,'es')).filter(r=>{const hay=norm([r.name,r.url,m.name].join(' '));return words.every(w=>hay.includes(w))});
+  count+=items.length;
+  if(words.length&&!items.length)continue;
+  const expanded=expandedModules.has(m.id)||managerOpen||words.length>0;
+  const visible=expanded?items:items.slice(0,4);
+  const hidden=Math.max(0,items.length-4);
+  const footer=hidden>0&&!managerOpen&&!words.length?
+   `<div class="module-footer"><button class="more" type="button" data-more="${esc(m.id)}" aria-expanded="${expandedModules.has(m.id)}" aria-label="${expandedModules.has(m.id)?'Ver menos enlaces de ':'Ver '+hidden+' enlaces más de '}${esc(m.name)}">${expandedModules.has(m.id)?'Ver menos':'Ver más ('+hidden+')'} ${ico(expandedModules.has(m.id)?'up':'down')}</button></div>`:
+   `<div class="module-footer"><span class="all-visible">${items.length} recurso${items.length===1?'':'s'}</span></div>`;
+  out.push(`<section class="module tone-${index%6}" data-module="${esc(m.id)}" aria-label="${esc(m.name)}"><div class="module-head"><span class="mico">${ico(MODICON[m.id]||'folder')}</span><h2>${esc(m.name)}</h2><span class="pill" title="${items.length} recurso${items.length===1?'':'s'}">${items.length}</span></div>${items.length?'<ul class="reslist">'+visible.map(rowHtml).join('')+'</ul>':`<p class="empty">${managerOpen?'Sin recursos. Usa «Añadir recurso».':'Sin recursos todavía'}</p>`}${footer}</section>`);
+ }
+ $('modules').innerHTML=out.join('')||`<div class="noresults"><strong>Sin resultados</strong>No se han encontrado recursos con esas palabras.<br><button id="clearSearch" class="btn" type="button">Borrar búsqueda</button></div>`;
+ document.querySelectorAll('.module[data-module] .reslist').forEach(el=>{const id=el.closest('.module').dataset.module;if(managerOpen||words.length||expandedModules.has(id))el.scrollTop=previousScroll.get(id)||0});
+ if(words.length)message(`${count} coincidencia${count===1?'':'s'} · Intro abre la primera`);else message(statusLine());
+ syncChrome();
+}
+function validate(candidate){if(!candidate||candidate.schema!=='senda-recursos-v1'||!Array.isArray(candidate.modules)||!Array.isArray(candidate.resources))throw Error('La copia de seguridad no es compatible');if(candidate.modules.some(x=>typeof x.id!=='string'||typeof x.name!=='string')||candidate.resources.some(x=>typeof x.id!=='string'||typeof x.name!=='string'||typeof x.moduleId!=='string'||typeof x.url!=='string'||!candidate.modules.some(m=>m.id===x.moduleId)||!validUrl(x.url)))throw Error('El catálogo contiene recursos o módulos inválidos');return candidate}
+
+/* ===================== Carpeta de trabajo (lógica original) ===================== */
+// Se recuerda únicamente el acceso concedido a la carpeta. No usa cookies ni Internet.
+function openLocalDb(){return new Promise((resolve,reject)=>{if(!('indexedDB'in window)){reject(Error('No disponible'));return}const q=indexedDB.open('SENDA_CARPETA_LOCAL',1);q.onupgradeneeded=()=>{if(!q.result.objectStoreNames.contains('estado'))q.result.createObjectStore('estado')};q.onsuccess=()=>resolve(q.result);q.onerror=()=>reject(q.error)})}
+async function rememberFolder(handle){const database=await openLocalDb();return new Promise((resolve,reject)=>{const t=database.transaction('estado','readwrite');t.objectStore('estado').put(handle,'carpeta');t.oncomplete=()=>{database.close();resolve()};t.onerror=()=>{database.close();reject(t.error)}})}
+async function savedFolder(){const database=await openLocalDb();return new Promise((resolve,reject)=>{const t=database.transaction('estado','readonly');const q=t.objectStore('estado').get('carpeta');q.onsuccess=()=>{const val=q.result;database.close();resolve(val)};q.onerror=()=>{database.close();reject(q.error)}})}
+async function loadFolder(handle,offerRecovery){
+ await checkFolder(handle);
+ const oldFile=await handle.getFileHandle('recursos.json',{create:false}).catch(e=>{if(e.name==='NotFoundError')return null;throw e});
+ let next=structuredClone(DEFAULT),content=null;
+ if(oldFile){content=await(await oldFile.getFile()).text();next=validate(JSON.parse(content))}
+ dir=handle;fileHandle=oldFile;db=next;lastLoaded=content;clean();await syncMirror();
+ if(oldFile){
+   const missing=DEFAULT.resources.filter(r=>!db.resources.some(x=>x.id===r.id||x.url===r.url&&x.name===r.name));
+   if(offerRecovery&&missing.length&&db.revision<=2&&await ask('Enlaces iniciales',`La carpeta contiene ${db.resources.length} enlaces, pero faltan ${missing.length} de los enlaces iniciales. ¿Quieres incorporarlos sin borrar ninguno de los tuyos?`,{ok:'Incorporar'})){
+     if(mergeStarter()){mark();await save()}
+   }
+   if(!db.resources.length)notice('La carpeta está conectada, pero su listado está vacío. Usa «Recuperar enlaces iniciales» si lo deseas.','error');
+   else if(!dirty)notice(`Carpeta conectada · ${db.resources.length} enlaces disponibles.`,'ok');
+ }else notice('La carpeta no tiene todavía un listado. Se muestran los enlaces iniciales. Pulsa Guardar para crearlo.','warn');
+ render();
+}
+/* ---------- Errores y comprobaciones de la carpeta ---------- */
+// Un error de acceso a la carpeta casi siempre es la red de la mañana: se explica con palabras del usuario.
+const DEFAULT_PATH='';
+// Ruta de la carpeta de SENDA tal como la ve el usuario; se deduce de la dirección de la propia página.
+function folderPath(){
+ try{if(location.protocol==='file:'){
+  const p=decodeURIComponent(location.pathname).replace(/\/[^\/]*$/,'');
+  if(location.host)return '\\\\'+location.host+p.replace(/\//g,'\\');
+  if(/^\/[A-Za-z]:/.test(p))return p.slice(1).replace(/\//g,'\\');
+  return p}}catch(e){}
+ return ''}
+function connDialog(){return new Promise(resolve=>{
+ const dlg=$('connDlg'),path=folderPath();let answer=false;
+ $('connPath').innerHTML=path.split('\\').map(esc).join('\\<wbr>');$('connCopy').textContent='Copiar ruta';
+ $('connCopy').onclick=async()=>{let ok=false;
+  try{await navigator.clipboard.writeText(path);ok=true}catch(e){
+   try{const r=document.createRange();r.selectNodeContents($('connPath'));const s=getSelection();s.removeAllRanges();s.addRange(r);ok=document.execCommand('copy')}catch(e2){}}
+  $('connCopy').textContent=ok?'✓ Copiada':'Selecciónala y pulsa Ctrl+C'};
+ $('connGo').onclick=()=>{answer=true;dlg.close()};
+ $('connNo').onclick=()=>dlg.close();
+ dlg.addEventListener('close',()=>resolve(answer),{once:true});
+ dlg.showModal();$('connGo').focus()})}
+function friendly(e){
+ const n=e&&e.name;
+ if(e&&e.wrongFolder)return e.message;
+ if(['NotFoundError','NotReadableError','InvalidStateError','NetworkError','TimeoutError','UnknownError'].includes(n))
+  return 'No se puede acceder a la carpeta de SENDA. Comprueba que la carpeta sigue en su sitio y que el dispositivo (disco, unidad de red o memoria USB) está conectado. Si la carpeta se ha movido de sitio, vuelve a seleccionarla con «Conectar».';
+ if(n==='NoModificationAllowedError')return 'Tu perfil no tiene permiso para modificar esta carpeta. Pide permiso de escritura sobre esa carpeta o elige otra.';
+ if(n==='NotAllowedError'||n==='SecurityError')return 'No se ha concedido el permiso. Cuando el navegador lo pida, pulsa «Permitir». Si ya lo has hecho, es posible que no tengas permiso de escritura en esta carpeta: elige otra carpeta.';
+ return e&&e.message?e.message:String(e);
+}
+function reportError(e){const m=friendly(e);message(m,true);notice(m,'error');toast(m,'error')}
+async function probe(h){const it=h.keys();await it.next()}   // falla si la carpeta no está accesible (red caída, carpeta movida)
+async function checkFolder(handle){
+ await probe(handle);
+ const self=decodeURIComponent(location.pathname.split('/').pop()||'').trim();
+ for(const n of [...new Set([self,'SENDA.html'].filter(Boolean))]){
+  try{await handle.getFileHandle(n,{create:false});return}catch(e){if(e.name!=='NotFoundError'&&e.name!=='TypeMismatchError')throw e}
+ }
+ throw Object.assign(Error('Esa no es la carpeta de SENDA. La carpeta correcta es: '+folderPath()),{wrongFolder:true});
+}
+/* ---------- Copia de lectura (recursos.js) ---------- */
+const mirrorText=o=>'/* SENDA · copia de lectura de recursos.json. Se genera automáticamente al guardar; no editar a mano. */\nwindow.SENDA_RECURSOS='+JSON.stringify(o,null,2)+';\n';
+async function writeMirror(obj){const f=await dir.getFileHandle('recursos.js',{create:true});const w=await f.createWritable();await w.write(mirrorText(obj));await w.close()}
+async function syncMirror(){ // mejor esfuerzo: nunca bloquea la conexión
+ try{if(!dir||lastLoaded===null)return;const obj=JSON.parse(lastLoaded),want=mirrorText(obj);let have=null;
+  try{have=await(await(await dir.getFileHandle('recursos.js',{create:false})).getFile()).text()}catch(e){if(e.name!=='NotFoundError')throw e}
+  if(have!==want)await writeMirror(obj)}catch(e){/* sin permiso de escritura todavía: se reintentará al guardar */}
+}
+/* ---------- Conexión ---------- */
+async function selectFolder(){
+ if(typeof window.showDirectoryPicker!=='function'){message('Este navegador no ofrece selección de carpeta. Utiliza Chrome compatible.',true);toast('Este navegador no permite conectar carpetas. Usa Chrome.','error');return false}
+ if(dirty&&!await ask('Cambios sin guardar','Hay cambios sin guardar. ¿Descartarlos y conectar otra carpeta?',{ok:'Descartar y conectar',danger:true}))return false;
+ try{
+  const opts={id:'senda',mode:'readwrite'};
+  try{const prev=await savedFolder();if(prev)opts.startIn=prev}catch(e){}
+  const handle=await window.showDirectoryPicker(opts);await loadFolder(handle,true);rememberFolder(handle).catch(()=>{});return true}
+ catch(e){if(e.name!=='AbortError')reportError(e);return false}
+}
+// Al pulsar Editar: usa la carpeta recordada (un solo «Permitir» del navegador) y solo pregunta si no hay ninguna.
+async function connectFlow(){
+ if(dir)return true;
+ let h=null;try{h=await savedFolder()}catch(e){}
+ if(h&&typeof h.queryPermission==='function'){
+  try{
+   let p=await h.queryPermission({mode:'readwrite'});
+   if(p!=='granted'&&typeof h.requestPermission==='function')p=await h.requestPermission({mode:'readwrite'});
+   if(p==='granted'){await loadFolder(h,true);return true}
+  }catch(e){if(e.name==='AbortError')return false;reportError(e);return false}
+ }
+ if(!await connDialog())return false;
+ return selectFolder();
+}
+async function restoreFolder(){
+ try{const handle=await savedFolder();if(!handle||typeof handle.queryPermission!=='function')return;
+ const granted=await handle.queryPermission({mode:'read'});if(granted==='granted')await loadFolder(handle,false)}catch(e){/* La consulta normal no depende de la carpeta. */}
+}
+async function save(){
+ if(!dir){notice('No se pudo guardar. Pulsa Conectar primero.','error');message('No guardado: carpeta sin conectar.',true);toast('No guardado: primero hay que conectar la carpeta.','error');return false}
+ if(!dirty&&lastLoaded!==null){notice('✓ Todo guardado. No hay cambios pendientes.','ok');toast('Todo guardado. No hay cambios pendientes.','ok');return true}
+ try{
+  await probe(dir);
+  const permission=await dir.requestPermission?.({mode:'readwrite'});
+  if(permission&&permission!=='granted')throw Error('Permiso de escritura denegado');
+  const previousHandle=await dir.getFileHandle('recursos.json',{create:false}).catch(e=>e.name==='NotFoundError'?null:Promise.reject(e));
+  const existing=previousHandle?await(await previousHandle.getFile()).text():null;
+  if(existing!==lastLoaded){notice('Los recursos han cambiado fuera de SENDA. No se han sobrescrito. Vuelve a pulsar Conectar.','error');message('No guardado: cambios externos detectados.',true);toast('No guardado: el listado ha cambiado fuera de SENDA. Vuelve a pulsar Conectar.','error');return false}
+  if(existing){const versions=await dir.getDirectoryHandle('versiones',{create:true});let suffix=new Date().toISOString().replace(/[:.]/g,'-');let backup=await versions.getFileHandle(`recursos_revision_${db.revision}_${suffix}.json`,{create:true});let w=await backup.createWritable();await w.write(existing);await w.close()}
+  validate(db);const next=structuredClone(db);next.revision=(Number(next.revision)||0)+1;next.updatedAt=new Date().toISOString();const output=JSON.stringify(next,null,2)+'\n';
+  fileHandle=await dir.getFileHandle('recursos.json',{create:true});let w=await fileHandle.createWritable();await w.write(output);await w.close();
+  const verify=await(await fileHandle.getFile()).text();if(verify!==output)throw Error('La relectura no coincide con lo escrito');
+  let aviso='';try{await writeMirror(next)}catch(e){aviso=' Aviso: no se pudo actualizar la copia de lectura (recursos.js); el resto de usuarios no verá el cambio hasta que se guarde de nuevo.'}
+  db=next;lastLoaded=output;clean();render();message('Cambios guardados y comprobados · Revisión '+db.revision);notice('✓ Guardado correctamente.'+aviso,aviso?'warn':'ok');toast('Guardado y comprobado · Revisión '+db.revision+aviso,aviso?'error':'ok');return true
+ }catch(e){const m=friendly(e);message('Error guardando: '+m,true);notice('NO GUARDADO: '+m+' Tus cambios siguen en pantalla.','error');toast('NO GUARDADO: '+m,'error');return false}
+}
+
+/* ===================== Recursos: alta, edición, orden y borrado ===================== */
+function itemDialog(id=null){if(!needFolder())return;editing=id;const r=id?db.resources.find(x=>x.id===id):null;$('itemErr').classList.add('hide');$('itemHeading').textContent=r?'Editar recurso':'Añadir recurso';$('itemName').value=r?.name||'';$('itemUrl').value=r?.url||'';$('itemModule').innerHTML=db.modules.map(m=>`<option value="${esc(m.id)}">${esc(m.name)}</option>`).join('');$('itemModule').value=r?.moduleId||db.modules[0]?.id;$('itemPosition').value=r?db.resources.filter(x=>x.moduleId===r.moduleId&&x.order<=r.order).length:db.resources.filter(x=>x.moduleId===db.modules[0]?.id).length+1;$('itemDlg').showModal()}
+function reindex(moduleId){db.resources.filter(r=>r.moduleId===moduleId).sort((a,b)=>a.order-b.order).forEach((r,i)=>r.order=i+1)}
+$('itemForm').addEventListener('submit',async e=>{e.preventDefault();const name=$('itemName').value.trim(),url=normalizeUrl($('itemUrl').value),moduleId=$('itemModule').value;if(!name||!validUrl(url)){await ask('Datos incompletos','Introduce un nombre y un enlace válido: una dirección web (http/https), un correo (mailto), una ruta de archivo de la red (por ejemplo C:\\carpeta\\archivo.pdf) o una ruta relativa.',{info:true});return}const old=editing?db.resources.find(x=>x.id===editing):null;if(old){db.resources=db.resources.filter(x=>x.id!==old.id);reindex(old.moduleId)}const items=db.resources.filter(x=>x.moduleId===moduleId).sort((a,b)=>a.order-b.order);const pos=Math.max(0,Math.min(items.length,(parseInt($('itemPosition').value,10)||1)-1));items.splice(pos,0,{id:old?.id||uuid(),name,url,description:old?.description||'',moduleId,order:pos+1});items.forEach((r,i)=>r.order=i+1);db.resources=db.resources.filter(x=>x.moduleId!==moduleId).concat(items);mark();const ok=await save();if(ok){$('itemDlg').close();$('itemDlg').returnValue='guardado'}/* si falla, se conserva el motivo concreto que ya muestra save() dentro del formulario */});
+$('modules').addEventListener('click',async e=>{
+ if(e.target.closest('#clearSearch')){$('search').value='';render();$('search').focus();return}
+ const more=e.target.closest('[data-more]');if(more){const id=more.dataset.more;expandedModules.has(id)?expandedModules.delete(id):expandedModules.add(id);render();return}
+ const btn=e.target.closest('[data-act]');if(!btn)return;if(!needFolder())return;const id=btn.dataset.id,r=db.resources.find(x=>x.id===id);if(!r)return;const act=btn.dataset.act;
+ if(act==='edit')itemDialog(id);
+ if(act==='delete'&&await ask('Eliminar recurso',`¿Eliminar "${r.name}" de SENDA?`,{ok:'Eliminar',danger:true})){db.resources=db.resources.filter(x=>x.id!==id);reindex(r.moduleId);mark();await save()}
+ if(act==='up'||act==='down'){const items=db.resources.filter(x=>x.moduleId===r.moduleId).sort((a,b)=>a.order-b.order);const i=items.indexOf(r),j=i+(act==='up'?-1:1);if(j<0||j>=items.length)return;[items[i],items[j]]=[items[j],items[i]];items.forEach((x,k)=>x.order=k+1);mark();await save()}
+});
+
+/* ===================== Módulos ===================== */
+function drawModules(){$('moduleEditor').innerHTML=db.modules.map((m,i)=>`<div class="modrow"><input data-module="${esc(m.id)}" value="${esc(m.name)}" aria-label="Nombre del módulo ${i+1}"><button data-move="up" data-id="${esc(m.id)}" class="ib" title="Subir" aria-label="Subir módulo ${esc(m.name)}">${ico('up')}</button><button data-move="down" data-id="${esc(m.id)}" class="ib" title="Bajar" aria-label="Bajar módulo ${esc(m.name)}">${ico('down')}</button></div>`).join('')}
+$('moduleEditor').addEventListener('change',e=>{if(!e.target.matches('[data-module]'))return;const m=db.modules.find(x=>x.id===e.target.dataset.module);if(!m)return;const name=e.target.value.trim();if(!name){e.target.value=m.name;return}m.name=name;mark()});
+$('moduleEditor').addEventListener('click',e=>{const b=e.target.closest('[data-move]');if(!b)return;const i=db.modules.findIndex(m=>m.id===b.dataset.id),j=i+(b.dataset.move==='up'?-1:1);if(j<0||j>=db.modules.length)return;[db.modules[i],db.modules[j]]=[db.modules[j],db.modules[i]];mark();drawModules()});
+$('addModule').onclick=async()=>{const name=await ask('Nuevo módulo','Nombre del nuevo módulo:',{input:true,ok:'Crear'});if(!name?.trim())return;db.modules.push({id:uuid(),name:name.trim()});mark();drawModules()};
+
+/* ===================== Botones principales ===================== */
+$('connect').onclick=selectFolder;$('connect2').onclick=connectFlow;$('headerSave').onclick=save;
+async function finishEditing(){if(dirty){if(!await save())return}stopEditing()}
+$('edit').onclick=()=>{if(managerOpen)finishEditing();else{startEditing();if(!dir)connectFlow()}};
+$('discard').onclick=async()=>{if(!await ask('Descartar cambios','¿Descartar los cambios que todavía no están guardados?',{ok:'Descartar',danger:true}))return;db=lastLoaded?validate(JSON.parse(lastLoaded)):structuredClone(DEFAULT);clean();notice('Cambios sin guardar descartados.','ok');render()};
+$('restoreStarter').onclick=async()=>{if(!needFolder())return;const missing=DEFAULT.resources.filter(r=>!db.resources.some(x=>x.id===r.id||x.url===r.url&&x.name===r.name));if(!missing.length){notice('Los 14 enlaces iniciales ya están presentes.','ok');toast('Los enlaces iniciales ya están presentes.','ok');return}if(!await ask('Recuperar enlaces iniciales',`¿Añadir ${missing.length} enlaces iniciales sin eliminar ninguno de los actuales?`,{ok:'Añadir'}))return;mergeStarter();mark();await save()};
+$('add').onclick=()=>itemDialog();$('closeItem').onclick=$('cancelItem').onclick=()=>$('itemDlg').close();
+$('manageModules').onclick=()=>{if(!needFolder())return;drawModules();$('modulesDlg').showModal()};
+$('closeModules').onclick=$('doneModules').onclick=async()=>{$('modulesDlg').close();if(dirty&&dir)await save()};
+$('search').oninput=render;
+// Menú de copias: se cierra al elegir una opción o al pulsar fuera.
+$('backupMenu').addEventListener('click',e=>{if(e.target.closest('.menu-panel button'))$('backupMenu').open=false});
+document.addEventListener('click',e=>{const m=$('backupMenu');if(m.open&&!m.contains(e.target))m.open=false});
+
+async function backupNow(){
+ if(!dir){message('Pulsa Conectar para hacer una copia de seguridad.',true);toast('Para hacer una copia, primero pulsa Conectar.','error');return}
+ try{
+ await probe(dir);
+ const src=await dir.getFileHandle('recursos.json',{create:false});
+ const contents=await(await src.getFile()).text();
+ validate(JSON.parse(contents));
+ const history=await dir.getDirectoryHandle('versiones',{create:true});
+ const stamp=new Date().toISOString().replace(/[:.]/g,'-');
+ const dest=await history.getFileHandle(`copia_seguridad_${stamp}.json`,{create:true});
+ const w=await dest.createWritable();await w.write(contents);await w.close();
+ const actual=await(await dest.getFile()).text();if(actual!==contents)throw Error('No se pudo verificar la copia');
+ message('Copia de seguridad creada y comprobada en la carpeta versiones.');toast('Copia de seguridad creada y comprobada (carpeta versiones).','ok');
+ }catch(e){message('No se pudo hacer la copia de seguridad: '+friendly(e),true);toast('No se pudo hacer la copia: '+friendly(e),'error')}
+}
+$('backupNow').onclick=backupNow;
+$('importJson').onclick=()=>{if(needFolder())$('fileJson').click()};
+$('fileJson').onchange=async(e)=>{const f=e.target.files[0];if(!f)return;try{const candidate=validate(JSON.parse(await f.text()));if(!await ask('Importar copia de seguridad','¿Sustituir el listado actual por esta copia de seguridad? Se guardará después de confirmar.',{ok:'Sustituir',danger:true}))return;db=candidate;mark();await save()}catch(ex){await ask('No se pudo importar',ex.message,{info:true})}e.target.value=''};
+$('exportJson').onclick=()=>{const blob=new Blob([JSON.stringify(db,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='recursos.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Copia exportada como recursos.json (carpeta de descargas).','ok')};
+$('importHtml').onclick=()=>{if(needFolder())$('fileHtml').click()};
+$('fileHtml').onchange=async(e)=>{const f=e.target.files[0];if(!f)return;try{const text=await f.text();const doc=new DOMParser().parseFromString(text,'text/html');const found=Array.from(doc.querySelectorAll('a[href]')).map(x=>({name:(x.textContent||'').trim().replace(/\s+/g,' '),url:x.getAttribute('href')})).filter(x=>x.name&&validUrl(x.url)&&!x.url.startsWith('#'));if(!found.length)throw Error('No se encontraron enlaces utilizables');const target=db.modules[0]?.id;if(!target)throw Error('No hay módulo de destino');if(!await ask('Importar listado de enlaces',`Se han detectado ${found.length} enlaces. ¿Incorporarlos a "${db.modules[0].name}" para organizarlos después? La extracción es aproximada y deberás comprobar los enlaces.`,{ok:'Incorporar'}))return;const seen=new Set(db.resources.map(x=>x.name+'|'+x.url));let order=Math.max(0,...db.resources.filter(x=>x.moduleId===target).map(x=>x.order));let added=0;for(const x of found){const k=x.name+'|'+x.url;if(seen.has(k))continue;db.resources.push({id:uuid(),moduleId:target,name:x.name,url:x.url,description:'',order:++order});seen.add(k);added++}mark();await save();await ask('Importación terminada',added+' enlaces incorporados. Revisa la distribución por módulos.',{info:true})}catch(ex){await ask('No se pudo importar',ex.message,{info:true})}e.target.value=''};
+
+/* ===================== Teclado ===================== */
+// Intro en el buscador abre el primer resultado (solo en uso normal). Esc borra la búsqueda. «/» enfoca el buscador.
+$('search').addEventListener('keydown',e=>{
+ if(e.key==='Enter'&&!managerOpen){const a=document.querySelector('#modules a.res-link');if(a){e.preventDefault();a.click()}}
+ if(e.key==='Escape'&&$('search').value){$('search').value='';render()}
+});
+document.addEventListener('keydown',e=>{
+ if(e.key!=='/'||e.ctrlKey||e.metaKey||e.altKey)return;
+ const t=e.target;if(t&&(/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)||t.isContentEditable))return;
+ if(document.querySelector('dialog[open]'))return;
+ e.preventDefault();$('search').focus();$('search').select();
+});
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
+
+/* ===================== Arranque ===================== */
+$('headerSave').classList.add('hide');
+clean();render();restoreFolder();
+$('search').focus();
+</script>
+</body>
+</html>
